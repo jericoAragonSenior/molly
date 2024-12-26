@@ -11,6 +11,7 @@ export interface IState {
 	caseToolbarInView: boolean
 	fixedCaseToolbarInView: boolean
 	headerBarInView: boolean
+	signinState: boolean
 }
 export interface IActions {
 	setChatHidden: (value: boolean) => void
@@ -19,6 +20,7 @@ export interface IActions {
 	setCaseToolbarInView: (value: boolean) => void
 	setFixedCaseToolbarInView: (value: boolean) => void
 	setHeaderBarInView: (value: boolean) => void
+	setSigninState: (value: boolean) => void
 }
 
 export const initialState: IState = {
@@ -27,7 +29,8 @@ export const initialState: IState = {
 	headerBarWidth: 0,
 	caseToolbarInView: false,
 	fixedCaseToolbarInView: false,
-	headerBarInView: false
+	headerBarInView: false,
+	signinState: false,
 }
 
 export const useCommonStore = create<IState & IActions>()(
@@ -83,7 +86,15 @@ export const useCommonStore = create<IState & IActions>()(
 							},
 							undefined,
 							'SET_HEADER_BAR_IN_VIEW'
-						)
+						),
+					setSigninState: value =>
+						set(
+							state => {
+								state.signinState = value
+							},
+							undefined,
+							'SET_SIGN_IN_STATE'
+						),
 				}),
 				{
 					name: 'common'
