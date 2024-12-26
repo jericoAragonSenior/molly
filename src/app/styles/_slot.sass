@@ -1,0 +1,112 @@
+.slot
+  border-style: solid
+  &.hexagon
+    --hexagon-angle-offset: 10px
+    &-x
+      clip-path: polygon(var(--hexagon-angle-offset) 0, calc(100% - var(--hexagon-angle-offset)) 0, 100% 50%, calc(100% - var(--hexagon-angle-offset)) 100%, var(--hexagon-angle-offset) 100%, 0 50%)
+      .content
+        clip-path: polygon(calc(var(--hexagon-angle-offset) - 1px) 0, calc(100% - var(--hexagon-angle-offset) + 1px) 0, 100% 50%, calc(100% - var(--hexagon-angle-offset) + 1px) 100%, calc(var(--hexagon-angle-offset) - 1px) 100%, 0 50%)
+    &-y
+      clip-path: polygon(50% 0, 100% var(--hexagon-angle-offset), 100% calc(100% - var(--hexagon-angle-offset)), 50% 100%, 0 calc(100% - var(--hexagon-angle-offset)), 0 var(--hexagon-angle-offset))
+      .content
+        clip-path: polygon(50% 0, 100% calc(var(--hexagon-angle-offset) - var(--hexagon-border-offset)), 100% calc(100% - var(--hexagon-angle-offset) + var(--hexagon-border-offset)), 50% 100%, 0 calc(100% - var(--hexagon-angle-offset) + var(--hexagon-border-offset)), 0 calc(var(--hexagon-angle-offset) - var(--hexagon-border-offset)))
+  &.backdrop
+    border: none
+    .content
+      height: 100%
+    &.stroke
+      &-thin
+        --hexagon-border-offset: 0px
+        padding: 1px
+      &-reg
+        --hexagon-border-offset: 1px
+        padding: 2px
+  &:not(.backdrop)
+    &.stroke
+      &-thin
+        border-width: 1px
+      &-reg
+        border-width: 2px
+  &.transparent
+    background-color: transparent
+    border-color: none
+    &.backdrop
+      background-color: transparent
+      .content
+        background-color: transparent
+  &.grey
+    &-1
+      background-color: #1A202E
+      border-color: #1E2536
+      &.backdrop
+        background-color: #1E2536
+        .content
+          background-color: #1A202E
+      .content
+        color: #60719A
+        fill: #60719A
+    &-2
+      background-color: #1A2130
+      border-color: #232B3E
+      &.backdrop
+        background-color: #232B3E
+        .content
+          background-color: #1A2130
+      .content
+        color: #ffffff
+        fill: #ffffff
+    &-3
+      background-color: #181E29
+      border-color: #1E232F
+      &.backdrop
+        background-color: #1E232F
+        .content
+          background-color: #181E29
+      .content
+        @apply text-text-primary fill-text-primary
+    &-4
+      background-color: #181E2B
+      border-color: #1C2331
+      &.backdrop
+        background-color: #1C2331
+        .content
+          background-color: #181E2B
+      .content
+        @apply text-text-primary fill-text-primary
+    &-5
+      background-color: #171C29
+      border-color: #313A4F
+      &.backdrop
+        background-color: #313A4F
+        .content
+          background-color: #171C29
+  &.gradient
+    &-red
+      &-2
+        background: linear-gradient(0deg, rgba(29,27,39,1) 0%, rgba(32,29,40,1) 100%)
+        border-color: #3C262D
+        &.backdrop
+          background: #3C262D
+          .content
+            background: linear-gradient(0deg, rgba(29,27,39,1) 0%, rgba(32,29,40,1) 100%)
+        .content
+          color: #EA6552
+          fill: #EA6552
+  &.gradient-outline
+    &-green
+      &-2
+        background: #171D2A
+        border-color: #1C8A72
+        &.backdrop
+          background: linear-gradient(0deg, rgba(34,41,58,1) 0%, rgba(23,226,165,1) 100%)
+          .content
+            background: #171D2A
+        .content
+          @apply text-text-primary fill-text-primary
+      &-3
+        background: linear-gradient(0deg, rgba(16,34,38,1) 0%, rgba(17,22,31,1) 100%)
+        border-color: #10AA7C
+        &.backdrop
+          background: #10AA7C
+          .content
+            background: linear-gradient(0deg, rgba(16,34,38,1) 0%, rgba(17,22,31,1) 100%)

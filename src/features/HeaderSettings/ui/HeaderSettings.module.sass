@@ -1,0 +1,81 @@
+.trigger
+  &:focus-visible
+    outline: none
+  &[aria-expanded="true"]
+    opacity: 1
+    transform: none
+    .trigger_icon
+      transform: rotate(25deg)
+  &_icon
+    transition: transform 0.2s
+
+.content
+  position: relative
+  z-index: 10
+  border-radius: 12px
+  border: 1px solid #222738
+  width: 310px
+  display: block
+  padding: 20px
+  background-color: #151A27
+
+.base._with-arrow
+  &::before
+    --tw-translate-y: -1px
+    --tw-rotate: 45deg
+    z-index: 11
+    border: 1px solid #222738
+    width: 10px
+    height: 10px
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%)
+    background-color: rgba(25, 33, 48, 0.7)
+    backdrop-filter: blur(4px)
+
+.arrow
+  margin-left: 24px
+  width: 11px
+  height: 10px
+  padding: 1px
+  padding-bottom: 0
+  transform: rotate(180deg)
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%)
+  background-color: #222738
+  backdrop-filter: blur(45px)
+  &_inner
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%)
+    width: 100%
+    height: 100%
+    background-color: #151A24
+
+.label
+  margin-bottom: 6px
+  text-transform: uppercase
+  @apply font-primary-bold
+  font-size: 10px
+  color: #49526D
+
+.btn
+  border-radius: 10px
+  &_content
+    padding: 14px 6px
+    @apply font-primary-bold
+    font-size: 12px
+    text-transform: uppercase
+    svg
+      flex-shrink: 0
+      width: 20px
+      height: 20px
+
+@media ( max-width: 768px )
+
+  .content
+    width: 250px
+    padding: 12px
+
+  .btn
+    &_content
+      padding: 10px 6px
+      font-size: 10px
+      svg
+        width: 16px
+        height: 16px

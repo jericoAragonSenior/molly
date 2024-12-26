@@ -1,0 +1,96 @@
+.base
+  overflow: hidden
+  position: relative
+  border-radius: 12px
+  padding: 2px
+  background: linear-gradient(90deg, rgba(25,30,45,1) 0%, rgba(16,21,31,1) 100%)
+  &.my, &.admin
+    .avatar
+      &::after
+        content: ''
+        position: absolute
+        z-index: -1
+        top: 50%
+        left: 50%
+        border-radius: 15px
+        width: 100%
+        height: 100%
+        transform: translate(-50%, -50%)
+        background-color: rgba(253, 62, 36, 0.25)
+        filter: blur(5px)
+  &.admin
+    &::before
+      content: ''
+      position: absolute
+      z-index: 1
+      top: 0
+      left: 0
+      width: 25%
+      height: 100%
+      background: linear-gradient(45deg, rgba(253,205,36,1) 0%, rgba(253,205,36,0) 50%)
+    .tag
+      border-color: #FDCD24
+      color: #FDCD24
+      background-color: rgba(226, 182, 23, 0.15)
+
+.inner
+  position: relative
+  z-index: 2
+  border-radius: 11px
+  width: 100%
+  height: 100%
+  background: linear-gradient(90deg, rgba(22,27,38,1) 0%, rgba(16,21,30,1) 100%)
+  padding: 12px
+  display: flex
+  align-items: flex-start
+  gap: 8px
+
+.avatar
+  position: relative
+  z-index: 1
+  flex-shrink: 0
+  width: 34px
+  height: 38px
+  &_border
+    position: relative
+    width: 100%
+    height: 100%
+    &_inner
+      position: absolute
+      z-index: 2
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 26px
+      height: 30px
+  &_pic
+    position: absolute
+    z-index: 1
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 26px
+    height: 30px
+    clip-path: polygon( 43.269% 5.292%,43.269% 5.292%,44.546% 4.73%,45.869% 4.292%,47.227% 3.979%,48.607% 3.792%,50% 3.729%,51.393% 3.792%,52.773% 3.979%,54.131% 4.292%,55.454% 4.73%,56.731% 5.292%,91.309% 22.594%,91.309% 22.594%,92.51% 23.271%,93.609% 24.045%,94.6% 24.908%,95.478% 25.851%,96.236% 26.865%,96.87% 27.941%,97.373% 29.071%,97.74% 30.247%,97.964% 31.459%,98.04% 32.698%,98.04% 67.302%,98.04% 67.302%,97.964% 68.541%,97.74% 69.753%,97.373% 70.929%,96.87% 72.059%,96.236% 73.135%,95.478% 74.149%,94.6% 75.092%,93.609% 75.955%,92.51% 76.729%,91.309% 77.406%,56.731% 94.708%,56.731% 94.708%,55.454% 95.27%,54.131% 95.708%,52.773% 96.021%,51.393% 96.208%,50% 96.271%,48.607% 96.208%,47.227% 96.021%,45.869% 95.708%,44.546% 95.27%,43.269% 94.708%,8.691% 77.406%,8.691% 77.406%,7.49% 76.729%,6.391% 75.955%,5.4% 75.092%,4.522% 74.149%,3.764% 73.135%,3.13% 72.059%,2.627% 70.929%,2.26% 69.753%,2.036% 68.541%,1.96% 67.302%,1.96% 32.698%,1.96% 32.698%,2.036% 31.459%,2.26% 30.247%,2.627% 29.071%,3.13% 27.941%,3.764% 26.865%,4.522% 25.851%,5.4% 24.908%,6.391% 24.045%,7.49% 23.271%,8.691% 22.594%,43.269% 5.292% )
+
+.name
+  @apply font-primary-black
+  font-size: 12px
+  color: #2F374A
+
+.tag
+  border-radius: 6px
+  border-width: 1px
+  padding: 0 10px
+  @apply font-primary-bold
+  font-size: 9px
+  line-height: 16px
+
+.time
+  font-size: 10px
+  color: #2F374A
+
+.message
+  @apply text-text-primary
+  font-size: 11px
+  line-height: 16px

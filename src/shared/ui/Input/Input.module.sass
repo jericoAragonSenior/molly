@@ -1,0 +1,69 @@
+.base
+  flex-direction: column
+  align-items: flex-start
+  &[data-has-helper="true"]
+    .label
+      padding: 0
+  &:not(&[data-readonly="true"])
+    .input
+      &_wrapper
+        transition-property: filter, background-color
+        transition-duration: 0.3s
+        &[data-hover="true"], &[data-focus="true"]
+          filter: brightness(110%)
+
+.input
+  line-height: 1
+  &[data-has-start-content="true"], &[data-has-end-content="true"]
+    padding: 0
+  &_wrapper
+    min-height: auto
+    flex-basis: auto
+
+.inner
+  &_wrapper
+    gap: 8px
+
+.label
+  margin-bottom: 6px
+  padding: 0
+
+.theme-1
+  --nextui-danger: 0 60% 52%
+  &[data-invalid="true"]
+    .input_wrapper
+      border-color: hsl(var(--nextui-danger))
+      background-color: #181E2C !important
+  &[data-hover="true"], &[data-focus="true"]
+    .input_wrapper
+      background-color: #181E2C
+  &[data-has-value="true"]
+    .input
+      color: #60719A
+      &_wrapper
+        color: #60719A
+  .label
+    color: #49526D
+  .input
+    &::placeholder
+      color: rgba(96, 113, 154, 0.5)
+
+.theme-3
+  --nextui-danger: 0 60% 52%
+  &[data-invalid="true"]
+    .input_wrapper
+      border-color: hsl(var(--nextui-danger))
+      background-color: #181E29 !important
+  &[data-hover="true"], &[data-focus="true"]
+    .input_wrapper
+      background-color: #181E29
+  &[data-has-value="true"]
+    .input
+      @apply text-text-primary
+      &_wrapper
+        @apply text-text-primary
+  .label
+    color: #545778
+  .input
+    &::placeholder
+      @apply text-text-primary/50

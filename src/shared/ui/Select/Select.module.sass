@@ -1,0 +1,72 @@
+.trigger
+  min-height: auto
+  transition-property: filter, background-color
+  transition-duration: 0.3s
+  &[data-hover="true"]
+    filter: brightness(110%)
+    &.theme-1
+      background-color: #181E2C
+    &.theme-2
+      background-color: #1A2130
+    &.theme-3
+      background-color: #181E29
+  &_icon
+    position: static
+    flex-shrink: 0
+    svg
+      transition: transform 0.3s ease-out
+    &[data-open="true"]
+      transform: none
+      svg
+        transform: scale(1, -1)
+
+.content
+  padding: 6px
+
+.listbox
+  padding: 0
+  .item_inner
+    white-space: nowrap
+
+.item
+  &_inner
+    display: flex
+    align-items: center
+    gap: 8px
+
+.theme
+  &-2
+    &:not([data-has-value="true"])
+      .value
+        color: #ffffff
+    .trigger
+      &_icon
+        border-radius: 6px
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: #252C3D
+        svg
+          width: 18px
+          fill: #7785B3
+    .item
+      color: #ffffff
+      background-color: transparent
+      &[data-hover="true"], &[data-selectable="true"]:focus
+        color: #ffffff
+        background-color: rgba(255, 255, 255, 0.1)
+  &-3
+    &:not([data-has-value="true"])
+      .value
+        color: #ffffff
+    .trigger
+      &_icon
+        svg
+          width: 16px
+          fill: #484E5B
+    .item
+      color: #ffffff
+      background-color: transparent
+      &[data-hover="true"], &[data-selectable="true"]:focus
+        color: #ffffff
+        background-color: rgba(255, 255, 255, 0.05)

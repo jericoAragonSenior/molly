@@ -1,0 +1,118 @@
+.container
+  position: relative
+  display: flex
+
+.item
+  width: 100%
+  height: 100%
+  padding-top: 3px
+  padding-bottom: 3px
+  display: flex
+  align-items: center
+  clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 8px 100%, 0 50%)
+  &_wrapper
+    height: 100%
+    padding: 1px
+    clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 8px 100%, 0 50%)
+    transition: filter 0.3s
+    &:hover
+      filter: brightness(120%)
+    &._green
+      background: linear-gradient(120deg, rgba(15, 171, 124, 0.05) 50%, #10aa7c 100%)
+      .item
+        background-color: #121E26
+    &._yellow
+      background: linear-gradient(120deg, rgba(252, 205, 35, 0.05) 50%, #fdcd24 100%)
+      .item
+        background-color: #1E2022
+  &_btn
+    &_wrapper
+      position: relative
+    &_add
+      position: absolute
+      z-index: 3
+      top: 50%
+      transform: translateY(-50%)
+      left: 3px
+      width: 16px
+      height: 18px
+      &:hover
+        &::after
+          background: rgba(16, 170, 124, 0.5)
+        &::before
+          background: rgba(16, 170, 124, 0.2)
+      svg
+        width: 100%
+        height: 100%
+      &::after
+        content: ''
+        position: absolute
+        z-index: -1
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 22px
+        height: 26px
+        clip-path: path('M10.07 0.488492C10.6523 0.182642 11.3478 0.182644 11.9301 0.488497L20.93 5.21577C21.5879 5.56134 22 6.24322 22 6.98638V19.0136C22 19.7568 21.5879 20.4387 20.93 20.7842L11.9301 25.5115C11.3478 25.8174 10.6523 25.8174 10.07 25.5115L1.06999 20.7842C0.412062 20.4387 0 19.7568 0 19.0136V6.98638C0 6.24322 0.412062 5.56134 1.06999 5.21577L10.07 0.488492Z')
+        background: rgba(16, 170, 124, 0.25)
+        transition: background 0.3s
+      &::before
+        content: ''
+        position: absolute
+        z-index: -2
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 30px
+        height: 34px
+        clip-path: path('M14.1004 0.453188C14.6663 0.168123 15.3339 0.168125 15.8998 0.453192L28.8997 7.00134C29.5744 7.34117 30 8.03212 30 8.78754V25.2125C30 25.9679 29.5744 26.6588 28.8997 26.9987L15.8998 33.5468C15.3339 33.8319 14.6663 33.8319 14.1004 33.5468L1.10029 26.9987C0.425628 26.6588 0 25.9679 0 25.2125V8.78754C0 8.03212 0.425626 7.34117 1.10029 7.00134L14.1004 0.453188Z')
+        background: rgba(16, 170, 124, 0.08)
+        transition: background 0.3s
+
+.label
+  @apply font-primary-black
+  font-size: 12px
+  white-space: nowrap
+
+.icon
+  flex-shrink: 0
+
+@media ( max-width: 1367px )
+  .container
+    transform: translateX(-20px)
+    flex-direction: column
+    align-items: flex-end
+  .item
+    justify-items: flex-end
+    padding-left: 25px
+    padding-right: 8px
+    &_wrapper
+      width: 100%
+    &_btn
+      &_add
+        transform: translateY(-50%) rotate(90deg)
+        left: auto
+        right: -21px
+
+@media ( max-width: 991px )
+  .container
+    transform: translateX(-30px)
+  .item
+    padding-top: 2px
+    padding-bottom: 2px
+    padding-right: 6px
+    padding-left: 30px
+    clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 50%, calc(100% - 5px) 100%, 5px 100%, 0 50%)
+    &_wrapper
+      clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 50%, calc(100% - 5px) 100%, 5px 100%, 0 50%)
+    &_btn
+      &_add
+        right: -15px
+        width: 10px
+        height: 11px
+        &::after
+          transform: translate(-50%, -50%) scale(0.7)
+        &::before
+          transform: translate(-50%, -50%) scale(0.7)
+  .label
+    font-size: 8px

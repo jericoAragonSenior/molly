@@ -1,0 +1,85 @@
+.popover
+  width: 29px
+
+.base
+  width: auto
+
+.trigger
+  border-radius: 5px
+  min-height: auto
+  height: auto
+  flex-shrink: 0
+  padding: 3px 5px
+  display: flex
+  align-items: center
+  gap: 8px
+  outline: none
+  background-color: transparent
+  &[data-hover="true"]
+    background-color: rgba(29, 36, 51, 0.3)
+  &_icon
+    position: static
+    flex-shrink: 0
+    width: 16px
+    fill: #D1D9EB
+
+.wrapper
+  &_inner
+    width: auto
+
+.content
+  overflow: hidden
+  border-radius: 5px
+  padding: 1px 3px
+  padding: 0
+  background-color: #1D2433
+
+.listbox
+  padding: 0
+  &_wrapper
+    max-height: 220px
+  ul
+    gap: 0
+
+.item
+  border-radius: 0
+  padding: 1px
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 8px
+  cursor: pointer
+  transition: background-color 0.2s
+  &[data-hover="true"], &[data-selected="true"], &[data-selectable="true"]:focus
+    background-color: #2D3444
+    .item_label
+      color: #FFFFFF
+  &[data-focus-visible="true"]
+    outline-offset: -2px
+    outline-width: 1px
+  &_inner
+    display: flex
+    align-items: center
+    justify-content: center
+  &_icon
+    position: relative
+    width: 22px
+    height: 22px
+    svg, img
+      width: 100%
+    &_selected
+      display: none
+  &_label
+    font-weight: bold
+    font-size: 13px
+    color: #75747d
+
+.scrollbtn
+  height: 16px
+  display: flex
+  justify-content: center
+  align-items: center
+  &_icon
+    width: 16px
+    height: 16px
+    color: #4F4B60

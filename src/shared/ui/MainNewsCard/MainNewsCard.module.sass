@@ -1,0 +1,162 @@
+.item
+  border-radius: 5px
+  position: relative
+  z-index: 1
+  width: 100%
+  height: 100%
+  min-height: 330px
+  padding-left: 40px
+  padding-right: 40px
+  padding-bottom: 40px
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  &_wrapper
+    position: relative
+    border-radius: 6px
+    padding: 3px
+    &::before
+      content: ''
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      bottom: 0
+      width: 100%
+      height: 3px
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(18, 23, 34, 0.8) 40%, rgba(18, 23, 34, 0.8) 60%, rgba(0, 0, 0, 0) 100%)
+    &.green
+      background: linear-gradient(0deg, #12615e 0%, #131a25 100%)
+      .item
+        background: linear-gradient(0deg, #12262e 0%, #121823 100%)
+        &_desc
+          &_icon
+            background-color: #12413E
+            &_border
+              background-color: #24FDBC
+              color: #24FDBC
+            &_frame
+              &::after
+                background-color: #17E2A5
+          a
+            color: #17E2A5
+    &.purple
+      background: linear-gradient(0deg, #48145f 0%, #151725 100%)
+      .item
+        background: linear-gradient(0deg, #1e1730 0%, #131723 100%)
+        &_desc
+          &_icon
+            background-color: #2E1745
+            &_border
+              background-color: #C424FD
+              color: #C424FD
+            &_frame
+              &::after
+                background-color: #8B10AA
+          a
+            color: #C424FD
+    &.blue
+      background: linear-gradient(0deg, #113861 0%, #121926 100%)
+      .item
+        background: linear-gradient(0deg, #121f30 0%, #121824 100%)
+        &_desc
+          &_icon
+            background-color: #11273F
+            &_border
+              background-color: #2461FD
+              color: #2461FD
+            &_frame
+              &::after
+                background-color: #1060AA
+          a
+            color: #2461FD
+  &_backdrop
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    width: 100%
+    height: 100%
+    object-fit: cover
+    object-position: bottom center
+  &_content
+    position: relative
+    z-index: 2
+  &_pic
+    position: absolute
+    top: 0
+    right: 0
+    max-width: 80%
+    max-height: 100%
+  &_icon
+    position: relative
+    width: 52px
+    height: 52px
+  &_title
+    margin-top: 24px
+    max-width: 80%
+    font-style: italic
+    text-transform: uppercase
+    letter-spacing: 1px
+    font-size: 24px
+    line-height: 1
+    @apply font-primary-heavy-ultra
+  &_desc
+    padding-top: 3px
+    @apply font-primary-med
+    font-size: 12px
+    color: #404F71
+    &_icon
+      width: 100%
+      height: 100%
+      clip-path: polygon( 42.045% 6.615%,42.045% 6.615%,43.554% 5.912%,45.118% 5.365%,46.722% 4.974%,48.354% 4.74%,50% 4.662%,51.646% 4.74%,53.278% 4.974%,54.882% 5.365%,56.446% 5.912%,57.955% 6.615%,87.01% 21.993%,87.01% 21.993%,88.429% 22.839%,89.728% 23.807%,90.899% 24.885%,91.937% 26.063%,92.834% 27.331%,93.583% 28.676%,94.177% 30.089%,94.61% 31.558%,94.875% 33.073%,94.965% 34.623%,94.965% 65.378%,94.965% 65.378%,94.875% 66.927%,94.61% 68.442%,94.177% 69.911%,93.583% 71.324%,92.834% 72.669%,91.937% 73.937%,90.899% 75.115%,89.728% 76.193%,88.429% 77.161%,87.01% 78.007%,57.955% 93.385%,57.955% 93.385%,56.446% 94.088%,54.882% 94.635%,53.278% 95.026%,51.646% 95.26%,50% 95.338%,48.354% 95.26%,46.722% 95.026%,45.118% 94.635%,43.554% 94.088%,42.045% 93.385%,12.99% 78.007%,12.99% 78.007%,11.571% 77.161%,10.272% 76.193%,9.101% 75.115%,8.063% 73.937%,7.166% 72.669%,6.417% 71.324%,5.823% 69.911%,5.39% 68.442%,5.125% 66.927%,5.035% 65.378%,5.035% 34.623%,5.035% 34.623%,5.125% 33.073%,5.39% 31.558%,5.823% 30.089%,6.417% 28.676%,7.166% 27.331%,8.063% 26.063%,9.101% 24.885%,10.272% 23.807%,11.571% 22.839%,12.99% 21.993%,42.045% 6.615% )
+      display: flex
+      align-items: center
+      justify-content: center
+      &_border
+        flex-shrink: 0
+        width: 24px
+        height: 24px
+        padding: 1px
+        clip-path: polygon( 42.045% 6.615%,42.045% 6.615%,43.554% 5.912%,45.118% 5.365%,46.722% 4.974%,48.354% 4.74%,50% 4.662%,51.646% 4.74%,53.278% 4.974%,54.882% 5.365%,56.446% 5.912%,57.955% 6.615%,87.01% 21.993%,87.01% 21.993%,88.429% 22.839%,89.728% 23.807%,90.899% 24.885%,91.937% 26.063%,92.834% 27.331%,93.583% 28.676%,94.177% 30.089%,94.61% 31.558%,94.875% 33.073%,94.965% 34.623%,94.965% 65.378%,94.965% 65.378%,94.875% 66.927%,94.61% 68.442%,94.177% 69.911%,93.583% 71.324%,92.834% 72.669%,91.937% 73.937%,90.899% 75.115%,89.728% 76.193%,88.429% 77.161%,87.01% 78.007%,57.955% 93.385%,57.955% 93.385%,56.446% 94.088%,54.882% 94.635%,53.278% 95.026%,51.646% 95.26%,50% 95.338%,48.354% 95.26%,46.722% 95.026%,45.118% 94.635%,43.554% 94.088%,42.045% 93.385%,12.99% 78.007%,12.99% 78.007%,11.571% 77.161%,10.272% 76.193%,9.101% 75.115%,8.063% 73.937%,7.166% 72.669%,6.417% 71.324%,5.823% 69.911%,5.39% 68.442%,5.125% 66.927%,5.035% 65.378%,5.035% 34.623%,5.035% 34.623%,5.125% 33.073%,5.39% 31.558%,5.823% 30.089%,6.417% 28.676%,7.166% 27.331%,8.063% 26.063%,9.101% 24.885%,10.272% 23.807%,11.571% 22.839%,12.99% 21.993%,42.045% 6.615% )
+      &_frame
+        position: relative
+        &::after
+          content: ''
+          position: absolute
+          z-index: 2
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          border-radius: 50%
+          width: 50%
+          height: 50%
+          filter: blur(12px)
+
+@media ( max-width: 1600px )
+  .item
+    min-height: 280px
+    padding-left: 20px
+    padding-right: 20px
+    padding-bottom: 20px
+
+@media ( max-width: 1440px )
+  .item
+    min-height: 240px
+    &_icon
+      width: 35px
+      height: 35px
+    &_title
+      margin-top: 16px
+      font-size: 20px
+
+@media ( max-width: 768px )
+  .item
+    min-height: 200px
+
+@media ( max-width: 540px )
+  .item
+    min-height: 130px
+    padding-top: 20px
+    &_title
+      margin-top: 0px
+      font-size: 18px

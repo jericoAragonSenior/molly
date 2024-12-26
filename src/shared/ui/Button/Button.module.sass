@@ -1,0 +1,18 @@
+.base
+  position: relative
+  overflow: hidden
+  transition-duration: 0.4s
+  transition-property: filter, background-color, color, fill, stroke
+  &[data-disabled], &:disabled
+    opacity: 0.5
+    pointer-events: none
+  &[data-hover], &[data-focus], &:focus, &:focus-visible
+    filter: brightness(120%)
+  &:focus
+    outline: none
+
+.content
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 8px

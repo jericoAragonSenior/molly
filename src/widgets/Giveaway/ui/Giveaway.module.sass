@@ -1,0 +1,126 @@
+.container
+  border-radius: 4px
+  width: 280px
+  height: 100%
+  padding: 2px
+  background: linear-gradient(0deg, rgba(31,37,52,1) 0%, rgba(22,28,40,1) 100%)
+  &_inner
+    width: 100%
+    height: 100%
+    background: linear-gradient(0deg, rgba(26,32,45,1) 0%, rgba(20,25,37,1) 100%)
+
+.content
+  padding: 22px 22px 0
+  display: grid
+  grid-template-columns: auto auto
+  gap: 10px 6px
+  .timer
+    justify-self: start
+  .preview, .title, .desc
+    grid-column: 1/-1
+
+
+.timer
+  display: inline-block
+  background-color: #1C2331
+  height: 44px
+  padding: 2px
+  clip-path: polygon( 8.323% 3.563%,8.323% 3.563%,8.365% 3.335%,8.415% 3.126%,8.472% 2.937%,8.536% 2.768%,8.605% 2.622%,8.679% 2.5%,8.757% 2.402%,8.839% 2.331%,8.924% 2.288%,9.011% 2.273%,90.989% 2.273%,90.989% 2.273%,91.076% 2.288%,91.161% 2.331%,91.243% 2.402%,91.321% 2.5%,91.395% 2.622%,91.464% 2.768%,91.528% 2.937%,91.585% 3.126%,91.635% 3.335%,91.677% 3.563%,98.995% 49.018%,98.995% 49.018%,99.022% 49.207%,99.043% 49.401%,99.058% 49.598%,99.067% 49.799%,99.07% 50%,99.067% 50.201%,99.058% 50.402%,99.043% 50.599%,99.022% 50.793%,98.995% 50.983%,91.677% 96.437%,92.365% 97.419%,91.677% 96.437%,91.677% 96.437%,91.635% 96.665%,91.585% 96.874%,91.528% 97.063%,91.464% 97.232%,91.395% 97.378%,91.321% 97.5%,91.243% 97.598%,91.161% 97.669%,91.076% 97.712%,90.989% 97.727%,9.011% 97.727%,9.011% 97.727%,8.924% 97.712%,8.839% 97.669%,8.757% 97.598%,8.679% 97.5%,8.605% 97.378%,8.536% 97.232%,8.472% 97.063%,8.415% 96.874%,8.365% 96.665%,8.323% 96.437%,1.005% 50.983%,0.316% 51.965%,1.005% 50.983%,1.005% 50.983%,0.978% 50.793%,0.957% 50.599%,0.942% 50.402%,0.933% 50.201%,0.93% 50%,0.933% 49.799%,0.942% 49.598%,0.957% 49.401%,0.978% 49.207%,1.005% 49.018%,8.323% 3.563% )
+  &_inner
+    width: 100%
+    height: 100%
+    padding: 5px 20px
+    display: flex
+    align-items: center
+    gap: 8px
+    background-color: #181E2B
+    clip-path: polygon( 8.323% 3.563%,8.323% 3.563%,8.365% 3.335%,8.415% 3.126%,8.472% 2.937%,8.536% 2.768%,8.605% 2.622%,8.679% 2.5%,8.757% 2.402%,8.839% 2.331%,8.924% 2.288%,9.011% 2.273%,90.989% 2.273%,90.989% 2.273%,91.076% 2.288%,91.161% 2.331%,91.243% 2.402%,91.321% 2.5%,91.395% 2.622%,91.464% 2.768%,91.528% 2.937%,91.585% 3.126%,91.635% 3.335%,91.677% 3.563%,98.995% 49.018%,98.995% 49.018%,99.022% 49.207%,99.043% 49.401%,99.058% 49.598%,99.067% 49.799%,99.07% 50%,99.067% 50.201%,99.058% 50.402%,99.043% 50.599%,99.022% 50.793%,98.995% 50.983%,91.677% 96.437%,92.365% 97.419%,91.677% 96.437%,91.677% 96.437%,91.635% 96.665%,91.585% 96.874%,91.528% 97.063%,91.464% 97.232%,91.395% 97.378%,91.321% 97.5%,91.243% 97.598%,91.161% 97.669%,91.076% 97.712%,90.989% 97.727%,9.011% 97.727%,9.011% 97.727%,8.924% 97.712%,8.839% 97.669%,8.757% 97.598%,8.679% 97.5%,8.605% 97.378%,8.536% 97.232%,8.472% 97.063%,8.415% 96.874%,8.365% 96.665%,8.323% 96.437%,1.005% 50.983%,0.316% 51.965%,1.005% 50.983%,1.005% 50.983%,0.978% 50.793%,0.957% 50.599%,0.942% 50.402%,0.933% 50.201%,0.93% 50%,0.933% 49.799%,0.942% 49.598%,0.957% 49.401%,0.978% 49.207%,1.005% 49.018%,8.323% 3.563% )
+  &_icon
+    flex-shrink: 0
+    width: 14px
+    height: 14px
+    @apply fill-primary stroke-primary-2
+  &_text
+    @apply font-primary-black
+    white-space: nowrap
+    font-size: 12px
+
+.part
+  display: flex
+  align-items: center
+  gap: 6px
+  &_label
+    text-align: right
+    font-size: 10px
+    color: #4D5361
+  &_value
+    text-align: right
+    @apply font-primary-black text-text-primary
+    font-size: 14px
+  &_icon
+    flex-shrink: 0
+    width: 18px
+    height: 18px
+
+.preview
+  justify-self: center
+  img
+    width: auto
+    max-height: 120px
+
+.title
+  font-size: 22px
+
+.desc
+  font-size: 12px
+  line-height: 1.3
+  color: #404F71
+  a
+    @apply text-primary
+
+.slider
+  --swiper-pagination-bullet-width: 4px
+  --swiper-pagination-bullet-height: 4px
+  --swiper-pagination-color: #D1D9EB
+  --swiper-pagination-bullet-inactive-color: #404F71
+  .slider_inner
+    position: relative
+    padding-top: 14px
+    padding-bottom: 18px
+  .slide
+    display: flex
+    justify-content: center
+
+@media ( max-width: 1600px )
+  .container
+    width: 100%
+    height: auto
+
+  .content
+    .title
+      grid-column: 1/2
+      grid-row: 1/2
+    .desc
+      grid-column: 1/2
+      grid-row: 2/3
+    .part
+      justify-self: end
+      grid-column: 2/3
+      grid-row: 1/2
+    .timer
+      justify-self: end
+      grid-column: 2/3
+      grid-row: 2/3
+    .preview
+      display: none
+
+  .slider
+    .slider_inner
+      padding-left: 25px
+      padding-right: 25px
+
+@media ( max-width: 768px )
+  .content
+    padding: 14px 12px 0
+    gap: 4px
+

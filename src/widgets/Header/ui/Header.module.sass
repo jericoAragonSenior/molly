@@ -1,0 +1,115 @@
+.nav
+  .item
+    display: flex
+    align-items: center
+    gap: 6px
+    cursor: pointer
+    &:hover, &.active
+      .item
+        &_icon
+          &::after
+            opacity: 1
+          svg
+            @apply stroke-primary-2 fill-primary
+        &_label
+          @apply text-text-primary
+    &_icon
+      position: relative
+      flex-shrink: 0
+      &::after
+        content: ''
+        position: absolute
+        z-index: 1
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 154, 99, 0.65)
+        filter: blur(12px)
+        opacity: 0
+        transition: opacity 0.3s
+      svg
+        position: relative
+        z-index: 2
+        width: 100%
+        // stroke: #2F374A
+        stroke: #3B455C
+        fill: #2F374A
+        transition: 0.3s
+        transition-property: fill, stroke
+    &_label
+      font-size: 12px
+      line-height: 1.3
+      text-align: center
+      color: #2F374A
+      transition: color 0.3s
+
+.avatar
+  &_wrapper
+    &::after
+      content: ''
+      position: absolute
+      z-index: -1
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 35px
+      height: 35px
+      background-color: rgba(253, 62, 36, 0.66)
+      filter: blur(11px)
+  &_pic
+    width: 50px
+    height: 50px
+    clip-path: path('M24 0.577351C24.6188 0.220085 25.3812 0.220085 26 0.57735L45.6506 11.9226C46.2694 12.2799 46.6506 12.9402 46.6506 13.6547V36.3453C46.6506 37.0598 46.2694 37.7201 45.6506 38.0774L26 49.4226C25.3812 49.7799 24.6188 49.7799 24 49.4226L4.34937 38.0774C3.73056 37.7201 3.34937 37.0598 3.34937 36.3453V13.6547C3.34937 12.9402 3.73056 12.2799 4.34937 11.9226L24 0.577351Z')
+
+.level
+  position: absolute
+  z-index: 3
+  right: 7px
+  bottom: 0
+  width: 20px
+  height: 22px
+  &_frame
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+  &_count
+    position: relative
+    z-index: 2
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 9px
+    @apply font-primary-black text-bg
+    text-shadow: 0 1px 0 #FDCD24
+
+.bar
+  &_fixed
+    border-radius: 10px
+    padding: 8px
+    background-color: rgba(25, 33, 48, 0.7)
+    backdrop-filter: blur(5px)
+
+@media ( max-width: 1367px )
+  .avatar_wrapper
+    order: 1
+  .balance
+    order: 2
+  .settings
+    order: 3
+  .notif
+    order: 4
+
+@media ( max-width: 1200px )
+  .notif
+    order: 1
+  .avatar_wrapper
+    order: 2
+  .balance
+    order: 3
+

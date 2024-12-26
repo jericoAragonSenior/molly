@@ -1,0 +1,76 @@
+{
+	"example": "example",
+	"sidebar": {
+		"rewards": "Rewards",
+		"cases_opening": "Opening Cases",
+		"cases_battle": "Cases Battles",
+		"upgrades": "Upgrades",
+		"contracts": "Contracts",
+		"faq": "FAQ",
+		"support": "Support"
+	},
+	"header": {
+		"vip": "VIP Club",
+		"bonuses": "Bonuses",
+		"leaderboard": "Leaderboard",
+		"notifications": "Notification"
+	},
+	"livefeed": {
+		"title": "live drops",
+		"all": "all",
+		"top": "top"
+	},
+	"giveaway": {
+		"label": "Participants"
+	},
+	"topcases": {
+		"title": "Top Case",
+		"subtitle": "Popular cases right now"
+	},
+	"caseCard": {
+		"discount": "**-{discount}%** discount",
+		"locked": "lock",
+		"free": "free"
+	},
+	"settings": {
+		"trade": "Trade URL",
+		"logout": "Logout",
+		"title": "Settings",
+		"language": "language",
+		"volume": "volume"
+	},
+	"toolbar": {
+		"search_by_case": "Search for a case...",
+		"search_by_weapon": "Search for a weapon...",
+		"weapon_type": "Weapon type",
+		"mode": "Mode",
+		"enough_balance": "Enough balance",
+		"clear": "Clear"
+	},
+	"chat": {
+		"chat": "Chat",
+		"placeholder": "Your message..."
+	},
+	"pages": {
+		"rewards": "Rewards",
+		"cases_opening": "Opening Cases",
+		"battles": "Cases Battles",
+		"upgrades": "Upgrades",
+		"contracts": "Contracts",
+		"vip": "VIP Club",
+		"bonuses": "Bonuses",
+		"leaderboard": "Leaderboard",
+		"faq": "FAQ",
+		"support": "Support",
+		"userAgreement": "User Agreement",
+		"provablyFair": "Provably fair",
+		"contacts": "Contacts",
+		"privacyPolicy": "Privacy Policy",
+		"short": {
+			"cases_opening": "Cases",
+			"battles": "Battles",
+			"upgrades": "Upgrades",
+			"contracts": "Contracts"
+		}
+	}
+}

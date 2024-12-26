@@ -1,0 +1,164 @@
+.base
+  width: 320px
+  overflow: hidden
+  &_loader
+    position: relative
+    width: 320px
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100%
+    background-color: #10151E
+
+.btn
+  &_open
+    &_wrapper
+      position: fixed
+      top: 10px
+      right: -10px
+      z-index: -1
+      &.active
+        z-index: 101
+    &_base
+      height: 36px
+      .btn_open_content
+        padding-left: 15px
+        padding-right: 15px
+        gap: 3px
+        @apply font-primary-black
+        font-size: 12px
+        text-transform: uppercase
+        line-height: 1
+    &_icon
+      width: 16px
+      height: 16px
+    &_label
+      font-size: 12px
+      text-transform: uppercase
+  &_close
+    border: 1px solid rgb(28 34 50 / 0.4)
+    width: 48px
+    height: 48px
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: background-color 0.2s
+    &:hover
+      background-color: rgba(255, 255, 255, 0.05)
+
+.h
+  position: relative
+  z-index: 1
+  border-bottom: 1px solid #161C28
+  background: linear-gradient(90deg, rgba(16, 21, 31, 0.3) 0%, #10151e 100%), linear-gradient(180deg, rgba(16, 21, 31, 0.65) 30%, #10151e 100%,), url('/images/chat-header-bg.png') no-repeat
+
+.track
+  -webkit-overflow-scrolling: touch
+  overscroll-behavior: none
+
+.bar
+  margin: 0 10px 10px
+  &_inner
+    border-radius: 12px
+    border: 2px solid #1C2232
+    height: 62px
+    padding: 8px
+    display: flex
+    align-items: center
+    gap: 10px
+    background-color: #10151E
+  &_input
+    flex-grow: 1
+    background-color: transparent
+    resize: none
+    height: 100%
+    padding-top: 10px
+    padding-left: 12px
+    padding-right: 8px
+    font-size: 12px
+    @apply text-text-primary
+    outline: none
+    &::placeholder
+      color: #2F374A
+  &_btn
+    &_send
+      width: 34px
+      height: 38px
+      clip-path: polygon( 57.353% 6.837%,88.101% 22.721%,88.101% 22.721%,89.413% 23.484%,90.613% 24.357%,91.696% 25.33%,92.655% 26.394%,93.484% 27.537%,94.177% 28.751%,94.726% 30.026%,95.127% 31.352%,95.371% 32.718%,95.454% 34.116%,95.454% 65.884%,95.454% 65.884%,95.371% 67.282%,95.127% 68.649%,94.726% 69.974%,94.177% 71.249%,93.484% 72.463%,92.655% 73.606%,91.696% 74.67%,90.613% 75.643%,89.413% 76.516%,88.101% 77.279%,57.353% 93.163%,57.353% 93.163%,55.958% 93.798%,54.513% 94.291%,53.03% 94.644%,51.521% 94.855%,50% 94.926%,48.479% 94.855%,46.97% 94.644%,45.487% 94.291%,44.042% 93.798%,42.647% 93.163%,11.899% 77.279%,11.899% 77.279%,10.587% 76.516%,9.387% 75.643%,8.304% 74.67%,7.345% 73.606%,6.516% 72.463%,5.823% 71.249%,5.274% 69.974%,4.874% 68.649%,4.629% 67.282%,4.546% 65.884%,4.546% 34.116%,4.546% 34.116%,4.629% 32.718%,4.874% 31.352%,5.274% 30.026%,5.823% 28.751%,6.516% 27.537%,7.345% 26.394%,8.304% 25.33%,9.387% 24.357%,10.587% 23.484%,11.899% 22.721%,42.647% 6.837%,42.647% 6.837%,44.042% 6.202%,45.487% 5.709%,46.97% 5.356%,48.479% 5.145%,50% 5.074%,51.521% 5.145%,53.03% 5.356%,54.513% 5.709%,55.958% 6.202%,57.353% 6.837% )
+      &_content
+        clip-path: polygon( 57.353% 6.837%,88.101% 22.721%,88.101% 22.721%,89.413% 23.484%,90.613% 24.357%,91.696% 25.33%,92.655% 26.394%,93.484% 27.537%,94.177% 28.751%,94.726% 30.026%,95.127% 31.352%,95.371% 32.718%,95.454% 34.116%,95.454% 65.884%,95.454% 65.884%,95.371% 67.282%,95.127% 68.649%,94.726% 69.974%,94.177% 71.249%,93.484% 72.463%,92.655% 73.606%,91.696% 74.67%,90.613% 75.643%,89.413% 76.516%,88.101% 77.279%,57.353% 93.163%,57.353% 93.163%,55.958% 93.798%,54.513% 94.291%,53.03% 94.644%,51.521% 94.855%,50% 94.926%,48.479% 94.855%,46.97% 94.644%,45.487% 94.291%,44.042% 93.798%,42.647% 93.163%,11.899% 77.279%,11.899% 77.279%,10.587% 76.516%,9.387% 75.643%,8.304% 74.67%,7.345% 73.606%,6.516% 72.463%,5.823% 71.249%,5.274% 69.974%,4.874% 68.649%,4.629% 67.282%,4.546% 65.884%,4.546% 34.116%,4.546% 34.116%,4.629% 32.718%,4.874% 31.352%,5.274% 30.026%,5.823% 28.751%,6.516% 27.537%,7.345% 26.394%,8.304% 25.33%,9.387% 24.357%,10.587% 23.484%,11.899% 22.721%,42.647% 6.837%,42.647% 6.837%,44.042% 6.202%,45.487% 5.709%,46.97% 5.356%,48.479% 5.145%,50% 5.074%,51.521% 5.145%,53.03% 5.356%,54.513% 5.709%,55.958% 6.202%,57.353% 6.837% )
+      &_icon
+        width: 18px
+        height: 18px
+        @apply stroke-primary-2 fill-primary
+    &_picker
+      width: 16px
+      height: 16px
+      &_icon
+        fill: #2F374A
+        width: 100%
+        height: 100%
+
+@media ( max-width: 1440px )
+  .base
+    &_loader
+      width: 280px
+
+
+@media ( max-width: 1200px )
+  .btn
+    &_open
+      &_wrapper
+        position: fixed
+        top: auto
+        right: 20px
+        bottom: 88px
+      &_base
+        height: auto
+        .btn_open_content
+          padding-left: 10px
+          padding-right: 10px
+          padding-top: 15px
+          padding-bottom: 15px
+          flex-direction: column
+      &_icon
+        width: 16px
+        height: 16px
+    &_close
+      border: none
+      border-radius: 5px
+      width: 20px
+      height: 20px
+      background-color: #0C131B
+      svg
+        fill: #2F374A
+      &:hover
+        background-color: rgba(12 19 27 / 0.9)
+
+  .base
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: calc(100% - 69px)
+    z-index: -1
+    visibility: hidden
+    overscroll-behavior: none
+    &.active
+      z-index: 101
+      visibility: visible
+    &_loader
+      width: 100%
+      height: calc(100% - 69px)
+
+  .h
+    border-color: #1E2433
+    background: transparent
+
+  .track
+    margin-left: 20px
+    margin-right: 20px
+
+  .bar
+    margin: 0 30px 20px
+

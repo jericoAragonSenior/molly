@@ -1,0 +1,23 @@
+.slider
+  &_wrapper
+    border-radius: 10px
+    background-color: #1A2030
+    padding: 10px 20px
+  &_track
+    height: 4px
+  &_thumb
+    width: 18px
+    height: 18px
+  &_mark
+    margin-right: 0
+    font-size: 10px
+  &_tooltip
+    &_base
+      &[data-arrow="true"]
+        &::before
+          display: none
+    &_content
+      padding: 0
+      background-color: transparent
+      font-size: 10px
+      color: #fff

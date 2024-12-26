@@ -1,0 +1,52 @@
+body
+  user-select: none
+  cursor: default
+
+a, button
+  cursor: pointer
+
+.app-scrollbar
+  -webkit-overflow-scrolling: touch
+  &::-webkit-scrollbar
+    width: 6px
+    height: 6px
+  &::-webkit-scrollbar-track
+    background-color: #151B28
+  &::-webkit-scrollbar-thumb
+    background-color: #1F2534
+
+.title
+  &-primary
+    @apply font-primary-heavy-ultra
+    font-style: italic
+    text-transform: uppercase
+    background: linear-gradient(0deg, rgba(204,211,230,1) 0%, rgba(154,162,178,1) 100%)
+    -webkit-background-clip: text
+    color: transparent
+    -webkit-text-stroke: 1px transparent
+    background-clip: border-box
+    border-image: linear-gradient(0deg, rgba(232,237,250,1) 0%, rgba(171,176,190,1) 100%) 1
+    -webkit-background-clip: text, border
+    background-clip: text, padding-box
+    letter-spacing: 1px
+    line-height: 1
+
+.container
+  &-common
+    @apply mx-10 lg:mx-5 md:mx-3
+
+@keyframes slideFadeDown
+  0%
+    opacity: 0
+    transform: translateY(-10px)
+  100%
+    opacity: 1
+    transform: translateY(0)
+
+@keyframes slideFadeUp
+  0%
+    opacity: 1
+    transform: translateY(0)
+  100%
+    opacity: 0
+    transform: translateY(-10px)

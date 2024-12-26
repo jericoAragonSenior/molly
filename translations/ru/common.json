@@ -1,0 +1,73 @@
+{
+	"example": "пример",
+	"sidebar": {
+		"rewards": "Награды",
+		"cases_opening": "Открытие кейсов",
+		"cases_battle": "Кейс батлы",
+		"upgrades": "Апргейды",
+		"contracts": "Контракты",
+		"faq": "FAQ",
+		"support": "Поддержка"
+	},
+	"header": {
+		"vip": "ВИП клуб",
+		"bonuses": "Бонусы",
+		"leaderboard": "Лидерборд",
+		"notifications": "Уведомления"
+	},
+	"livefeed": {
+		"title": "live drops",
+		"all": "все",
+		"top": "топ"
+	},
+	"giveaway": {
+		"label": "Участники"
+	},
+	"topcases": {
+		"title": "Топ кейсы",
+		"subtitle": "Популярные кейсы сейчас"
+	},
+	"caseCard": {
+		"discount": "Скидка **-{discount}%**",
+		"locked": "закрыто",
+		"free": "бесплатно"
+	},
+	"settings": {
+		"trade": "URL трейда",
+		"logout": "Выйти",
+		"title": "Настройки",
+		"language": "язык",
+		"volume": "громкость"
+	},
+	"toolbar": {
+		"search_by_case": "Поиск по кейсам...",
+		"search_by_weapon": "Поиск по оружию...",
+		"weapon_type": "Тип оружия",
+		"mode": "Мод",
+		"enough_balance": "Хватает баланса",
+		"clear": "Очистить"
+	},
+	"chat": {
+		"chat": "Чат",
+		"placeholder": "Сообщение..."
+	},
+	"pages": {
+		"rewards": "Награды",
+		"cases_opening": "Открытие кейсов",
+		"battles": "Кейс батлы",
+		"upgrades": "Апргейды",
+		"contracts": "Контракты",
+		"faq": "FAQ",
+		"support": "Поддержка",
+		"userAgreement": "Пользовательское соглашение",
+		"provablyFair": "Provably fair",
+		"contacts": "Контакты",
+		"privacyPolicy": "Политика конфиденциальности",
+		"short": {
+			"cases_opening": "Кейсы",
+			"battles": "Батлы",
+			"upgrades": "Апргейды",
+			"contracts": "Контракты"
+		}
+	}
+}

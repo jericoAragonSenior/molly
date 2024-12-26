@@ -1,0 +1,94 @@
+.sb
+  &_body
+    overflow-y: auto
+    -webkit-overflow-scrolling: touch
+    &::-webkit-scrollbar
+      width: 4px
+      height: 4px
+    &::-webkit-scrollbar-track
+      background-color: transparent
+    &::-webkit-scrollbar-thumb
+      cursor: pointer
+      border-radius: 6px
+      background-color: #2F374A
+
+.btn
+  &_rew
+    @apply border border-warning-1
+    border-radius: 12px
+    width: 100%
+    padding: 9px 5px
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 2px
+    background: linear-gradient(0deg, rgba(226, 182, 23, 0.1) 0%, rgba(227, 183, 23, 0) 100%)
+    transition: 0.3s filter
+    &:hover
+      filter: brightness(1.3)
+    &_icon
+      position: relative
+      flex-shrink: 0
+      width: 24px
+      height: 24px
+      &::after
+        content: ''
+        position: absolute
+        z-index: 1
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 100%
+        height: 100%
+        background-color: rgba(255, 61, 0, 0.45)
+        filter: blur(10px)
+      svg
+        position: relative
+        z-index: 2
+        width: 100%
+        height: 100%
+    &_label
+      text-align: center
+      font-size: 12px
+      line-height: 1.3
+
+.social
+  flex-shrink: 0
+  width: 20px
+  height: 20px
+  color: #2F374A
+  transition: color 0.3s
+  svg
+    width: 100%
+    height: 100%
+
+.fnav
+  border-radius: 12px
+  border: 1px solid #21293C
+  display: flex
+  flex-direction: column
+  &_item
+    padding: 20px 10px
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 6px
+    color: #2F374A
+    transition: color 0.3s
+    &:hover
+      @apply text-text-primary
+      svg
+        @apply fill-text-primary
+    &:not(&:last-child)
+      border-bottom: 1px solid #21293C
+    &_icon
+      flex-shrink: 0
+      width: 24px
+      height: 24px
+      svg
+        width: 100%
+        height: 100%
+        fill: #2F374A
+        transition: fill 0.3s
+    &_label
+      font-size: 12px

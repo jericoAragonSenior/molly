@@ -1,0 +1,67 @@
+.container
+  display: flex
+  align-items: center
+  gap: 4px
+
+.skeleton
+  height: 78px
+  background-color: #191F2D
+
+.title
+  text-transform: uppercase
+  font-size: 8px
+  &_row
+    display: flex
+    align-items: center
+    gap: 6px
+
+.bar
+  display: flex
+  gap: 4px
+  &_btn
+    min-width: 38px
+    height: 37px
+
+.track
+  position: relative
+  display: flex
+  gap: 2px
+  overflow: hidden
+  mask-image: linear-gradient(180deg, black 80%, transparent 100%)
+
+.card
+  flex-shrink: 0
+  width: 78px
+  height: 78px
+
+.axis-x
+  .title
+    writing-mode: vertical-rl
+    transform: rotate(180deg)
+    &_row
+      flex-direction: column-reverse
+  .bar
+    flex-direction: column
+  .track
+    mask-image: linear-gradient(90deg, black 80%, transparent 100%)
+
+.axis-y
+  height: 100vh
+  padding: 2px
+  flex-direction: column
+  .bar
+    flex-direction: row
+  .track
+    flex-grow: 1
+    flex-direction: column
+    mask-image: linear-gradient(180deg, black 80%, transparent 100%)
+
+@media ( max-width: 768px )
+  .card
+    width: 62px
+    height: 62px
+
+  .bar
+    gap: 2px
+    &_btn
+      height: 30px

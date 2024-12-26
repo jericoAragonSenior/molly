@@ -1,0 +1,131 @@
+.card
+  position: relative
+  border-radius: 8px
+  padding: 2px
+  background: linear-gradient(90deg, rgba(34,40,52,1) 0%, rgba(26,32,44,1) 100%)
+  &.grey
+    &::before
+      background-color: rgb(176, 195, 217)
+      box-shadow: 0 0 20px 0 rgba(176, 195, 217, 0.35)
+    .card
+      &_type
+        color: rgb(176, 195, 217, 0.5)
+      &_title
+        color: rgb(176, 195, 217)
+  &.light-blue
+    &::before
+      background-color: rgb(94, 152, 217)
+      box-shadow: 0 0 20px 0 rgba(94, 152, 217, 0.35)
+    .card
+      &_type
+        color: rgb(94, 152, 217, 0.5)
+      &_title
+        color: rgb(94, 152, 217)
+  &.blue
+    &::before
+      background-color: rgb(75, 105, 255)
+      box-shadow: 0 0 20px 0 rgba(75, 105, 255, 0.35)
+    .card
+      &_type
+        color: rgb(75, 105, 255, 0.5)
+      &_title
+        color: rgb(75, 105, 255)
+  &.purple
+    &::before
+      background-color: rgb(136, 71, 255)
+      box-shadow: 0 0 20px 0 rgba(136, 71, 255, 0.35)
+    .card
+      &_type
+        color: rgb(136, 71, 255, 0.5)
+      &_title
+        color: rgb(136, 71, 255)
+  &.pink
+    &::before
+      background-color: rgb(211, 44, 230)
+      box-shadow: 0 0 20px 0 rgba(211, 44, 230, 0.35)
+    .card
+      &_type
+        color: rgb(211, 44, 230, 0.5)
+      &_title
+        color: rgb(211, 44, 230)
+  &.red
+    &::before
+      background-color: rgb(235, 75, 75)
+      box-shadow: 0 0 20px 0 rgba(235, 75, 75, 0.35)
+    .card
+      &_type
+        color: rgb(235, 75, 75, 0.5)
+      &_title
+        color: rgb(235, 75, 75)
+  &.yellow
+    &::before
+      background-color: rgb(228, 174, 57)
+      box-shadow: 0 0 20px 0 rgba(228, 174, 57, 0.35)
+    .card
+      &_type
+        color: rgb(228, 174, 57, 0.5)
+      &_title
+        color: rgb(228, 174, 57)
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    border-top-left-radius: 8px
+    border-bottom-left-radius: 8px
+    width: 12px
+    height: 100%
+  &_inner
+    position: relative
+    z-index: 2
+    border-radius: 7px
+    width: 100%
+    padding: 10px
+    display: flex
+    align-items: flex-start
+    gap: 12px
+    background: linear-gradient(90deg, rgba(28,33,46,1) 0%, rgba(24,29,42,1) 100%)
+  &_pic
+    img
+      width: auto
+      height: 48px
+  &_type
+    font-size: 12px
+    line-height: 1.5
+  &_title
+    @apply font-primary-bold
+    font-size: 12px
+    line-height: 1.2
+  &_price
+    display: flex
+    align-items: center
+    gap: 4px
+    &_icon
+      flex-shrink: 0
+      width: 14px
+      height: 14px
+    &_value
+      font-size: 12px
+      @apply text-text-primary
+
+@media ( max-width: 1600px )
+  .card
+    &_inner
+      align-items: center
+    &_title
+      font-size: 14px
+    &_price
+      &_value
+        font-size: 14px
+    &_pic
+      img
+        height: 70px
+
+@media ( max-width: 640px )
+  .card
+    &_inner
+      justify-content: center
+    &_pic
+      img
+        height: 50px

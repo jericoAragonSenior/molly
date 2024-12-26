@@ -1,0 +1,85 @@
+.track
+  border: none
+
+.filler
+  border-radius: 999px
+
+.thumb
+  &_round
+    .thumb
+      position: relative
+      &::after
+        width: calc(50% - 1px)
+        height: calc(50% - 1px)
+  &_rect
+    .thumb
+      border-radius: 20%
+      aspect-ratio: 1 / 1.5
+      height: auto
+      &::after
+        display: none
+  &_pill
+    .thumb
+      aspect-ratio: 3 / 2
+      height: auto
+      padding: 1px
+      &::after
+        width: 100%
+        height: 100%
+
+.tooltip
+  &_base
+    &::before
+      background-color: #fff
+  &_content
+    border-radius: 6px
+    background-color: #fff
+    color: #000
+    padding: 5px 10px
+
+.theme
+  &_green
+    .track
+      background-color: #2A3246
+    .mark
+      @apply font-primary-bold
+      color: #49526D
+      &[data-in-range="true"]
+        color: #fff
+    .filler
+      background: linear-gradient(0deg, rgba(29,223,165,1) 0%, rgba(17,171,125,1) 100%)
+    &.thumb
+      &_round
+        .thumb
+          background: linear-gradient(50deg, rgba(29,223,165,1) 0%, rgba(17,171,125,1) 100%)
+          box-shadow: none
+          &::after
+            background-color: #0A7455
+      &_rect
+        .thumb
+          box-shadow: none
+          background-color: #C5FFEE
+      &_pill
+        .track
+          background-color: #2A3246
+        .filler
+          background-color: linear-gradient(0deg, rgba(29,223,165,1) 0%, rgba(17,171,125,1) 100%)
+        .thumb
+          background: linear-gradient(90deg, rgba(29,223,165,1) 0%, rgba(17,171,125,1) 100%)
+          box-shadow: 0 0 12px 0 rgba(16, 170, 124, 0.25)
+          &::after
+            background-color: #0A7455
+            box-shadow: none
+  &_yellow
+    &.thumb
+      &_pill
+        .track
+          background-color: #262F41
+        .filler
+          background-color: #F2C41F
+        .thumb
+          background: linear-gradient(90deg, rgba(254,219,97,1) 0%, rgba(234,189,25,1) 100%)
+          box-shadow: 0 0 12px 0 rgba(253, 62, 36, 0.25)
+          &::after
+            background-color: #EABD19
+            box-shadow: none
