@@ -12,18 +12,22 @@ interface HeaderDesktopProps {
 
 export const HeaderDesktop: FC<HeaderDesktopProps> = ({ className }) => {
 	return (
-		<header className={clsx(className, 'flex items-center justify-between gap-2')}>
-			<HeaderNav />
+		<header className={clsx(className, 'flex items-center relative justify-center gap-2')}>
+			<div className={clsx('absolute left-0')}>
+				<HeaderNav />
+			</div>
 			<Link
 				href='/'
-				className='shrink-0 self-start w-[386px] h-[92px] 3xl:w-[300px] 3xl:h-[72px] xl:ml-auto'
+				className='shrink-0 self-start w-[386px] h-[92px] 3xl:w-[300px] 3xl:h-[72px]'
 				style={{
 					backgroundImage: 'url(/images/logo-header.svg)',
 					backgroundSize: 'contain',
 					backgroundRepeat: 'no-repeat'
 				}}
 			></Link>
-			<HeaderBar />
+			<div className={clsx('absolute right-0')}>
+				<HeaderBar />
+			</div>
 		</header>
 	)
 }
