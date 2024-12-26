@@ -13,7 +13,7 @@ interface HeaderDesktopProps {
 export const HeaderDesktop: FC<HeaderDesktopProps> = ({ className }) => {
 	return (
 		<header className={clsx(className, 'flex items-center relative justify-center gap-2')}>
-			<div className={clsx('absolute left-0')}>
+			<div className={clsx('absolute left-10')}>
 				<HeaderNav />
 			</div>
 			<Link
@@ -25,7 +25,7 @@ export const HeaderDesktop: FC<HeaderDesktopProps> = ({ className }) => {
 					backgroundRepeat: 'no-repeat'
 				}}
 			></Link>
-			<div className={clsx('absolute right-0')}>
+			<div className={clsx('absolute right-10')}>
 				<HeaderBar />
 			</div>
 		</header>
