@@ -13,5 +13,7 @@ export enum AppRoute {
 	USER_AGREEMENT = '/user-agreement',
 	PROVABLY_FAIR = '/provably-fair',
 	CONTACTS = '/contacts',
-	PRIVACY_POLICY = '/privacy-policy'
+	PRIVACY_POLICY = '/privacy-policy',
+	TERM_OF_SERVICES = '/term-of-services',
+	TEMP = "#"
 }
