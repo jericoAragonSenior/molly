@@ -13,7 +13,8 @@
 		"vip": "ВИП клуб",
 		"bonuses": "Бонусы",
 		"leaderboard": "Лидерборд",
-		"notifications": "Уведомления"
+		"notifications": "Уведомления",
+		"item": "Элемент"
 	},
 	"livefeed": {
 		"title": "live drops",
@@ -69,5 +70,26 @@
 			"upgrades": "Апргейды",
 			"contracts": "Контракты"
 		}
+	},
+	"auth": {
+		"signin": "Войти",
+		"signup": "Зарегистрироваться",
+		"forget_password": "Забыть пароль",
+		"email_label": "электронное письмо",
+		"password_label": "пароль",
+		"email_placeholder": "Введите свою электронную почту",
+		"password_placeholder": "•••••••••••••",
+		"forget_pwd_btn_text": "Забыли пароль?",
+		"sigin_btn_text": "Войти",
+		"signup_btn_text": "Зарегистрироваться",
+		"sigin_in_via_steam": "Войти через Steam",
+		"create_new_account": "Создать новый аккаунт",
+		"password_recovery": "Восстановление пароля",
+		"continue": "Продолжать"
+	},
+	"topbar": {
+		"provably_fair":"Доказуемо честный",
+		"faq":"FAQ",
+		"term_of_service": "Условия обслуживания"
 	}
 }
