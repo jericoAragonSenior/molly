@@ -13,7 +13,8 @@
 		"vip": "VIP Club",
 		"bonuses": "Bonuses",
 		"leaderboard": "Leaderboard",
-		"notifications": "Notification"
+		"notifications": "Notification",
+		"item": "Item"
 	},
 	"livefeed": {
 		"title": "live drops",
@@ -72,5 +73,26 @@
 			"upgrades": "Upgrades",
 			"contracts": "Contracts"
 		}
+	},
+	"auth": {
+		"signin": "SignIn",
+		"signup": "SignUp",
+		"email_label": "email",
+		"password_label": "password",
+		"forget_password": "Forget Password",
+		"email_placeholder": "Enter your email",
+		"password_placeholder": "•••••••••••••",
+		"forget_pwd_btn_text": "Forgot your password?",
+		"sigin_btn_text": "Sign in",
+		"signup_btn_text": "Sign up",
+		"sigin_in_via_steam": "Sign in via Steam",
+		"create_new_account": "Create new account",
+		"password_recovery": "Password recovery",
+		"continue": "Continue"
+	},
+	"topbar": {
+		"provably_fair":"Provably Fair",
+		"faq":"FAQ",
+		"term_of_service": "Term of Services"
 	}
 }
