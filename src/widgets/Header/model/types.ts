@@ -7,3 +7,10 @@ export interface IHeaderNavItem {
 	label: string
 	icon: React.FC<React.SVGProps<SVGSVGElement>>
 }
+
+export interface ITopNavItem {
+	src: AppRoute,
+	label: string,
+	icon: React.FC<React.SVGProps<SVGSVGElement>>,
+	side: string
+}
