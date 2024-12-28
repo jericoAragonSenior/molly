@@ -30,6 +30,7 @@ export const ChatButton: FC = () => {
 	const breakpoints = useAppResponsive()
 
 	const chatViewHidden = useCommonStore(state => state.chatViewHidden)
+	const mobileRightBarState = useCommonStore(state => state.mobileRightBarState)
 	const setViewChatHidden = useCommonStore(state => state.setViewChatHidden)
 	const [active, setActive] = useState(!chatViewHidden)
 
@@ -47,7 +48,7 @@ export const ChatButton: FC = () => {
 					variant === 'active' && setActive(true)
 				}}
 				transition={{ duration: 0.2 }}
-				className={clsx(cls.btn_open_wrapper, active && cls.active)}
+				className={clsx(cls.btn_open_wrapper, active && cls.active, mobileRightBarState ? 'hidden' : 'flex')}
 			>
 				<Button
 					theme='gradient-outline-green-2'
