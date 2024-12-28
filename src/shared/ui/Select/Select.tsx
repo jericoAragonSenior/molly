@@ -7,6 +7,7 @@ import { VariantProps, tv } from 'tailwind-variants'
 import IconSelector2 from '@/shared/assets/icons/icon-arrow-down-2.svg'
 import IconSelector1 from '@/shared/assets/icons/icon-arrow-down.svg'
 import IconSelector3 from '@/shared/assets/icons/icon-arrow-top-down.svg'
+import IconSelector4 from '@/shared/assets/icons/icon-arrow-top.svg'
 import { fieldVariants } from '@/shared/config/ui/fieldVariants'
 
 import cls from './Select.module.sass'
@@ -19,12 +20,13 @@ const selectVariants = tv({
 	}
 })
 
-type SelectorIcon = '1' | '2' | '3'
+type SelectorIcon = '1' | '2' | '3' | '4'
 
 const selectorIconByType: Record<SelectorIcon, ReactNode> = {
 	'1': <IconSelector1 />,
 	'2': <IconSelector2 />,
-	'3': <IconSelector3 />
+	'3': <IconSelector3 />,
+	'4': <IconSelector4 />
 }
 
 export interface ISelectItem {
