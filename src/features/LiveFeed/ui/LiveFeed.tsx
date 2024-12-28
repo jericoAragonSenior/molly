@@ -58,7 +58,7 @@ export const LiveFeed: FC<LiveFeedProps> = ({ className, axis = 'y', title }) =>
 					className={cls.bar_btn}
 				/>
 			</div>
-			<div className={cls.track}>{items}</div>
+			<div className={clsx(cls.track)}>{items}</div>
 		</div>
 	)
 }
