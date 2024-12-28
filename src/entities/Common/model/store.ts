@@ -12,6 +12,9 @@ export interface IState {
 	fixedCaseToolbarInView: boolean
 	headerBarInView: boolean
 	signinState: boolean
+	headerState: number
+	mobileRightBarState: boolean
+	itemPosition: string
 }
 export interface IActions {
 	setChatHidden: (value: boolean) => void
@@ -21,6 +24,9 @@ export interface IActions {
 	setFixedCaseToolbarInView: (value: boolean) => void
 	setHeaderBarInView: (value: boolean) => void
 	setSigninState: (value: boolean) => void
+	setHeaderState: (value: number) => void
+	setMobileRightBarState: (value: boolean) => void
+	setItemPosition: (value: string) => void
 }
 
 export const initialState: IState = {
@@ -31,6 +37,9 @@ export const initialState: IState = {
 	fixedCaseToolbarInView: false,
 	headerBarInView: false,
 	signinState: false,
+	headerState: 0,
+	mobileRightBarState: false,
+	itemPosition: 'left'
 }
 
 export const useCommonStore = create<IState & IActions>()(
@@ -94,6 +103,30 @@ export const useCommonStore = create<IState & IActions>()(
 							},
 							undefined,
 							'SET_SIGN_IN_STATE'
+						),
+					setHeaderState: value =>
+						set(
+							state => {
+								state.headerState = value
+							},
+							undefined,
+							'SET_HEADER_STATE' 
+						),
+					setMobileRightBarState: value =>
+						set(
+							state => {
+								state.mobileRightBarState = value
+							},
+							undefined,
+							'SET_MOBILE_RIGHT_BAR_STATE' 
+						),
+					setItemPosition: value =>
+						set(
+							state => {
+								state.itemPosition = value
+							},
+							undefined,
+							'SET_ITEM_POSITION_STATE' 
 						),
 				}),
 				{
