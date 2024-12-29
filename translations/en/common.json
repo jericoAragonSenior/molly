@@ -94,5 +94,42 @@
 		"provably_fair":"Provably Fair",
 		"faq":"FAQ",
 		"term_of_service": "Term of Services"
+	},
+	"faq_bar": {
+		"replenishment": "Replenishment",
+		"bonuses": "Bonuses",
+		"cases": "Cases",
+		"items": "Items",
+		"processing": "Processing"
+	},
+	"faq_datas": {
+		"first":{
+			"title": "How do we work and why should you choose us?",
+			"content": "Our service may contain links to third-party web sites or services that are not owned or controlled by HYBETS.com. HYBETS.com has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that HYBETS.com shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services. We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit."
+		},
+		"second":{
+			"title": "How are we better than other similar sites?",
+			"content": "Our service may contain links to third-party web sites or services that are not owned or controlled by HYBETS.com. HYBETS.com has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that HYBETS.com shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services. We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit."
+		},
+		"third":{
+			"title": "How can I contact technical support personally?",
+			"content": "Our service may contain links to third-party web sites or services that are not owned or controlled by HYBETS.com. HYBETS.com has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that HYBETS.com shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services. We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit."
+		},
+		"forth":{
+			"title": "Is this legal?",
+			"content": "Our service may contain links to third-party web sites or services that are not owned or controlled by HYBETS.com. HYBETS.com has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that HYBETS.com shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services. We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit."
+		},
+		"fifth":{
+			"title": "How are we better than other similar sites?",
+			"content": "Our service may contain links to third-party web sites or services that are not owned or controlled by HYBETS.com. HYBETS.com has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that HYBETS.com shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services. We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit."
+		},
+		"sixth":{
+			"title": "How does replenishment of skins on a project work?",
+			"content": "Our service may contain links to third-party web sites or services that are not owned or controlled by HYBETS.com. HYBETS.com has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that HYBETS.com shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services. We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit."
+		},
+		"seventh":{
+			"title": "Is it safe to store money on the project?",
+			"content": "Our service may contain links to third-party web sites or services that are not owned or controlled by HYBETS.com. HYBETS.com has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that HYBETS.com shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services. We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit."
+		}
 	}
 }
