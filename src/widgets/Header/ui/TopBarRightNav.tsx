@@ -1,7 +1,6 @@
 "use client"
 
 import { Link, usePathname } from "@/shared/config/i18n/navigation";
-import { useTranslations } from "next-intl";
 import { topbarNavItmes } from "../model/items";
 import clsx from "clsx";
 
@@ -15,7 +14,6 @@ interface TopBarRightNavProps {
 
 
 const TopBarRightNav: FC<TopBarRightNavProps> = ({ className }) => {
-    const t = useTranslations()
     const pathname = usePathname()
 
     return (
