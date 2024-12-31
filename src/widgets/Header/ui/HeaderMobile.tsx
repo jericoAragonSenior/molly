@@ -57,6 +57,7 @@ export const HeaderMobile: FC<HeaderMobileProps> = ({ className }) => {
 				</div>
 				<HeaderBar />
 				<Button
+					disableAnimation
 					onPress={() => { setMobileRightBarState(!rightBarState); setRightBarState(!rightBarState) }}
 					className={clsx('w-[30px] h-[30px] transition-transform animate-pulse duration-500 ease-in-out rotate-0 transform', rightBarState ? "rotate-180" : "rotate-0")}>
 					<IconItem />
