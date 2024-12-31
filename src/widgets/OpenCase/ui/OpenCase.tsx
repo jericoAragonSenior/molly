@@ -1,5 +1,4 @@
 import clsx from 'clsx'
-import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { FC } from 'react'
 
@@ -16,7 +15,6 @@ interface OpenCaseProps {
 }
 
 export const OpenCase: FC<OpenCaseProps> = ({ className }) => {
-	const t = useTranslations()
 	return (
 		<div className={clsx(cls.base, className)}>
 			<div className={cls.title}>Beach Season</div>
