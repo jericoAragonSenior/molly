@@ -17,6 +17,7 @@ import Button from '@/shared/ui/Button/Button'
 import { ButtonHexSquare } from '@/shared/ui/ButtonHexSquare/ButtonHexSquare'
 
 import cls from './HeaderSettings.module.sass'
+import { useCommonStore } from '@/entities/Common/model/store'
 
 interface HeaderSettingsProps {
 	className?: string
@@ -25,7 +26,13 @@ interface HeaderSettingsProps {
 export const HeaderSettings: FC<HeaderSettingsProps> = ({ className }) => {
 	const t = useTranslations()
 
+	const setSigninState = useCommonStore(state => state.setSigninState)
+
 	const breakpoints = useAppResponsive()
+
+	const logOut = () => {
+		setSigninState(false)
+	}
 
 	return (
 		<Popover
@@ -72,6 +79,7 @@ export const HeaderSettings: FC<HeaderSettingsProps> = ({ className }) => {
 								theme='gradient-red-2'
 								startContent={<IconLogout />}
 								classNames={{ base: cls.btn, content: cls.btn_content }}
+								onPress={logOut}
 							>
 								{t('settings.logout')}
 							</Button>
