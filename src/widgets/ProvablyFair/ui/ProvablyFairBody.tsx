@@ -142,13 +142,11 @@ const ProvablyFairBody = () => {
                         />
                     </div>
                     <div className="flex relative justify-center">
-                        <div className="relative w-auto h-full hover:cursor-pointer">
-                            <span className="text-[#121722] text-[14px] uppercase font-[900] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+                        <div className="relative w-full h-full sm:w-auto flex justify-center hover:cursor-pointer">
+                            <span className="text-[#121722] text-center w-full text-[14px] uppercase font-[900] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
                                 {t('fair_footer.show_result')}
                             </span>
-                            <div>
-                                <SvgFooterBtn />
-                            </div>
+                            <SvgFooterBtn />
                         </div>
 
                     </div>
