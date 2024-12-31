@@ -9,9 +9,7 @@ import { Link } from '@/shared/config/i18n/navigation'
 
 import { HeaderBar } from './HeaderBar'
 import Button from '@/shared/ui/Button/Button'
-import { useTranslations } from 'next-intl'
 
-import cls from './Header.module.sass'
 import IconItem from '@/shared/assets/icons/icon-item.svg'
 import { HeaderLiveKeed } from '@/features/LiveFeed/ui/HeaderLiveKeed'
 import { useCommonStore } from '@/entities/Common/model/store'
@@ -22,7 +20,6 @@ interface HeaderMobileProps {
 
 export const HeaderMobile: FC<HeaderMobileProps> = ({ className }) => {
 
-	const t = useTranslations()
 
 	const setMobileRightBarState = useCommonStore(state => state.setMobileRightBarState)
 	const mobileRightBarState = useCommonStore(state => state.mobileRightBarState)
