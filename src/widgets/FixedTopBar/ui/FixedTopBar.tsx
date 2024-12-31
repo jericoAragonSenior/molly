@@ -64,7 +64,7 @@ export const FixedTopBar: FC<FixedTopBarProps> = ({ className }) => {
 					right: window.innerWidth - (holderRef.current?.getBoundingClientRect().right ?? holderWidth),
 					maxWidth: holderWidth
 				}}
-				className={clsx('fixed top-14 z-[100] flex items-start justify-end gap-4', className, {
+				className={clsx('fixed top-4 z-[100] flex items-start justify-end gap-4', className, {
 					['top-[-200px] duration-500']: headerBarInView,
 					['w-full']: fixedCaseToolbarInView
 				})}
