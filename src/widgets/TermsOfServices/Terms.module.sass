@@ -1,0 +1,30 @@
+.fnav
+  border-radius: 12px
+  border: 1px solid #21293C
+  display: flex
+  flex-direction: column
+  &_item
+    padding: 20px 10px
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 6px
+    color: #2F374A
+    transition: color 0.3s
+    &:hover
+      @apply text-text-primary
+      svg
+        @apply fill-text-primary
+    &:not(&:last-child)
+      border-bottom: 1px solid #21293C
+    &_icon
+      flex-shrink: 0
+      width: 24px
+      height: 24px
+      svg
+        width: 100%
+        height: 100%
+        fill: #2F374A
+        transition: fill 0.3s
+    &_label
+      font-size: 12px
