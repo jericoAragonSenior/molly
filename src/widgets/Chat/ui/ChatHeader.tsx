@@ -2,7 +2,6 @@
 
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
-import { FC } from 'react'
 
 import { useCommonStore } from '@/entities/Common/model/store'
 
@@ -14,11 +13,8 @@ import { useAppResponsive } from '@/shared/lib/useResponsive'
 
 import cls from './Chat.module.sass'
 
-interface ChatHeaderProps {
-	className?: string
-}
 
-export const ChatHeader: FC<ChatHeaderProps> = ({ className }) => {
+export const ChatHeader = () => {
 	const t = useTranslations()
 	const breakpoints = useAppResponsive()
 	const setViewChatHidden = useCommonStore(state => state.setViewChatHidden)
