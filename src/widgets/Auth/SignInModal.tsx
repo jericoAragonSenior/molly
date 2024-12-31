@@ -9,19 +9,23 @@ import IconStream from "@/shared/assets/icons/icon-steam-logo.svg"
 import { FC, useState } from "react";
 import { useTranslations } from "next-intl";
 import Button from "@/shared/ui/Button/Button";
+import { useCommonStore } from "@/entities/Common/model/store";
 
 interface SignInModalProps {
     onClickSignUp: () => void,
     onClickForgetPassword: () => void
+    onClickSignIn: () => void
 }
 
 
-const SignInModal: FC<SignInModalProps> = ({ onClickSignUp, onClickForgetPassword }) => {
+const SignInModal: FC<SignInModalProps> = ({ onClickSignUp, onClickForgetPassword, onClickSignIn }) => {
 
     const t = useTranslations()
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+
 
     return (
         <div className={clsx(cls.modal, 'py-6')}>
@@ -70,6 +74,7 @@ const SignInModal: FC<SignInModalProps> = ({ onClickSignUp, onClickForgetPasswor
                             content: [cls.btn_content, cls.bg_gradent_gray, cls.border_gradent, 'text-black py-4 border-none'],
                             base: ["w-full", cls.border_r_12]
                         }}
+                        onPress={onClickSignIn}
                     >
                         <span className="font-[900] text-[14px] text-[rgba(21, 26, 38, 1)]">
                             {t('auth.sigin_btn_text')}
