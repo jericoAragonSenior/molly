@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import Image from 'next/image'
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 
 import { HeaderNotifications } from '@/features/HeaderNotifications/ui/HeaderNotifications'
 import { HeaderSettings } from '@/features/HeaderSettings/ui/HeaderSettings'
@@ -12,10 +12,17 @@ import IconLevelFrame from '@/shared/assets/icons/icon-level-frame-header.svg'
 import IconAvatarFrame from '@/shared/assets/icons/icon-user-avatar-frame.svg'
 import AvatarExample from '@/shared/assets/user-avatar-example.png'
 import { Media } from '@/shared/ui/Media/Media'
+import IconSignIn from '@/shared/assets/icons/icon-signin.svg'
+import HeaderIcon from '@/shared/assets/icons/icon-auth.svg'
 
 import cls from './Header.module.sass'
 
 import { useCommonStore } from '@/entities/Common/model/store'
+import { useTranslations } from 'next-intl'
+import SignInModal from '@/widgets/Auth/SignInModal'
+import { useModal } from '@/shared/context/ModalContext'
+import SignUpModal from '@/widgets/Auth/SignUpModal'
+import ForgetPassword from '@/widgets/Auth/ForgetPasswordModal'
 
 
 interface HeaderBarContentProps {
@@ -24,10 +31,63 @@ interface HeaderBarContentProps {
 
 export const HeaderBarContent: FC<HeaderBarContentProps> = ({ className }) => {
 
+	const t = useTranslations()
 
 	const signinState = useCommonStore(state => state.signinState)
+	const setSigninState = useCommonStore(state => state.setSigninState)
 
 	const [isSignin, setIsSignin] = useState(signinState);
+
+	const { openModal } = useModal();
+	const { closeModal } = useModal();
+
+	const signIn = () => {
+		setSigninState(true)
+		closeModal();
+	}
+
+	const signInModal = () => {
+		openModal(
+			<SignInModal onClickForgetPassword={foregetPassword} onClickSignUp={signUpModal} onClickSignIn={signIn} />,
+			{},
+			<HeaderIcon />,
+			t('auth.sigin_btn_text'),
+			{
+				body: '',
+				modal: 'relative w-full lg:h-full h-screen flex lg:items-start justify-center items-center'
+			}
+		);
+	};
+
+	const signUpModal = () => {
+		openModal(
+			<SignUpModal onClickSignIn={signInModal} />,
+			{},
+			<HeaderIcon />,
+			t('auth.signup_btn_text'),
+			{
+				body: '',
+				modal: 'relative w-full lg:h-full h-screen flex lg:items-start justify-center items-center'
+			}
+		);
+	}
+
+	const foregetPassword = () => {
+		openModal(
+			<ForgetPassword />,
+			{},
+			<HeaderIcon />,
+			t('auth.password_recovery'),
+			{
+				body: '',
+				modal: 'relative w-full lg:h-full h-screen flex justify-center items-center'
+			}
+		);
+	}
+
+	useEffect(() => {
+		setIsSignin(signinState)
+	}, [signinState])
 
 
 	return (
@@ -72,10 +132,28 @@ export const HeaderBarContent: FC<HeaderBarContentProps> = ({ className }) => {
 				</div>
 			</div>
 			:
-			<Media greaterThanOrEqual='lg'>
-				<div className={clsx(cls.settings)}>
-					<SignIn />
+			<div className={clsx(className, 'flex items-center', cls.bar)} onClick={signInModal}>
+
+				<div
+					className={clsx(
+						cls.avatar_wrapper,
+						'ml-2 relative z-[1] shrink-0 w-[58px] h-[58px] flex items-center justify-center cursor-pointer'
+					)}
+				>
+					<IconAvatarFrame
+						className={clsx(
+							cls.avatar_frame,
+							'absolute z-[2] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full'
+						)}
+					/>
+					<div className={clsx(cls.avatar_pic, 'relative z-[1] flex justify-center items-center')}>
+						<IconSignIn
+							width={30}
+							height={30}
+							className="fill-white"
+						/>
+					</div>
 				</div>
-			</Media>
+			</div>
 	)
 }
