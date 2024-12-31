@@ -100,7 +100,8 @@
 		"bonuses": "Bonuses",
 		"cases": "Cases",
 		"items": "Items",
-		"processing": "Processing"
+		"processing": "Processing",
+		"title": "Find the question you are interested in and get a quick answer."
 	},
 	"faq_datas": {
 		"first":{
@@ -131,5 +132,83 @@
 			"title": "Is it safe to store money on the project?",
 			"content": "Our service may contain links to third-party web sites or services that are not owned or controlled by HYBETS.com. HYBETS.com has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that HYBETS.com shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services. We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit."
 		}
+	},
+	"support_datas": {
+		"title": "Ask your question in a ticket to our specialists.",
+		"new_ticket": "New Ticket"
+		
+	},
+	"support_chat_header": {
+		"id_ticket": "ID Ticket",
+		"subject_of_appeal": "Subject of the appeal",
+		"last_update": "Last Update",
+		"status_of_the_req": "Status of the request",
+		"ticket_closed": "Ticket closed",
+		"problem_with_receiving_money": "Problem with receiving money",
+		"consideration": "Under consideration",
+		"response_from_support": "Response from support"
+	},
+	"create_new_ticket": {
+		"create_ticket": "Create ticket",
+		"select_problem": "Select a problem",
+		"subject": "Subject",
+		"describe": "Describe your problem",
+		"subject_placeholder": "Enter subject",
+		"issue_with_withdraw": "Issue with withdraw",
+		"max_size": "Max 64MB"
+	},
+	"provably_fair_header": {
+		"title": "Povably fair",
+		"description": "Find the question you are interested in and get a quick answer."
+	},
+	"fair_list": {
+		"review": "Review",
+		"implementation": "Implementation",
+		"conversion": "Conversion",
+		"game_events": "Game events",
+		"decoding": "Decoding",
+		"calculation": "Calculation"
+	},
+	"fair_body_data1": {
+		"title": "How are game results generated fairly?",
+		"footer": "e850222d-ec90-46e9-a69d-7d483ff8a2f9:2.00:ef6e64a9-8c8b-49f4-8304-fdd4dd030cbf:4.00",
+		"content1": "Our system uses a local random seed plus a random seed from a reputable 3rd party (RANDOM.ORG). By doing this, you are able to see the exact seed we request from Random.org, which will match up with the game's end time (when the game will roll).",
+		"content2": "This system makes it impossible for anyone, including us or the third party, to predict the winning outcome and makes each round provable and legitimate."
+	},
+	"fair_body_data2": {
+		"title": "Brief technical overview",
+		"content": "When a game is started, we create the local random seed. We hash it and show it to you before the game rolls (under the players). You are able to use the hash to verify that the local random seed remained unchanged throughout the game. Here is a code snippet of how it works."
+	},
+	"fair_footer": {
+		"seed": "Seed",
+		"verification": "Verification",
+		"game": "Game",
+		"client_seed": "Cleint seed",
+		"server_seed": "Server seed",
+		"show_result": "Show result"
+	},
+	"fair_footer_select": {
+		"mine": "Mine",
+		"game": "Game"
+	},
+	"terms_data":{
+		"title": "Terms of services",
+		"description": "Find the question you are interested in and get a quick answer."
+	},
+	"terms_content": {
+		"title": "No person below the age of eighteen (18) may use the Service, regardless of your parent or guardian's consent to use the Service. For access the Service you will need a registered Web browser. You acknowledge and agree that HYBETS.com may cease supporting a given Web browser and will require you to download a supported Web browser for your continued use of the Service. You further accept and recognize that the Service's output is the duty of operating the computer equipment and connecting to the Internet. You agree that you are responsible for all activities that take place on your account or through the use of your password by yourself or others. When you think a third party has access to your password, change your password and activate Two Factor Authenticator for the best account security.",
+		"license": "License grant",
+		"content1": "1.1. HYBETS grants you a limited, non-transferable, royalty-free license to use the Service in accordance with the terms of this agreement.",
+		"content2": "1.2. You are (i) aged 18 or over, (ii) you are of the age of majority in your jurisdiction, (iii) you are accessing the Service from a jurisdiction in which it is legal to do so, (iv) You are not currently self-excluded from any gambling site or gambling premises, and (v) That you will inform HYBETS immediately if you enter into a self-exclusion agreement with Any gambling provider.",
+		"content3": "1.3. You are under no legal disability that would prevent you from forming a binding contract with us. 1.4. HYBETS and its licensors are the sole holders of all rights in and to the Service and code, structure and organization, including copyright, trade secrets, intellectual property and other rights. You may not, within the limits prescribed by applicable laws: (a) copy, distribute, publish, reverse engineer, decompile, disassemble, modify, or translate the website; or (b) use the Service in a manner prohibited by applicable laws or regulations (each of the above is an 'Unauthorized Use').",
+		"result1": "As a condition to your use of the Service, you agree not to:",
+		"result2": "Impersonate or misrepresent your affiliation with any person or entity;",
+		"result3": "Access, tamper with, or use any non-public areas of the Service or HYBETS.com's computer systems;",
+		"result4": "The Service is intended solely for the User’s personal use. The User is only allowed to wager for his/her personal entertainment and may not create multiple accounts, including for the purpose of collusion and/or abuse of service.",
+		"result5": "HYBETS may not be used for illegal or unauthorized purposes and you must abide completely by the laws, rules, and regulations that apply to you. Whether that be federal, state, or local laws.",
+		"result6": "Attempt to probe, scan, or test the vulnerability of the Service or any related system or network or breach any security or authentication measures used in connection with the Service and such systems and networks;",
+		"result7": "Persons located in or residents of the United States, Australia, Aruba, Bonaire, Curaçao, Cyprus, France, Netherlands, Saba, Statia, Iran, or St Martin (the ”Prohibited Jurisdictions”) are not permitted to make use of the Service. For the avoidance of doubt, the foregoing restrictions on Engaging in real-money play from Prohibited Jurisdictions applies equally to residents and Citizens of other nations while located in a Prohibited Jurisdiction. Any attempt to Circumvent the restrictions on play by any persons located in a Prohibited Jurisdiction or Restricted Jurisdiction, is a breach of this Agreement. An attempt at circumvention Includes, but is not limited to, manipulating the information used by HYBETS to identify your location and providing HYBETS with false or misleading information regarding your location or place of residence.",
+		"result8": "Harm or threaten to harm other users in any way or interfere with, or attempt to interfere with, the access of any user, host or network, including without limitation, by sending a virus, overloading, flooding, spamming, or mail-bombing the Service;",
+		"result9": "Use the Service in an abusive way contrary to its intended use, to HYBETS.com policies and instructions and to any applicable law;"
 	}
 }
