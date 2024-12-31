@@ -1,5 +1,4 @@
 import clsx from 'clsx'
-import { useTranslations } from 'next-intl'
 import { FC } from 'react'
 
 import cls from './CaseCardView.module.sass'
@@ -23,7 +22,6 @@ export const CaseBadge: FC<CaseBadgeProps> = ({
 	badgeTheme,
 	className
 }) => {
-	const t = useTranslations()
 	return (
 		<div className={clsx(cls.badge, cls[badgeTheme || 'default'], cls[badgeMode || ''], className)}>
 			<div className={cls.badge_inner}>
