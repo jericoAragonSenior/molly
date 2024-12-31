@@ -4,7 +4,6 @@ import { FC, useEffect, useState } from 'react'
 
 import { HeaderNotifications } from '@/features/HeaderNotifications/ui/HeaderNotifications'
 import { HeaderSettings } from '@/features/HeaderSettings/ui/HeaderSettings'
-import { SignIn } from './SingIn'
 
 import { Balance } from '@/entities/Balance/ui/Balance'
 
