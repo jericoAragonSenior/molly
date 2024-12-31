@@ -16,7 +16,6 @@ import { Media } from '@/shared/ui/Media/Media'
 import cls from './Header.module.sass'
 
 import { useCommonStore } from '@/entities/Common/model/store'
-import { useTranslations } from 'next-intl'
 
 
 interface HeaderBarContentProps {
@@ -25,7 +24,6 @@ interface HeaderBarContentProps {
 
 export const HeaderBarContent: FC<HeaderBarContentProps> = ({ className }) => {
 
-	const t = useTranslations()
 
 	const signinState = useCommonStore(state => state.signinState)
 
