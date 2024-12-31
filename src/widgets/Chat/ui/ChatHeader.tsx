@@ -8,7 +8,7 @@ import { useCommonStore } from '@/entities/Common/model/store'
 import IconAngleRight from '@/shared/assets/icons/icon-angle-right-grey.svg'
 import IconChat from '@/shared/assets/icons/icon-chat-grey.svg'
 import IconChatUsers from '@/shared/assets/icons/icon-chat-users.svg'
-import IconClose from '@/shared/assets/icons/icon-close.svg'
+import IconClose from '@/shared/assets/icons/icon-close-circle.svg'
 import { useAppResponsive } from '@/shared/lib/useResponsive'
 
 import cls from './Chat.module.sass'
@@ -42,7 +42,7 @@ export const ChatHeader = () => {
 				onClick={() => setViewChatHidden(true)}
 				className={cls.btn_close}
 			>
-				{breakpoints.lg ? <IconAngleRight className='w-[18px] h-[18px]' /> : <IconClose className='w-2 h-2' />}
+				{breakpoints.lg ? <IconAngleRight className='w-[18px] h-[18px]' /> : <IconClose className='w-[20px] h-[20px] fill-[#404F71] stroke-[#10AA7C]' />}
 			</button>
 		</div>
 	)
