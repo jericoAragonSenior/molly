@@ -30,7 +30,6 @@ const DesktopLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <div className='layout-main relative z-[0] grid grid-cols-[auto_1fr_auto] lg:block lg:pb-[70px]'>
             <div className='lg:layout-main__inner  lg:grid-rows[auto-1fr]'>
-                <TopBar />
                 <div className='layout-main grid grid-cols-[auto_1fr_auto]'>
                     <Sidebar />
                     {
@@ -44,7 +43,7 @@ const DesktopLayout = ({ children }: { children: React.ReactNode }) => {
                             </Client>
                             <Header className='px-[40px] lg:pl-5 lg:pr-6 md:pr-3' />
                             {
-                                itemPosition == "center" &&
+                                itemPosition == "center" && pathname != '/' &&
                                 <MainLiveFeed className='mt-3 pl-[40px] lg:pl-5 md:pl-3' />
                             }
                             <div className='w-screen'></div>
