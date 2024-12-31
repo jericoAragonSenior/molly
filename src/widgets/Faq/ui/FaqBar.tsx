@@ -4,7 +4,7 @@
 import { useAppResponsive } from '@/shared/lib/useResponsive';
 import { faqBarItems } from '../model/items';
 import FaqBarItem from './FaqBarItem';
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { Swiper, SwiperSlide, SwiperRef } from 'swiper/react'
 
 import 'swiper/css'
 import cls from './Faq.module.sass'
@@ -20,7 +20,7 @@ const FaqBar = () => {
     const breakpoints = useAppResponsive()
 
     const [swiperIndex, setSwiperIndex] = useState<number>(0)
-    const swiperRef = useRef(null)
+    const swiperRef = useRef<SwiperRef>(null)
 
     const slides = faqBarItems.map((item, index) => (
         <SwiperSlide
@@ -32,14 +32,14 @@ const FaqBar = () => {
 
     const nextSwiper = () => {
         if (swiperRef.current) {
-            swiperRef.current.swiper.slideNext();
+            swiperRef.current?.swiper.slideNext();
             setSwiperIndex(swiperIndex == faqBarItems.length - 1 ? swiperIndex : swiperIndex + 1)
         }
     }
 
     const prevSwiper = () => {
         if (swiperRef.current) {
-            swiperRef.current.swiper.slidePrev();
+            swiperRef.current?.swiper.slidePrev();
             setSwiperIndex(swiperIndex == 0 ? swiperIndex : swiperIndex - 1)
         }
     }
