@@ -1,5 +1,3 @@
-import { useTranslations } from 'next-intl'
-import { getTranslations } from 'next-intl/server'
 
 import { CasesSection } from '@/widgets/CasesSection/ui/CasesSection'
 import { Giveaway } from '@/widgets/Giveaway/ui/Giveaway'
