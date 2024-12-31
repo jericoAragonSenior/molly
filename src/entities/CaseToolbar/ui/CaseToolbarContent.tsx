@@ -1,5 +1,5 @@
 import { PriceRange, Type, initialState, useCasesToolbarStore } from '../model/store'
-import { SliderValue } from '@nextui-org/react'
+import { Link, SliderValue } from '@nextui-org/react'
 import { useDebounceFn } from 'ahooks'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
@@ -17,6 +17,8 @@ import { Select } from '@/shared/ui/Select/Select'
 import { Slider } from '@/shared/ui/Slider/Slider'
 
 import cls from './CaseToolbar.module.sass'
+import { headerNavItems } from '@/widgets/Header/model/items'
+import { usePathname } from '@/shared/config/i18n/navigation'
 
 interface CaseToolbarContentProps {
 	className?: string
@@ -53,6 +55,7 @@ const modeList = [
 
 export const CaseToolbarContent: FC<CaseToolbarContentProps> = ({ className }) => {
 	const t = useTranslations()
+	const pathname = usePathname()
 
 	const [viewType, setViewType] = useState<Type>(initialState.type)
 	const [viewSearch, setViewSearch] = useState<string>(initialState.search)
@@ -84,6 +87,22 @@ export const CaseToolbarContent: FC<CaseToolbarContentProps> = ({ className }) =
 
 	return (
 		<div className={clsx(cls.grid, className)}>
+			<div className={clsx('flex gap-4 mx-4', cls.nav)}>
+				{headerNavItems.map(item => (
+					<Link
+						title={t(item.label)}
+						href={item.src}
+						key={item.src}
+						className={clsx(cls.item, {
+							[cls.active]: pathname === item.src
+						})}
+					>
+						<div className={clsx(cls.item_icon, 'w-[18px] h-[18px]')}>
+							<item.icon />
+						</div>
+					</Link>
+				))}
+			</div>
 			<div className={cls.btn_group}>
 				<Button
 					theme='grey-3'
