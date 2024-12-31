@@ -25,7 +25,7 @@ const MobileLayout = ({ children }: { children: React.ReactNode }) => {
                     <Client>
                         <FixedTopBar className='px-10' />
                     </Client>
-                    <Header className='px-[40px] lg:pl-5 lg:pr-6 md:pr-3' />
+                    <Header className='px-[40px] lg:pl-5 lg:pr-6 md:pr-3 sm:pr-1 sm:pl-2 sm:gap-0' />
                     <main className='layout-main__page'>
                         <Suspense fallback={<Loading />}>{children}</Suspense>
                     </main>
