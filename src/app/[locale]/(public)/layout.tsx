@@ -1,6 +1,6 @@
 "use client"
 
-import React, { Suspense } from 'react'
+import React from 'react'
 
 
 import { useAppResponsive } from '@/shared/lib/useResponsive'
