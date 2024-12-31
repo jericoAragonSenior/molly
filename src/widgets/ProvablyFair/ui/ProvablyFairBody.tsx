@@ -57,7 +57,7 @@ const ProvablyFairBody = () => {
             <div className={clsx("w-auto h-auto fixed top-[85px] left-3 md:flex hidden z-[46] p-2 rounded-md  duration-150 transform", isShow && cls.rotateX)} onClick={showHeader}>
                 <IconDoubleArrow className="w-6 h-6 fill-[#24FDBC]" />
             </div>
-            <div className={clsx("min-w-[237px] h-full sticky lg:top-[100px] top-[10px] duration-150 z-[45] md:fixed md:h-auto md:max-w-0 md:min-w-0 md:overflow-hidden", isShow && "!min-w-[237px] transition-all")}>
+            <div className={clsx("min-w-[237px] h-full sticky top-[100px] md:top-[10px] duration-150 z-[45] md:fixed md:h-auto md:max-w-0 md:min-w-0 md:overflow-hidden", isShow && "!min-w-[237px] transition-all")}>
                 <List items={listItems} />
             </div>
             <div className="flex flex-col gap-4 w-full px-4 flex-1 h-auto">
