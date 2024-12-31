@@ -21,16 +21,16 @@ export const SignIn = () => {
     const t = useTranslations()
 
     const signInModal = () => {
-        openModal(
-            <SignInModal onClickForgetPassword={foregetPassword} onClickSignUp={signUpModal} />,
-            {},
-            <HeaderIcon />,
-            t('auth.sigin_btn_text'),
-            {
-                body: '',
-                modal: 'relative w-full lg:h-full h-screen flex lg:items-start justify-center items-center'
-            }
-        );
+        // openModal(
+        //     <SignInModal onClickForgetPassword={foregetPassword} onClickSignUp={signUpModal} />,
+        //     {},
+        //     <HeaderIcon />,
+        //     t('auth.sigin_btn_text'),
+        //     {
+        //         body: '',
+        //         modal: 'relative w-full lg:h-full h-screen flex lg:items-start justify-center items-center'
+        //     }
+        // );
     };
 
     const signUpModal = () => {
