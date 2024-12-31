@@ -9,7 +9,6 @@ import React, { FC, useRef } from 'react'
 import { CaseCard } from '@/entities/CaseCard/ui/CaseCard'
 
 import HeaderBg from '@/shared/assets/section-header-bg.svg'
-import { useAppResponsive } from '@/shared/lib/useResponsive'
 
 import cls from './CasesSection.module.sass'
 
@@ -23,7 +22,6 @@ export const CasesSection: FC<CasesSectionProps> = ({ className, categoryKey, ba
 	const barRef = useRef(null)
 	const barSize = useSize(barRef)
 
-	const breakpoints = useAppResponsive()
 
 	if (!categoryKey) {
 		return <div>The selected case category does not exist</div>
