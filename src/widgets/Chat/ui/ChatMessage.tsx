@@ -14,6 +14,7 @@ interface ChatMessageProps {
 	message?: string
 	type?: MessageType
 	timestamp: string
+	titleClass?: string
 }
 
 interface ThemeConfig {
@@ -44,7 +45,8 @@ export const ChatMessage: FC<ChatMessageProps> = ({
 	avatarUrl,
 	message,
 	type = 'default',
-	timestamp
+	timestamp,
+	titleClass
 }) => {
 	return (
 		<div className={clsx(cls.base, className, cls[type])}>
@@ -105,7 +107,7 @@ export const ChatMessage: FC<ChatMessageProps> = ({
 				<div className='grow'>
 					<div className='flex items-center justify-between gap-2.5'>
 						<div className='flex items-center flex-wrap gap-2.5'>
-							<div className={cls.name}>{name}</div>
+							<div className={clsx(cls.name, titleClass)}>{name}</div>
 							{type === 'admin' && <div className={cls.tag}>Admin</div>}
 						</div>
 						<div className={cls.time}>{timestamp}</div>
