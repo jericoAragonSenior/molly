@@ -22,13 +22,9 @@ export const MainNews: FC<MainNewsProps> = ({ className }) => {
 
 	useEffect(() => {
 		setItemPosition("center")
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
-	useEffect(() => {
-		if (breakpoints?.['lg']) {
-			setItemPosition("center")
-		}
-	}, [breakpoints])
 
 	const slides = newsList.map(item => (
 		<SwiperSlide
