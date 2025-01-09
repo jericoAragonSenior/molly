@@ -3,10 +3,12 @@
 import { problems } from '../model/item'
 import { Selection } from '@nextui-org/react'
 import { useLocale, useTranslations } from 'next-intl'
+
+import { FC } from 'react'
+
 import React from 'react'
 
 import { ISelectItem, Select } from '@/shared/ui/Select/Select'
-
 
 
 const SelectProblem = () => {
