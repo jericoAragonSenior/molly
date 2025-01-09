@@ -21,7 +21,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
 
 	return (
 		<Media greaterThanOrEqual='lg'>
-			<aside className={clsx(className, 'w-[136px] xl:w-[110px] h-[calc(100vh-48px)] py-6 px-1 flex flex-col bg-[#141925]')}>
+			<aside className={clsx(className, 'w-[136px] xl:w-[110px] h-screen py-6 px-1 flex flex-col bg-[#141925]')}>
 				<div className={clsx(cls.sb_body, 'grow px-5 xl:px-2 mb-3')}>
 					<button
 						type='button'
