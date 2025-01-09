@@ -11,7 +11,7 @@ const CountCases = () => {
 
 
     const caseCount = useCommonStore(state => state.caseCount)
-    
+
 
     // For case count
     const [caseCountState, setCaseCountState] = useState<number>(caseCount);
@@ -32,13 +32,13 @@ const CountCases = () => {
                         <div className={clsx("w-[4px] bg-[#FFC600] h-full absolute", cls.center, cls.pointer_shadow)}>
                         </div>
                     </div>
-                       
-                    )]
-                    
-                
+
+                )]
+
+
                 setCases(newCase1)
                 break;
-        
+
             case 2:
 
                 let newCase2 = []
@@ -53,12 +53,12 @@ const CountCases = () => {
                         </div>
                     )
                 }
-                 
+
 
                 setCases(newCase2);
-                
+
                 break;
-            
+
             case 3:
                 let newCase3 = []
                 for (let i = 0; i < 3; i++) {
@@ -74,9 +74,9 @@ const CountCases = () => {
                 }
 
                 setCases(newCase3);
-                
+
                 break;
-            
+
             case 4:
                 let newCase4 = []
                 for (let i = 0; i < 4; i++) {
@@ -92,7 +92,7 @@ const CountCases = () => {
                 }
 
                 setCases(newCase4);
-                
+
                 break;
 
             case 5:
@@ -110,9 +110,9 @@ const CountCases = () => {
                 }
 
                 setCases(newCase5);
-                
+
                 break;
-            
+
             case 10:
                 let newCase10 = []
                 for (let i = 0; i < 10; i++) {
@@ -128,9 +128,9 @@ const CountCases = () => {
                 }
 
                 setCases(newCase10);
-                
+
                 break;
-            
+
             default:
                 break;
 
@@ -140,8 +140,10 @@ const CountCases = () => {
     return (
         <div className="w-full h-auto flex justify-center gap-3 items-center flex-wrap">
             {
-                cases.map(item =>
-                    item
+                cases.map((item, index) =>
+                    <div key={index} className="w-auto h-auto">
+                        {item}
+                    </div>
                 )
             }
         </div>
