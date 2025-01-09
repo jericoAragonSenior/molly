@@ -12,9 +12,10 @@ import { CaseToolbarContent } from './CaseToolbarContent'
 interface CaseToolbarProps {
 	className?: string
 	withContainer?: boolean
+	isHeader?: boolean
 }
 
-export const CaseToolbar: FC<CaseToolbarProps> = ({ className, withContainer = true }) => {
+export const CaseToolbar: FC<CaseToolbarProps> = ({ className, withContainer = true, isHeader = true }) => {
 	const baseRef = useRef<HTMLDivElement>(null)
 
 	const [inViewport] = useInViewport(baseRef)
@@ -39,7 +40,7 @@ export const CaseToolbar: FC<CaseToolbarProps> = ({ className, withContainer = t
 		>
 			<div className={cls.wrapper}>
 				<div className={cls.inner}>
-					<CaseToolbarContent />
+					<CaseToolbarContent isHeader={isHeader} />
 				</div>
 			</div>
 		</div>
