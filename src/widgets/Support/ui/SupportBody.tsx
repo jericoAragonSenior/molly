@@ -1,4 +1,7 @@
+
 "use client"
+
+
 
 import Collapse from "@/shared/ui/Collapse/Collapse";
 import IconChat from '@/shared/assets/icons/icon-chat.svg'
@@ -13,7 +16,10 @@ import cls from './Support.module.sass'
 
 import { supportItems } from "../model/item";
 import { useTranslations } from "next-intl";
+
 import { useCommonStore } from "@/entities/Common/model/store";
+
+
 
 interface SupportBodyContentProps {
     messagesList: IChatMessage[]
@@ -30,6 +36,7 @@ interface SupportBodyHeaderProps {
 const SupportBodyHeader = ({ tikcetNumber, subjectOfAppeal, lastUpdate, responseType, response }: SupportBodyHeaderProps) => {
 
     const t = useTranslations();
+
     const chatViewHidden = useCommonStore(state => state.chatViewHidden)
 
 
@@ -42,7 +49,8 @@ const SupportBodyHeader = ({ tikcetNumber, subjectOfAppeal, lastUpdate, response
                     <span className="text-[#D1D9EB] font-[500] text-[15px]">{tikcetNumber}</span>
                 </div>
                 <div className={clsx("flex flex-col gap-2 md:hidden", !chatViewHidden && "hidden")}>
-                    <span className="text-[#545778] text-[13px] font-[500]">{t('support_chat_header.subject_of_appeal')}</span>
+
+                   <span className="text-[#545778] text-[13px] font-[500]">{t('support_chat_header.subject_of_appeal')}</span>
                     <span className="text-[#D1D9EB] font-[500] text-[15px]">{subjectOfAppeal}</span>
                 </div>
                 <div className="flex flex-col gap-2 md:hidden">
@@ -51,7 +59,10 @@ const SupportBodyHeader = ({ tikcetNumber, subjectOfAppeal, lastUpdate, response
                 </div>
                 <div className="flex flex-col gap-2">
                     <span className="text-[#545778] text-[13px] font-[500] md:hidden">{t('support_chat_header.status_of_the_req')}</span>
+
                     <span className="flex gap-3 md:gap-2">
+
+
                         <IconMessage
                             className={clsx(
                                 responseType === "response" && "fill-[#24FDBC]",
@@ -118,7 +129,7 @@ const SupportBody = () => {
                         tikcetNumber={item.ticketNumber}
                         subjectOfAppeal={item.subjectOfAppeal}
                         lastUpdate={item.lastUpdate}
-                        responseType={item.responseType}
+                     responseType={item.responseType}
                         response={item.response}
                     />
                 }
