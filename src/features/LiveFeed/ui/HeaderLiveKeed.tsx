@@ -1,5 +1,5 @@
 "use client"
-import { itemsList } from '../model/items'
+import { headerItemList } from '../model/items'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
 import { FC } from 'react'
@@ -23,7 +23,7 @@ export const HeaderLiveKeed: FC<HeaderLiveFeedProps> = ({ className, axis = 'y',
 
     const { lg } = useAppResponsive()
 
-    const items = itemsList.map(item => (
+    const items = headerItemList.map(item => (
         <CardLiveFeed
             key={item.id}
             title={item.title}
