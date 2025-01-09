@@ -91,8 +91,8 @@
 		"continue": "Continue"
 	},
 	"topbar": {
-		"provably_fair":"Provably Fair",
-		"faq":"FAQ",
+		"provably_fair": "Provably Fair",
+		"faq": "FAQ",
 		"term_of_service": "Term of Services"
 	},
 	"faq_bar": {
@@ -104,31 +104,31 @@
 		"title": "Find the question you are interested in and get a quick answer."
 	},
 	"faq_datas": {
-		"first":{
+		"first": {
 			"title": "How do we work and why should you choose us?",
 			"content": "Our service may contain links to third-party web sites or services that are not owned or controlled by HYBETS.com. HYBETS.com has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that HYBETS.com shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services. We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit."
 		},
-		"second":{
+		"second": {
 			"title": "How are we better than other similar sites?",
 			"content": "Our service may contain links to third-party web sites or services that are not owned or controlled by HYBETS.com. HYBETS.com has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that HYBETS.com shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services. We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit."
 		},
-		"third":{
+		"third": {
 			"title": "How can I contact technical support personally?",
 			"content": "Our service may contain links to third-party web sites or services that are not owned or controlled by HYBETS.com. HYBETS.com has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that HYBETS.com shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services. We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit."
 		},
-		"forth":{
+		"forth": {
 			"title": "Is this legal?",
 			"content": "Our service may contain links to third-party web sites or services that are not owned or controlled by HYBETS.com. HYBETS.com has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that HYBETS.com shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services. We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit."
 		},
-		"fifth":{
+		"fifth": {
 			"title": "How are we better than other similar sites?",
 			"content": "Our service may contain links to third-party web sites or services that are not owned or controlled by HYBETS.com. HYBETS.com has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that HYBETS.com shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services. We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit."
 		},
-		"sixth":{
+		"sixth": {
 			"title": "How does replenishment of skins on a project work?",
 			"content": "Our service may contain links to third-party web sites or services that are not owned or controlled by HYBETS.com. HYBETS.com has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that HYBETS.com shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services. We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit."
 		},
-		"seventh":{
+		"seventh": {
 			"title": "Is it safe to store money on the project?",
 			"content": "Our service may contain links to third-party web sites or services that are not owned or controlled by HYBETS.com. HYBETS.com has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that HYBETS.com shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services. We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit."
 		}
@@ -136,7 +136,6 @@
 	"support_datas": {
 		"title": "Ask your question in a ticket to our specialists.",
 		"new_ticket": "New Ticket"
-		
 	},
 	"support_chat_header": {
 		"id_ticket": "ID Ticket",
@@ -191,7 +190,7 @@
 		"mine": "Mine",
 		"game": "Game"
 	},
-	"terms_data":{
+	"terms_data": {
 		"title": "Terms of services",
 		"description": "Find the question you are interested in and get a quick answer."
 	},
@@ -210,5 +209,36 @@
 		"result7": "Persons located in or residents of the United States, Australia, Aruba, Bonaire, Curaçao, Cyprus, France, Netherlands, Saba, Statia, Iran, or St Martin (the ”Prohibited Jurisdictions”) are not permitted to make use of the Service. For the avoidance of doubt, the foregoing restrictions on Engaging in real-money play from Prohibited Jurisdictions applies equally to residents and Citizens of other nations while located in a Prohibited Jurisdiction. Any attempt to Circumvent the restrictions on play by any persons located in a Prohibited Jurisdiction or Restricted Jurisdiction, is a breach of this Agreement. An attempt at circumvention Includes, but is not limited to, manipulating the information used by HYBETS to identify your location and providing HYBETS with false or misleading information regarding your location or place of residence.",
 		"result8": "Harm or threaten to harm other users in any way or interfere with, or attempt to interfere with, the access of any user, host or network, including without limitation, by sending a virus, overloading, flooding, spamming, or mail-bombing the Service;",
 		"result9": "Use the Service in an abusive way contrary to its intended use, to HYBETS.com policies and instructions and to any applicable law;"
+	},
+	"cases_header": {
+		"title": "CREATE YOUR OWN CUSTOM CASES",
+		"content": "You can create cases with items and odds of your choice.",
+		"create_case": "create case"
+	},
+	"create_case": {
+		"title": "Case Creation",
+		"case_name": "Your case name",
+		"case_name_placeholder": "Enter a name",
+		"opening_type": "Opening type",
+		"select_case_image": "Select case image",
+		"set_drop_chances": "Set Drop Chances",
+		"total_cost": "Total cost",
+		"select_up": "Select up to 20 items",
+		"search": "Search",
+		"price_descending": "Price Descending",
+		"create_case": "Create Case"
+	},
+	"open_case": {
+		"beach_season": "Beach Season",
+		"selected_top": "selected case",
+		"limited_edition": "Limited Edition",
+		"limited_content": "Open the case before the limit expires!",
+		"count_title": "Open at the same time",
+		"click_open": "Click to open",
+		"open_case": "Open Case",
+		"fast_mod": "Fast mode",
+		"instant_result": "Instant results",
+		"top_drops": "top drops",
+		"case_content": "Case contents"
 	}
 }
