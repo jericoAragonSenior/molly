@@ -1,0 +1,39 @@
+<svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_dd_4264_32354)">
+<rect x="24" y="24" width="48" height="48" rx="12" fill="#E2B617"/>
+<rect x="24" y="24" width="48" height="48" rx="12" fill="url(#paint0_linear_4264_32354)"/>
+<rect x="24.5" y="24.5" width="47" height="47" rx="11.5" stroke="url(#paint1_linear_4264_32354)"/>
+<rect x="24.5" y="24.5" width="47" height="47" rx="11.5" stroke="url(#paint2_linear_4264_32354)"/>
+</g>
+<path d="M48 58C53.51 58 58 53.51 58 48C58 42.49 53.51 38 48 38C42.49 38 38 42.49 38 48C38 53.51 42.49 58 48 58ZM48.75 52C48.75 52.41 48.41 52.75 48 52.75C47.59 52.75 47.25 52.41 47.25 52L47.25 47C47.25 46.59 47.59 46.25 48 46.25C48.41 46.25 48.75 46.59 48.75 47L48.75 52ZM47.08 43.62C47.13 43.49 47.2 43.39 47.29 43.29C47.39 43.2 47.5 43.13 47.62 43.08C47.74 43.03 47.87 43 48 43C48.13 43 48.26 43.03 48.38 43.08C48.5 43.13 48.61 43.2 48.71 43.29C48.8 43.39 48.87 43.49 48.92 43.62C48.97 43.74 49 43.87 49 44C49 44.13 48.97 44.26 48.92 44.38C48.87 44.5 48.8 44.61 48.71 44.71C48.61 44.8 48.5 44.87 48.38 44.92C48.14 45.02 47.86 45.02 47.62 44.92C47.5 44.87 47.39 44.8 47.29 44.71C47.2 44.61 47.13 44.5 47.08 44.38C47.03 44.26 47 44.13 47 44C47 43.87 47.03 43.74 47.08 43.62Z" fill="#121722"/>
+<defs>
+<filter id="filter0_dd_4264_32354" x="0" y="0" width="96" height="96" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="12"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.992157 0 0 0 0 0.243294 0 0 0 0 0.141176 0 0 0 0.35 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4264_32354"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="6"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.992157 0 0 0 0 0.243294 0 0 0 0 0.141176 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_4264_32354" result="effect2_dropShadow_4264_32354"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_4264_32354" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_4264_32354" x1="75.7876" y1="24" x2="75.7876" y2="72" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FDCD24" stop-opacity="0"/>
+<stop offset="1" stop-color="#FDCD24" stop-opacity="0.65"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4264_32354" x1="77.7667" y1="48" x2="91.7857" y2="48" gradientUnits="userSpaceOnUse">
+<stop offset="0.347781" stop-color="#FDCD24" stop-opacity="0"/>
+<stop offset="1" stop-color="#FDCD24"/>
+</linearGradient>
+<linearGradient id="paint2_linear_4264_32354" x1="68.8606" y1="48" x2="55.8312" y2="48" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FDCD24" stop-opacity="0"/>
+<stop offset="1" stop-color="#FDCD24"/>
+</linearGradient>
+</defs>
+</svg>
