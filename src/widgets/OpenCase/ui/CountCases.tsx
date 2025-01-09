@@ -13,19 +13,16 @@ const CountCases = () => {
     const caseCount = useCommonStore(state => state.caseCount)
 
 
-    // For case count
-    const [caseCountState, setCaseCountState] = useState<number>(caseCount);
 
     const [cases, setCases] = useState<React.ReactNode[]>([]);
 
     // Case count hook
     useEffect(() => {
-        setCaseCountState(caseCount);
 
         switch (caseCount) {
             case 1:
                 const newCase1 = [(
-                    <div className="flex w-auto h-auto">
+                    <div className="flex w-auto h-auto" key={1}>
                         <div className={clsx("w-[990px] h-auto relative overflow-hidden flex justify-center items-center 3md:w-[720px]", cls.section)}>
                             <CaseSection className="h-auto" items={caseItems} />
                         </div>
@@ -44,7 +41,7 @@ const CountCases = () => {
                 let newCase2 = []
                 for (let i = 0; i < 2; i++) {
                     newCase2.push(
-                        <div className="flex w-auto h-auto py-2 relative">
+                        <div className="flex w-auto h-auto py-2 relative" key={i}>
                             <div className={clsx("w-[555px] h-auto relative overflow-hidden flex justify-center items-center md:w-[310px]", cls.section)}>
                                 <CaseSection className="h-auto" items={caseItems} />
                             </div>
@@ -63,7 +60,7 @@ const CountCases = () => {
                 let newCase3 = []
                 for (let i = 0; i < 3; i++) {
                     newCase3.push(
-                        <div className="flex w-auto h-auto py-2 relative">
+                        <div className="flex w-auto h-auto py-2 relative" key={i}>
                             <div className={clsx("w-[361px] h-auto relative overflow-hidden flex justify-center items-center md:w-[310px]", cls.section)}>
                                 <CaseSection className="h-auto" items={caseItems} isBig={false} />
                             </div>
@@ -81,7 +78,7 @@ const CountCases = () => {
                 let newCase4 = []
                 for (let i = 0; i < 4; i++) {
                     newCase4.push(
-                        <div className="flex w-auto h-auto py-2 relative">
+                        <div className="flex w-auto h-auto py-2 relative" key={i}>
                             <div className={clsx("w-[279px] h-auto relative overflow-hidden flex justify-center items-center md:w-[310px]", cls.section)}>
                                 <CaseSection className="h-auto" items={caseItems} isBig={false} />
                             </div>
@@ -99,7 +96,7 @@ const CountCases = () => {
                 let newCase5 = []
                 for (let i = 0; i < 5; i++) {
                     newCase5.push(
-                        <div className="flex w-auto h-auto py-2 relative">
+                        <div className="flex w-auto h-auto py-2 relative" key={i}>
                             <div className={clsx("w-[220px] h-auto relative overflow-hidden flex justify-center items-center md:w-[310px]", cls.section)}>
                                 <CaseSection className="h-auto" items={caseItems} isBig={false} />
                             </div>
@@ -117,7 +114,7 @@ const CountCases = () => {
                 let newCase10 = []
                 for (let i = 0; i < 10; i++) {
                     newCase10.push(
-                        <div className="flex w-auto h-auto py-2 relative">
+                        <div className="flex w-auto h-auto py-2 relative" key={i}>
                             <div className={clsx("w-[220px] h-auto relative overflow-hidden flex justify-center items-center md:w-[310px]", cls.section)}>
                                 <CaseSection className="h-auto" items={caseItems} isBig={false} />
                             </div>
@@ -140,11 +137,7 @@ const CountCases = () => {
     return (
         <div className="w-full h-auto flex justify-center gap-3 items-center flex-wrap">
             {
-                cases.map((item, index) =>
-                    <div key={index} className="w-auto h-auto">
-                        {item}
-                    </div>
-                )
+                cases.map((item) => item)
             }
         </div>
     )
