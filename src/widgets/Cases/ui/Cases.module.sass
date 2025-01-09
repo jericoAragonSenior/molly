@@ -1,0 +1,160 @@
+
+.header
+  &_border
+    border-radius: 12px
+    background: linear-gradient(180deg, #1F2534 0%, rgba(31, 37, 52, 0.25) 100%)
+    margin-bottom: 15px
+    padding: 2px
+
+  &_body
+    border-radius: 12px
+    background: linear-gradient(180deg, #191F2D 0%, rgba(3, 8, 17, 0.25) 100%)
+    width: 100%
+
+  &_btn
+    clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%)
+    min-width: 240px
+    height: 42px
+    background:  #24FDBC 57.96%
+    padding: 2px
+    &_inner
+      clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%)
+      background: linear-gradient(0deg, #10AA7C, #10AA7C, rgba(36, 253, 188, 0.65) 100%, rgba(36, 253, 188, 0) 0%)
+      width: 100%
+      height: 100%
+    
+    &_font
+      font-family: Gotham Bold, system-ui, -apple-system, BlinkMacSystemFont, sans-serif
+
+
+    
+.case
+  &_item
+    &_border
+      background: #232B3E
+      padding: 1px
+      border-radius: 10px
+      width: 48px
+      height: 48px
+      &_body
+        background: #1A202E
+        border-radius: 10px
+        width: 100%
+        height: 100%
+
+    &_active
+      background: linear-gradient(0deg, #10AA7C, #10AA7C, rgba(36, 253, 188, 0.65) 100%, rgba(36, 253, 188, 0) 0%)
+      padding: 1px
+      border-radius: 10px
+      width: 48px
+      height: 48px
+
+      &_body
+        background: rgba(6, 95, 68, 0.7)
+        border-radius: 10px
+        width: 100%
+        height: 100%
+
+
+.chance
+  &_item
+    background: #232B3E
+    padding: 1px
+    border-radius: 10px
+
+    &_inner
+      background: #1A202E
+      border-radius: 10px
+
+    &_bg
+      background: radial-gradient(50% 50% at 50% 50%, rgba(253, 205, 36, 0.35) 0%, rgba(18, 23, 34, 0) 90%)
+
+    &_btn
+      background: #262D40
+      border-radius: 8px 
+      padding: 1px
+
+      &_inner
+        background: #1D2434
+        border-radius: 8px
+
+    &_active
+      background: #17e2a594
+      border-radius: 8px
+      padding: 1px
+      &_inner
+        background: #073a2bbe
+        border-radius: 8px
+  &_body
+    background: linear-gradient(180deg, rgba(20, 25, 37, 0) 0%, #141925 100%)
+  
+.footer
+  &_body
+    background: #1A202E
+    padding: 1px
+    border-radius: 15px
+
+    &_inner
+      background: #141925
+      border-radius: 15px
+
+    &_btn
+      background: #1E2536
+      padding: 1px
+      border-radius: 8px
+
+      &_inner
+        background: #1A202E
+      border-radius: 8px
+
+      &_polygon
+        clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%)
+        background:  #24FDBC
+        min-width: 200px
+        height: 42px
+        padding: 1px
+
+        &_inner
+          clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%)
+          background: #10AA7C
+          width: 100%
+          height: 100%
+
+.modal
+  &_body
+    background: #1C2332
+    border-radius: 14px
+    padding: 1px
+
+    &_inner
+      background: #151B28
+      border-radius: 14px
+
+    &_bar
+      &_type
+        background: #232B3E
+        padding: 1px
+        border-radius: 8px
+
+        &_inner
+          background: #1A202E
+          border-radius: 8px
+      
+
+.box
+  border-radius: 8px
+  &_value
+    font-size: 14px
+  &_icon
+    flex-shrink: 0
+    width: 20px
+    height: 20px
+
+
+.input
+  &_search
+    &.box_value
+      &::placeholder
+        color: #60719A
+    &_icon
+      fill: #60719A
