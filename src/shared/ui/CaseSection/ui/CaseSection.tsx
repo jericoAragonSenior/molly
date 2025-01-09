@@ -13,7 +13,7 @@ interface CaseSectionProps {
 }
 
 const CaseSection = ({ className, items, isBig = true }: CaseSectionProps) => {
-    
+
 
     // Build case item list
     const cases = items.map((item, index) => (
@@ -22,11 +22,11 @@ const CaseSection = ({ className, items, isBig = true }: CaseSectionProps) => {
         >
             {
                 isBig == true &&
-                    <BigCaseItem className="min-w-[194px] h-full" key={index} title={item.title} picUrl={item.picUrl} type={item.type} name={item.name} />
+                <BigCaseItem className="min-w-[194px]" key={index} title={item.title} picUrl={item.picUrl} type={item.type} name={item.name} />
             }
             {
                 isBig == false &&
-                    <CaseItem key={index} title={item.title} content={item.content} price={item.price} picUrl={item.picUrl} type={item.type} name={item.name} percent={item.percent} />
+                <CaseItem key={index} title={item.title} content={item.content} price={item.price} picUrl={item.picUrl} type={item.type} name={item.name} percent={item.percent} />
             }
         </SwiperSlide>
     ))
