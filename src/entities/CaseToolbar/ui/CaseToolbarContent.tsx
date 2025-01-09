@@ -22,6 +22,7 @@ import { usePathname } from '@/shared/config/i18n/navigation'
 
 interface CaseToolbarContentProps {
 	className?: string
+	isHeader?: boolean
 }
 
 const weaponList = [
@@ -53,7 +54,7 @@ const modeList = [
 	}
 ]
 
-export const CaseToolbarContent: FC<CaseToolbarContentProps> = ({ className }) => {
+export const CaseToolbarContent: FC<CaseToolbarContentProps> = ({ className, isHeader = true }) => {
 	const t = useTranslations()
 	const pathname = usePathname()
 
@@ -87,22 +88,26 @@ export const CaseToolbarContent: FC<CaseToolbarContentProps> = ({ className }) =
 
 	return (
 		<div className={clsx(cls.grid, className)}>
-			<div className={clsx('flex gap-4 mx-4', cls.nav)}>
-				{headerNavItems.map(item => (
-					<Link
-						title={t(item.label)}
-						href={item.src}
-						key={item.src}
-						className={clsx(cls.item, {
-							[cls.active]: pathname === item.src
-						})}
-					>
-						<div className={clsx(cls.item_icon, 'w-[18px] h-[18px]')}>
-							<item.icon />
-						</div>
-					</Link>
-				))}
-			</div>
+			{
+				isHeader == true &&
+				<div className={clsx('flex gap-4 mx-4', cls.nav)}>
+					{headerNavItems.map(item => (
+						<Link
+							title={t(item.label)}
+							href={item.src}
+							key={item.src}
+							className={clsx(cls.item, {
+								[cls.active]: pathname === item.src
+							})}
+						>
+							<div className={clsx(cls.item_icon, 'w-[18px] h-[18px]')}>
+								<item.icon />
+							</div>
+						</Link>
+					))}
+				</div>
+			}
+
 			<div className={cls.btn_group}>
 				<Button
 					theme='grey-3'
