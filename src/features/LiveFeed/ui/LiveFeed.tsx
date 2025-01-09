@@ -1,3 +1,4 @@
+"use client"
 import { itemsList } from '../model/items'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
