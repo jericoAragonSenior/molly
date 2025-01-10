@@ -5,7 +5,6 @@ import { FC, useEffect, useState } from 'react'
 import IconLightning from '@/shared/assets/icons/icon-lightning.svg'
 import Backshape from '@/shared/assets/open-case-backshape.svg'
 import openCaseBg from '@/shared/assets/open-case-bg.png'
-import HeaderBg from '@/shared/assets/section-header-bg-top.svg'
 import IconSpeaking from '@/shared/assets/icons/icon-speaking-message.svg'
 import { CaseBadge } from '@/shared/ui/CaseCard/CaseBadge'
 
@@ -47,10 +46,7 @@ export const OpenCase: FC<OpenCaseProps> = ({ className }) => {
 
 	return (
 		<div className={clsx(cls.base, className)}>
-			<div className='relative w-full overflow-hidden min-h-[74px]'>
-				<div className={cls.title}>{t('open_case.beach_season')}</div>
-				<HeaderBg className={cls.border_top} />
-			</div>
+			
 
 			<div className={cls.container}>
 				<div className={cls.type}>{t('open_case.selected_top')}</div>
@@ -105,7 +101,7 @@ export const OpenCase: FC<OpenCaseProps> = ({ className }) => {
 						</div>
 
 					</div>
-					<div className={clsx('w-full h-full z-10 relative pt-5 flex justify-center items-center', caseCountState == 0 ? "hidden" : "flex")}>
+					<div className={clsx('w-full h-full z-10 relative py-2 flex justify-center items-center', caseCountState == 0 ? "hidden" : "flex")}>
 						<CountCases />
 					</div>
 					
