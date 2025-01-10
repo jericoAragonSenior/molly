@@ -47,7 +47,7 @@ const OpenFarm = () => {
                     <Button fullWidth={true} hexagon={true} classNames={{
                         base: "w-full h-full"
                     }}
-                        onPress={tryAgain}
+                        onClick={tryAgain}
                         startContent={<IconTryagain className='w-[22px] h-[20px]' />}
                     >
                         <span className='text-[#000000] text-[15px] font-[900]'>{t('case_farm.try_again')}</span>
@@ -55,7 +55,7 @@ const OpenFarm = () => {
                 </div>
             </div>
         </div>
-        
+
     )
 }
 
