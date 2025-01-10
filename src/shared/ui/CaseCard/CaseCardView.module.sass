@@ -77,6 +77,19 @@
         @apply text-text-primary
         b, strong
           color: #24FDBC
+
+  &.gradient-yellow
+    background: linear-gradient(0deg, rgba(59, 69, 92, 0.35), rgba(59, 69, 92, 0.35)),linear-gradient(360deg, #FDCD24 0%, rgba(253, 205, 36, 0) 100%)
+
+
+    .badge
+      &_inner
+        background: linear-gradient(0deg, rgba(32,72,72,1) 0%, rgba(28,36,49,1) 100%)
+      &_label
+        @apply text-text-primary
+        b, strong
+          color: #24FDBC
+
   &_inner
     border-radius: 9px
     padding: 6px 10px
