@@ -50,7 +50,7 @@ const ModalBar = () => {
                     </div>
                     <div className={clsx(cls.modal_body_bar_type)}>
                         <div className={clsx(cls.modal_body_bar_type_inner, "py-[7px] px-3 flex justify-center")}>
-                            <IconRefresh className="w-6 h-6" />
+                            <IconRefresh className="w-6 h-6 fill-[#60719A]" />
                         </div>
                     </div>
                 </div>
