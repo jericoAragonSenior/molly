@@ -5,7 +5,8 @@ export enum CaseType {
 	LIMITED = 'limit',
 	DISCOUNTED = 'discount',
 	AVAILABELED_IN = 'available_in',
-	EXPIRED_AT = 'expired_at'
+	EXPIRED_AT = 'expired_at',
+	UNIQUE = 'unique'
 }
 
 export interface ICase {
