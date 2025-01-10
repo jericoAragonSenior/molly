@@ -53,8 +53,8 @@ export const ChatMessage: FC<ChatMessageProps> = ({
 			<div className={cls.inner}>
 				<div className={clsx(cls.avatar)}>
 					<Image
-						width={30}
-						height={30}
+						width={40}
+						height={40}
 						alt='avatar'
 						className={cls.avatar_pic}
 						src={avatarUrl}
