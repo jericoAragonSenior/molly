@@ -38,7 +38,7 @@ export const OpenCase: FC<OpenCaseProps> = ({ className }) => {
 		setCaseCount(0)
 	}, [])
 
-	
+
 	// Case count hook
 	useEffect(() => {
 		setCaseCountState(caseCount);
@@ -46,7 +46,7 @@ export const OpenCase: FC<OpenCaseProps> = ({ className }) => {
 
 	return (
 		<div className={clsx(cls.base, className)}>
-			
+
 
 			<div className={cls.container}>
 				<div className={cls.type}>{t('open_case.selected_top')}</div>
@@ -95,7 +95,7 @@ export const OpenCase: FC<OpenCaseProps> = ({ className }) => {
 											<span className='text-[12px] font-[500] text-[#D1D9EB]'>there!</span>
 										</div>
 									</div>
-									
+
 								</div>
 							</div>
 						</div>
@@ -104,14 +104,11 @@ export const OpenCase: FC<OpenCaseProps> = ({ className }) => {
 					<div className={clsx('w-full h-full z-10 relative py-2 flex justify-center items-center', caseCountState == 0 ? "hidden" : "flex")}>
 						<CountCases />
 					</div>
-					
+
 				</div>
 			</div>
 			<div className={clsx('relative w-full justify-center flex overflow-hidden')}>
-				<div className={clsx(cls.border_bg, 'h-0.5 bg-opacity-10 opacity-90 absolute w-full')}>
-
-				</div>
-				<div className={clsx(" border-[2px] w-2/5	 border-dotted")}>
+				<div className={clsx(cls.border_bg, 'h-0.5 bg-opacity-10 opacity-90 w-full')}>
 
 				</div>
 			</div>
