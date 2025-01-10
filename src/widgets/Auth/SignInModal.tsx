@@ -64,9 +64,9 @@ const SignInModal: FC<SignInModalProps> = ({ onClickSignUp, onClickForgetPasswor
                     }}
                 />
             </div>
-            <button className="font-[500] text-[12px] text-[#49526D] text-right px-3 underline py-2" onClick={onClickForgetPassword}>
-                {t('auth.forget_pwd_btn_text')}
-            </button>
+            <span className="font-[500] text-[12px] text-[#49526D] text-right px-3 underline py-2">
+                <span className="hover:cursor-pointer" onClick={onClickForgetPassword}>{t('auth.forget_pwd_btn_text')}</span>
+            </span>
             <div className="flex flex-col gap-3">
                 <div className={clsx(cls.bg_gradent_steam_out, cls.border_r_12)}>
                     <Button
