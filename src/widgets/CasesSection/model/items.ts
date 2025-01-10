@@ -10,7 +10,7 @@ export const caseSection: Record<CaseCategory, CaseSection> = {
 		icon: IconLockOpen,
 		items: [
 			{
-				id: '1',
+				id: 'case/1',
 				name: 'Cases Magic',
 				// picUrl: '/images/case/case-preview-1.png',
 				picUrl: '/images/case/case-preview-3d-1.jpg',
@@ -19,7 +19,7 @@ export const caseSection: Record<CaseCategory, CaseSection> = {
 				availableIn: '2024-10-22'
 			},
 			{
-				id: '2',
+				id: 'case/2',
 				name: 'Cases Magic',
 				// picUrl: '/images/case/case-preview-2.png',
 				picUrl: '/images/case/case-preview-3d-2.jpg',
@@ -29,7 +29,7 @@ export const caseSection: Record<CaseCategory, CaseSection> = {
 				discount: '25'
 			},
 			{
-				id: '3',
+				id: 'case/3',
 				name: 'Cases Magic',
 				// picUrl: '/images/case/case-preview-3.png',
 				picUrl: '/images/case/case-preview-3d-3.jpg',
@@ -38,7 +38,7 @@ export const caseSection: Record<CaseCategory, CaseSection> = {
 				expiredAt: '2024-12-12'
 			},
 			{
-				id: '4',
+				id: 'case/4',
 				name: 'Cases Magic',
 				// picUrl: '/images/case/case-preview-4.png',
 				picUrl: '/images/case/case-preview-3d-4.jpg',
@@ -50,7 +50,7 @@ export const caseSection: Record<CaseCategory, CaseSection> = {
 				}
 			},
 			{
-				id: '5',
+				id: 'case/5',
 				name: 'Cases Magic',
 				// picUrl: '/images/case/case-preview-1.png',
 				picUrl: '/images/case/case-preview-3d-5.jpg',
@@ -59,7 +59,7 @@ export const caseSection: Record<CaseCategory, CaseSection> = {
 				availableIn: '2024-10-22'
 			},
 			{
-				id: '6',
+				id: 'case/6',
 				name: 'Cases Magic',
 				// picUrl: '/images/case/case-preview-2.png',
 				picUrl: '/images/case/case-preview-3d-6.jpg',
@@ -69,7 +69,7 @@ export const caseSection: Record<CaseCategory, CaseSection> = {
 				discount: '25'
 			},
 			{
-				id: '7',
+				id: 'case/7',
 				name: 'Cases Magic',
 				picUrl: '/images/case/case-preview-3.png',
 				price: '15.50',
@@ -77,7 +77,7 @@ export const caseSection: Record<CaseCategory, CaseSection> = {
 				expiredAt: '2024-12-12'
 			},
 			{
-				id: '8',
+				id: 'case/8',
 				name: 'Cases Magic',
 				picUrl: '/images/case/case-preview-4.png',
 				price: '15.50',
@@ -88,7 +88,7 @@ export const caseSection: Record<CaseCategory, CaseSection> = {
 				}
 			},
 			{
-				id: '9',
+				id: 'case/9',
 				name: 'Branded Series',
 				picUrl: '/images/case/case-preview-4.png',
 				price: '15.50',
@@ -105,7 +105,7 @@ export const caseSection: Record<CaseCategory, CaseSection> = {
 		icon: IconStar,
 		items: [
 			{
-				id: '1',
+				id: 'case/1',
 				name: 'Cases Magic',
 				picUrl: '/images/case/case-preview-1.png',
 				price: '',
@@ -113,7 +113,7 @@ export const caseSection: Record<CaseCategory, CaseSection> = {
 				availableIn: '2024-10-22'
 			},
 			{
-				id: '2',
+				id: 'case/2',
 				name: 'Cases Magic',
 				picUrl: '/images/case/case-preview-2.png',
 				price: '15.50',
@@ -122,7 +122,7 @@ export const caseSection: Record<CaseCategory, CaseSection> = {
 				discount: '25'
 			},
 			{
-				id: '3',
+				id: 'case/3',
 				name: 'Cases Magic',
 				picUrl: '/images/case/case-preview-3.png',
 				price: '15.50',
@@ -130,7 +130,7 @@ export const caseSection: Record<CaseCategory, CaseSection> = {
 				expiredAt: '2024-12-12'
 			},
 			{
-				id: '4',
+				id: 'case/4',
 				name: 'Cases Magic',
 				picUrl: '/images/case/case-preview-4.png',
 				price: '15.50',
@@ -141,5 +141,116 @@ export const caseSection: Record<CaseCategory, CaseSection> = {
 				}
 			}
 		]
+	},
+	caseLimited: {
+		title: 'Limited Edition',
+		icon: IconLockOpen,
+		items: [
+			{
+				id: 'case/farm',
+				name: 'Cases Magic',
+				picUrl: '/images/case/case-full-1.png',
+				price: '15.50',
+				type: CaseType.LIMITED,
+				limit: {
+					current: 9415,
+					total: 10000
+				},
+				oldPrice: '25.50'
+			},
+			{
+				id: 'case/2',
+				name: 'Cases Magic',
+				picUrl: '/images/case/case-full-2.png',
+				price: '15.50',
+				type: CaseType.LIMITED,
+				limit: {
+					current: 9415,
+					total: 10000
+				},
+				oldPrice: '25.50'
+			},
+			{
+				id: 'case/mystery',
+				name: 'Cases Magic',
+				picUrl: '/images/case/case-full-3.png',
+				price: '15.50',
+				type: CaseType.EXPIRED_AT,
+				expiredAt: '2024-12-12 03:25:09'
+			},
+			{
+				id: 'case/4',
+				name: 'Cases Magic',
+				picUrl: '/images/case/case-full-4.png',
+				price: '15.50',
+				type: CaseType.LIMITED,
+				limit: {
+					current: 9415,
+					total: 10000
+				},
+				oldPrice: '25.50'
+			}
+		]
+	},
+	caseBranded: {
+		title: 'Branded Series',
+		icon: IconStar,
+		items: [
+			{
+				id: 'case/farm',
+				name: 'Cases Magic',
+				picUrl: '/images/case/case-full-1.png',
+				price: '15.50',
+				type: CaseType.LIMITED,
+				limit: {
+					current: 9415,
+					total: 10000
+				},
+			},
+			{
+				id: 'case/2',
+				name: 'Cases Magic',
+				picUrl: '/images/case/case-full-2.png',
+				price: '15.50',
+				type: CaseType.LIMITED,
+				limit: {
+					current: 9415,
+					total: 10000
+				},
+			},
+			{
+				id: 'case/mystery',
+				name: 'Cases Magic',
+				picUrl: '/images/case/case-full-3.png',
+				price: '15.50',
+				type: CaseType.UNIQUE,
+				expiredAt: '2024-12-12 03:25:09'
+			},
+			{
+				id: 'case/4',
+				name: 'Cases Magic',
+				picUrl: '/images/case/case-full-4.png',
+				price: '15.50',
+				type: CaseType.DISCOUNTED,
+				limit: {
+					current: 9415,
+					total: 10000
+				},
+				discount: '25'
+			},
+			{
+				id: 'case/5',
+				name: 'Cases Magic',
+				picUrl: '/images/case/case-full-5.png',
+				price: '15.50',
+				type: CaseType.DISCOUNTED,
+				limit: {
+					current: 9415,
+					total: 10000
+				},
+				discount: '35'
+			}
+		]
 	}
+
 }
