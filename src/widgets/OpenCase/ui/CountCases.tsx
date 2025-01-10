@@ -25,11 +25,11 @@ const CountCases = () => {
                     let newCase1: any[] = [];
                     for (let i = 0; i < 1; i++) {
                         newCase1.push(
-                            <div className="flex w-auto h-auto" key={i}>
+                            <div className="flex w-auto h-auto justify-center items-center" key={i}>
                                 <div className={clsx("w-[990px] h-auto relative overflow-hidden flex justify-center items-center 3md:w-[720px]", cls.section)}>
                                     <CaseSection className="h-auto" items={caseItems} />
                                 </div>
-                                <div className={clsx("w-[4px] bg-[#FFC600] h-full absolute", cls.center, cls.pointer_shadow)}>
+                                <div className={clsx("w-[4px] bg-[#FFC600] h-full absolute z-[1]", cls.center, cls.pointer_shadow)}>
                                 </div>
                             </div>
 
@@ -51,7 +51,7 @@ const CountCases = () => {
                                 <div className={clsx("w-[555px] h-auto relative overflow-hidden flex justify-center items-center md:w-[310px]", cls.section)}>
                                     <CaseSection className="h-auto" items={caseItems} />
                                 </div>
-                                <div className={clsx("w-[4px] bg-[#FFC600] h-full absolute", cls.center, cls.pointer_shadow)}>
+                                <div className={clsx("w-[2px] bg-[#FFC600] h-full absolute  z-[1]", cls.center, cls.pointer_shadow)}>
                                 </div>
                             </div>
                         )
@@ -73,7 +73,7 @@ const CountCases = () => {
                                 <div className={clsx("w-[361px] h-auto relative overflow-hidden flex justify-center items-center md:w-[310px]", cls.section)}>
                                     <CaseSection className="h-auto" items={caseItems} isBig={false} />
                                 </div>
-                                <div className={clsx("w-[4px] bg-[#FFC600] h-full absolute", cls.center, cls.pointer_shadow)}>
+                                <div className={clsx("w-[1.3px] bg-[#FFC600] h-full absolute  z-[1]", cls.center, cls.pointer_shadow)}>
                                 </div>
                             </div>
                         )
@@ -93,7 +93,7 @@ const CountCases = () => {
                                 <div className={clsx("w-[279px] h-auto relative overflow-hidden flex justify-center items-center md:w-[310px]", cls.section)}>
                                     <CaseSection className="h-auto" items={caseItems} isBig={false} />
                                 </div>
-                                <div className={clsx("w-[4px] bg-[#FFC600] h-full absolute", cls.center, cls.pointer_shadow)}>
+                                <div className={clsx("w-[1px] bg-[#FFC600] h-full absolute  z-[1]", cls.center, cls.pointer_shadow)}>
                                 </div>
                             </div>
                         )
@@ -113,7 +113,7 @@ const CountCases = () => {
                                 <div className={clsx("w-[220px] h-auto relative overflow-hidden flex justify-center items-center md:w-[310px]", cls.section)}>
                                     <CaseSection className="h-auto" items={caseItems} isBig={false} />
                                 </div>
-                                <div className={clsx("w-[4px] bg-[#FFC600] h-full absolute", cls.center, cls.pointer_shadow)}>
+                                <div className={clsx("w-[0.8px] bg-[#FFC600] h-full absolute  z-[1]", cls.center, cls.pointer_shadow)}>
                                 </div>
                             </div>
                         )
@@ -134,7 +134,7 @@ const CountCases = () => {
                                 <div className={clsx("w-[220px] h-auto relative overflow-hidden flex justify-center items-center md:w-[310px]", cls.section)}>
                                     <CaseSection className="h-auto" items={caseItems} isBig={false} />
                                 </div>
-                                <div className={clsx("w-[4px] bg-[#FFC600] h-full absolute", cls.center, cls.pointer_shadow)}>
+                                <div className={clsx("w-[0.8px] bg-[#FFC600] h-full absolute z-[1]", cls.center, cls.pointer_shadow)}>
                                 </div>
                             </div>
                         )
