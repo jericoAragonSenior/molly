@@ -4,13 +4,13 @@ import IntroBar from "@/shared/ui/IntroBar/IntroBar";
 import IconQuestion from '@/shared/assets/icons/icon-question.svg'
 import IconNewTicket from '@/shared/assets/icons/icon-new-ticket.svg'
 import Button from "@/shared/ui/Button/Button"
-import IconSupportBtn from '@/shared/assets/icons/icon-support-btn.svg'
 
 import clsx from "clsx";
 import cls from './Support.module.sass'
 import { useTranslations } from "next-intl";
 import { useModal } from "@/shared/context/ModalContext";
 import CreateNewTicket from "./CreateNewTicket";
+import { useRouter } from "next/navigation";
 
 
 const SupportHeader = () => {
@@ -18,7 +18,10 @@ const SupportHeader = () => {
 
     const t = useTranslations();
 
+    // For router
+    const router = useRouter()
 
+    // open create New Ticket modal function
     const createNewTicket = () => {
         openModal(
             <CreateNewTicket />,
@@ -30,6 +33,11 @@ const SupportHeader = () => {
                 modal: 'relative w-full lg:h-full h-screen flex lg:items-start justify-center items-center'
             }
         )
+    }
+
+    // Go faq function
+    const goFaq = () => {
+        router.push('/faq');
     }
 
     return (
@@ -45,17 +53,18 @@ const SupportHeader = () => {
                             <span className={clsx('font-[700]  text-[#D1D9EB] text-[12px] font-[Gotham Medium] block md:hidden')}>{t('support_datas.new_ticket')}</span>
                         </div>
                     </Button>
-                    <Button disableAnimation classNames={{ base: clsx('w-[140px] h-[45px] flex items-center relative', cls.fnav_item), content: clsx('w-full h-full flex justify-center items-center') }}>
-                        <div className='w-full h-full top-0 right-0 absolute'>
-                            <IconSupportBtn className={'w-full h-full'} />
+                    <div className={cls.button_bar}>
+                        <div className={cls.button_bar_inner}>
+                            <Button onPress={goFaq} classNames={{ base: clsx('w-[140px] h-[45px] flex items-center relative', cls.fnav_item), content: clsx('w-full h-full flex justify-center items-center') }}>
+                                <div className='flex gap-3 items-center px-2 justify-center w-full h-full z-[40] '>
+                                    <div className={clsx('w-full h-[30px]', cls.fnav_item_icon)}>
+                                        <IconQuestion />
+                                    </div>
+                                    <span className={clsx('font-[700]  text-[#D1D9EB] text-[12px] font-[Gotham Medium]')}>{t('pages.faq')}</span>
+                                </div>
+                            </Button>
                         </div>
-                        <div className='flex gap-3 items-center px-2 justify-center w-full h-full z-[40] '>
-                            <div className={clsx('w-full h-[30px]', cls.fnav_item_icon)}>
-                                <IconQuestion />
-                            </div>
-                            <span className={clsx('font-[700]  text-[#D1D9EB] text-[12px] font-[Gotham Medium]')}>{t('pages.faq')}</span>
-                        </div>
-                    </Button>
+                    </div>
                 </div>
             }
         />
