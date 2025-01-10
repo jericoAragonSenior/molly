@@ -13,6 +13,7 @@ import { useTranslations } from 'next-intl'
 import Button from '@/shared/ui/Button/Button'
 import SwitchButton from '@/shared/ui/SwitchButton/SwitchButton'
 import { useCommonStore } from '@/entities/Common/model/store'
+import { useState } from 'react'
 
 
 const OpenCaseBar = () => {
@@ -23,9 +24,19 @@ const OpenCaseBar = () => {
     // Get setCaseCount function
     const setCaseCount = useCommonStore(state => state.setCaseCount)
 
+    // Case count value
+    const [count, setCount] = useState<number>(0);
+
     // For pagination function
     const setPagination = (value: number) => {
-        setCaseCount(value)
+        setCount(value)
+    }
+
+    // For open case function
+    const openCase = () => {
+        if (count > 0) {
+            setCaseCount(count);
+        }
     }
 
     return (
@@ -39,7 +50,7 @@ const OpenCaseBar = () => {
                         <span className='text-[#5F6C87] text-[13px] font-[500]'>{t('open_case.count_title')}</span>
                         <Pagination items={paginationData} onClick={setPagination} />
                     </div>
-                    <div className='w-1/3 flex flex-col gap-4 justify-center items-center 3md:w-auto'> 
+                    <div className='w-1/3 flex flex-col gap-4 justify-center items-center 3md:w-auto'>
                         <span className='text-[#5F6C87] text-[13px] font-[500]'>{t('open_case.click_open')}</span>
                         <div className={clsx('w-[313px] h-[48px]', cls.btn_hexagon_yellow)}>
                             <div className={clsx('w-full h-full', cls.btn_hexagon_yellow_inner)}>
@@ -47,6 +58,7 @@ const OpenCaseBar = () => {
                                     base: "w-full h-full"
                                 }}
                                     startContent={<IconCase className='w-[22px] h-[20px]' />}
+                                    onClick={openCase}
                                 >
                                     <span className='text-[#000000] text-[15px] font-[900]'>{t('open_case.open_case') + '• $15.50'}</span>
                                 </Button>
@@ -73,7 +85,7 @@ const OpenCaseBar = () => {
                 </div>
             </div>
         </div>
-        
+
     )
 }
 
