@@ -1,8 +1,6 @@
 "use client"
 import clsx from 'clsx';
 import cls from './Faq.module.sass'
-import { useCommonStore } from '@/entities/Common/model/store';
-import { useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 import IconFaq from '@/shared/assets/icons/icon-faq-white.svg'
@@ -15,15 +13,10 @@ const FaqHeader = () => {
 
     const t = useTranslations();
 
-    const setItemPosition = useCommonStore(state => state.setItemPosition)
 
     // For router
     const router = useRouter();
 
-    useEffect(() => {
-        setItemPosition("left")
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
 
     // Go support function
 
@@ -47,7 +40,7 @@ const FaqHeader = () => {
                         </Button>
                     </div>
                 </div>
-
+               
             }
         />
     )

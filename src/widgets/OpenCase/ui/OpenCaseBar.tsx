@@ -50,7 +50,7 @@ const OpenCaseBar = () => {
                         <span className='text-[#5F6C87] text-[13px] font-[500]'>{t('open_case.count_title')}</span>
                         <Pagination items={paginationData} onClick={setPagination} />
                     </div>
-                    <div className='w-1/3 flex flex-col gap-4 justify-center items-center 3md:w-auto'>
+                    <div className='w-1/3 flex flex-col gap-4 justify-center items-center 3md:w-auto'> 
                         <span className='text-[#5F6C87] text-[13px] font-[500]'>{t('open_case.click_open')}</span>
                         <div className={clsx('w-[313px] h-[48px]', cls.btn_hexagon_yellow)}>
                             <div className={clsx('w-full h-full', cls.btn_hexagon_yellow_inner)}>
@@ -85,7 +85,7 @@ const OpenCaseBar = () => {
                 </div>
             </div>
         </div>
-
+        
     )
 }
 

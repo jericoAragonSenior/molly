@@ -55,7 +55,7 @@ const OpenFarm = () => {
                 </div>
             </div>
         </div>
-
+        
     )
 }
 

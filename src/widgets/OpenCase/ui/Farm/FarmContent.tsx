@@ -51,7 +51,7 @@ const FarmContents = () => {
     ))
 
     return (
-        openFarm == true && <div className="flex flex-col w-full justify-center items-center gap-5 py-3 px-3">
+        openFarm  == true && <div className="flex flex-col w-full justify-center items-center gap-5 py-3 px-3">
             <span className="text-[#D1D9EB] font-[500] text-[18px]">{t('open_case.case_content')}</span>
             <div className="flex justify-center flex-wrap gap-3">
                 {cases}

@@ -23,22 +23,15 @@ export const OpenCase: FC<OpenCaseProps> = ({ className }) => {
 	// For translation
 	const t = useTranslations();
 
-	const setItemPosition = useCommonStore(state => state.setItemPosition)
 	const caseCount = useCommonStore(state => state.caseCount)
-	const setCaseCount = useCommonStore(state => state.setCaseCount)
 
 
 	// For case count
 	const [caseCountState, setCaseCountState] = useState<number>(0);
 
-	// Init function
-	useEffect(() => {
-		setItemPosition("left")
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-		setCaseCount(0)
-	}, [])
+	
 
-
+	
 	// Case count hook
 	useEffect(() => {
 		setCaseCountState(caseCount);
@@ -46,7 +39,7 @@ export const OpenCase: FC<OpenCaseProps> = ({ className }) => {
 
 	return (
 		<div className={clsx(cls.base, className)}>
-
+			
 
 			<div className={cls.container}>
 				<div className={cls.type}>{t('open_case.selected_top')}</div>
@@ -95,7 +88,7 @@ export const OpenCase: FC<OpenCaseProps> = ({ className }) => {
 											<span className='text-[12px] font-[500] text-[#D1D9EB]'>there!</span>
 										</div>
 									</div>
-
+									
 								</div>
 							</div>
 						</div>
@@ -104,13 +97,14 @@ export const OpenCase: FC<OpenCaseProps> = ({ className }) => {
 					<div className={clsx('w-full h-full z-10 relative py-2 flex justify-center items-center', caseCountState == 0 ? "hidden" : "flex")}>
 						<CountCases />
 					</div>
-
+					
 				</div>
 			</div>
 			<div className={clsx('relative w-full justify-center flex overflow-hidden')}>
-				<div className={clsx(cls.border_bg, 'h-0.5 bg-opacity-10 opacity-90 w-full')}>
+				<div className={clsx(cls.border_bg, 'min-h-0.5 bg-opacity-10 opacity-90 w-full')}>
 
 				</div>
+				
 			</div>
 		</div>
 	)

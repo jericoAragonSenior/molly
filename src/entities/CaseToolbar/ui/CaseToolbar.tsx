@@ -21,11 +21,7 @@ export const CaseToolbar: FC<CaseToolbarProps> = ({ className, withContainer = t
 	const [inViewport] = useInViewport(baseRef)
 
 	const setCaseToolbarInView = useCommonStore(state => state.setCaseToolbarInView)
-	const setItemPosition = useCommonStore(state => state.setItemPosition)
 
-	useEffect(() => {
-		setItemPosition("left")
-	}, [])
 
 	useEffect(() => {
 		if (inViewport !== undefined) {

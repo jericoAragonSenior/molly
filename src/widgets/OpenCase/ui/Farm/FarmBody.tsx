@@ -1,6 +1,5 @@
 "use client"
 import Image from 'next/image'
-import { FC, useEffect, useState } from 'react'
 
 import Backshape from '@/shared/assets/open-case-backshape.svg'
 import openCaseBg from '@/shared/assets/open-case-bg.png'
@@ -19,17 +18,7 @@ export const FarmBody = () => {
     // For translation
     const t = useTranslations();
 
-    const setItemPosition = useCommonStore(state => state.setItemPosition)
-    const setCaseCount = useCommonStore(state => state.setCaseCount)
 
-
-
-    // Init function
-    useEffect(() => {
-        setItemPosition("left")
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        setCaseCount(0)
-    }, [])
 
 
     // Open farm state
