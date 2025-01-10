@@ -1,7 +1,7 @@
 
 import { RarityTheme } from '@/shared/const/rarity'
 
-import { LiveFeedItem, ICaseItemType, IPagination } from './types'
+import { LiveFeedItem, ICaseItemType, IPagination, IFarmItemType, IBadgeItem } from './types'
 
 export const paginationData: IPagination[] = [
     {
@@ -377,5 +377,743 @@ export const caseItems: ICaseItemType[] = [
         name: 'AK-47 | Fire Serpent',
         price: '456,05',
         type: 'limit_blue'
+    }
+]
+
+
+// Farm progress
+export const farmItems: IFarmItemType[] = [
+    {
+        id: 'case-1',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-1.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'yellow',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-2',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-2.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'pink',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-3',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-3.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'purple',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-4',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-4.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'blue',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-5',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-5.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'limit_blue',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-6',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-1.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'yellow',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-7',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-2.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'pink',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-8',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-3.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'purple',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-9',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-4.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'blue',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-10',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-5.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'limit_blue',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-11',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-1.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'yellow',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-12',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-2.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'pink',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-13',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-3.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'purple',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-14',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-4.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'blue',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-15',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-5.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'limit_blue',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-16',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-1.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'yellow',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-17',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-2.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'pink',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-18',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-3.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'purple',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-19',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-4.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'blue',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-20',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-5.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'limit_blue',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    }
+]
+
+export const farmPaginationData: IPagination[] = [
+    {
+        value: 10,
+        content: "X10"
+    },
+    {
+        value: 20,
+        content: "X20"
+    },
+    {
+        value: 30,
+        content: "X30"
+    },
+    {
+        value: 40,
+        content: "X40"
+    }
+]
+
+
+import IconCase from '@/shared/assets/icons/icon-case-open.svg'
+import IconDollar from '@/shared/assets/icons/icon-dollar.svg'
+import IconSolide from '@/shared/assets/icons/icon-solid.svg'
+// Open farm badge items.
+export const badgeItems: IBadgeItem[] = [
+    {
+        icon: IconCase,
+        title: "3/10",
+        content: "opening",
+        iconClassName: "w-[22px] h-[20px]"
+    },
+    {
+        icon: IconDollar,
+        title: "$500.00",
+        content: "price",
+        iconClassName: "w-[22px] h-[22px]"
+    },
+    {
+        icon: IconSolide,
+        title: "$243.34",
+        content: "shirpa solid",
+        iconClassName: "w-[22px] h-[22px]"
+    }
+]
+
+// farm case item(open farm)
+export const farmCases: IFarmItemType[] = [
+    {
+        id: 'case-1',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-1.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'yellow',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-2',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-2.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'pink',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-3',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-3.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'purple',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-4',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-4.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'blue',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-5',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-5.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'limit_blue',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-6',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-1.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'yellow',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-7',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-2.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'pink',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-8',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-3.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'purple',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-9',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-4.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'blue',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-10',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-5.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'limit_blue',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-11',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-1.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'yellow',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-12',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-2.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'pink',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-13',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-3.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'purple',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-14',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-4.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'blue',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-15',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-5.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'limit_blue',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
+    },
+    {
+        id: 'case-16',
+        title: 'FT',
+        content: 'CHANCE',
+        percent: 0.064,
+        picUrl: '/images/case/skin-1.png',
+        name: 'AK-47 | Fire Serpent',
+        price: '456,05',
+        type: 'yellow',
+        pricesTitle: [
+            "fn", "mw", "ft", "ww"
+        ],
+        prices: [
+            "1928.84", "2304.02", "1399.98", "1029.90"
+        ],
+        oods: [
+            "0.247", "0.50896", "0.396", "0.667"
+        ]
     }
 ]
