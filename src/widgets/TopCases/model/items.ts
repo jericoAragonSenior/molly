@@ -2,7 +2,7 @@ import { CaseType, ICase } from '@/shared/types/case'
 
 export const caseList: ICase[] = [
 	{
-		id: '1',
+		id: 'case/1',
 		name: 'Cases Magic',
 		picUrl: '/images/case/case-preview-1.png',
 		price: '',
@@ -10,7 +10,7 @@ export const caseList: ICase[] = [
 		availableIn: '2024-10-22'
 	},
 	{
-		id: '2',
+		id: 'case/2',
 		name: 'Cases Magic',
 		picUrl: '/images/case/case-preview-2.png',
 		price: '15.50',
@@ -19,7 +19,7 @@ export const caseList: ICase[] = [
 		discount: '25'
 	},
 	{
-		id: '3',
+		id: 'case/3',
 		name: 'Cases Magic',
 		picUrl: '/images/case/case-preview-3.png',
 		price: '15.50',
@@ -27,7 +27,7 @@ export const caseList: ICase[] = [
 		expiredAt: '2024-12-12'
 	},
 	{
-		id: '4',
+		id: 'case/4',
 		name: 'Cases Magic',
 		picUrl: '/images/case/case-preview-4.png',
 		price: '15.50',
