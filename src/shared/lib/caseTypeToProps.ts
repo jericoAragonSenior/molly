@@ -5,6 +5,7 @@ import IconDiscount from '@/shared/assets/icons/icon-discount.svg'
 import IconLightning from '@/shared/assets/icons/icon-lightning.svg'
 import IconLock from '@/shared/assets/icons/icon-lock.svg'
 import IconTimer from '@/shared/assets/icons/icon-timer-3.svg'
+import IconUser from '@/shared/assets/icons/icon-user-avatar.svg'
 
 interface Props extends CaseConfigProps {}
 
@@ -20,6 +21,12 @@ export const caseTypeToProps: Record<CaseType, Props> = {
 		icon: IconDiscount,
 		badgeTheme: 'gradient-green',
 		iconTheme: 'outline-green',
+		iconShadow: true
+	},
+	[CaseType.UNIQUE]: {
+		icon: IconUser,
+		badgeTheme: 'gradient-yellow',
+		iconTheme: 'outline-yellow',
 		iconShadow: true
 	},
 	[CaseType.EXPIRED_AT]: {
