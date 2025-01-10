@@ -153,6 +153,11 @@ export const HeaderBarContent: FC<HeaderBarContentProps> = ({ className }) => {
 						/>
 					</div>
 				</div>
+				<Media greaterThanOrEqual='lg'>
+					<div className={cls.settings}>
+						<HeaderSettings className='ml-3' />
+					</div>
+				</Media>
 			</div>
 	)
 }
