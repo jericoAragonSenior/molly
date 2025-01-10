@@ -18,6 +18,8 @@ export const ChatHeader = () => {
 	const t = useTranslations()
 	const breakpoints = useAppResponsive()
 	const setViewChatHidden = useCommonStore(state => state.setViewChatHidden)
+	const setItemPosition = useCommonStore(state => state.setItemPosition)
+
 	return (
 		<div
 			className={clsx(
@@ -39,7 +41,7 @@ export const ChatHeader = () => {
 			</div>
 			<button
 				type='button'
-				onClick={() => setViewChatHidden(true)}
+				onClick={() => { setViewChatHidden(true); setItemPosition("center") }}
 				className={cls.btn_close}
 			>
 				{breakpoints.lg ? <IconAngleRight className='w-[18px] h-[18px]' /> : <IconClose className='w-[20px] h-[20px] fill-[#404F71] stroke-[#10AA7C]' />}

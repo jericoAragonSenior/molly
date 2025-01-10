@@ -33,7 +33,7 @@ export const ChatButton: FC = () => {
 	const mobileRightBarState = useCommonStore(state => state.mobileRightBarState)
 	const setViewChatHidden = useCommonStore(state => state.setViewChatHidden)
 	const [active, setActive] = useState(!chatViewHidden)
-
+	const setItemPosition = useCommonStore(state => state.setItemPosition)
 	return (
 		<Portal className='portal-chatbutton'>
 			<motion.div
@@ -57,7 +57,7 @@ export const ChatButton: FC = () => {
 					hexagon
 					hexagonAxis={breakpoints?.lg ? 'x' : 'y'}
 					hexagonAngleOffset={breakpoints?.lg ? 10 : 13}
-					onClick={() => setViewChatHidden(false)}
+					onClick={() => { setViewChatHidden(false); setItemPosition("left") }}
 					classNames={{
 						base: cls.btn_open_base,
 						content: cls.btn_open_content
