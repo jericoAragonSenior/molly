@@ -15,3 +15,14 @@ export enum RarityTheme {
 	SHADOW_ANCIENT = 'shadow_red',
 	SHADOW_EXCEEDINGLY = 'shadow_yellow',
 }
+
+export enum BackDropTheme {
+	GREEN = 'green',
+	PURPLE = 'purple',
+	YELLOW = 'yellow'
+}
+
+export enum CaseItemTheme {
+	GRADIENTGREEN = 'gradient_green',
+	GRAY = 'gray'
+}
