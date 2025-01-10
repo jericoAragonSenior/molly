@@ -31,7 +31,8 @@
 	"caseCard": {
 		"discount": "**-{discount}%** discount",
 		"locked": "lock",
-		"free": "free"
+		"free": "free",
+		"unique": "unique case"
 	},
 	"settings": {
 		"trade": "Trade URL",
@@ -240,5 +241,24 @@
 		"instant_result": "Instant results",
 		"top_drops": "top drops",
 		"case_content": "Case contents"
-	}
+	},
+	"case_mystery": {
+		"title": "Mystery Case",
+		"cases_magic": "Cases Magic",
+		"luck_text": "Open up and try your luck",
+		"prizes_text": "No one knows the list of prizes",
+		"cost_text": "The cost of the case is constantly changing",
+		"content1": "Mystery case. Inside the case is absolutely everything you can find on our site.",
+		"content2": "A variety of items, site bonuses and much more awaits you!"
+	},
+	"case_farm": {
+		"title": "Farm Case",
+		"hint_title": "let's say no to consumer goods",
+		"hint_content1": "Farmcases are designed to ensure that you only get the best items.",
+		"hint_content2": "Junk items are sold automatically!",
+		"price": "price",
+		"odds": "odds",
+		"try_again": "Try again"
+	},
+	"open": "open"
 }
