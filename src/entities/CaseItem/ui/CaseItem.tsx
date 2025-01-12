@@ -1,15 +1,16 @@
 "use client"
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { useState } from "react";
 
 import clsx from "clsx";
 import cls from "./CaseItem.module.sass";
 import { ImageBgType } from "@/widgets/Cases/model/types";
-import { CaseItemTheme } from "@/shared/const/rarity";
 
+import { CaseItemTheme } from "@/shared/const/rarity";
 import IconLogo from "@/shared/assets/icons/icon-caseitem-back-logo.svg"
-import { useTranslations } from "next-intl";
-import { useState } from "react";
+
 
 interface CaseItemProps {
     className?: string
