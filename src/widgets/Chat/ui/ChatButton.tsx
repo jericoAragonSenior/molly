@@ -57,7 +57,7 @@ export const ChatButton: FC = () => {
 					hexagon
 					hexagonAxis={breakpoints?.lg ? 'x' : 'y'}
 					hexagonAngleOffset={breakpoints?.lg ? 10 : 13}
-					onClick={() => { setViewChatHidden(false); setItemPosition("left") }}
+					onClick={() => { setViewChatHidden(false); setItemPosition("right") }}
 					classNames={{
 						base: cls.btn_open_base,
 						content: cls.btn_open_content
