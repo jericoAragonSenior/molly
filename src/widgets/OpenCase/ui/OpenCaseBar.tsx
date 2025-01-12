@@ -13,7 +13,10 @@ import { useTranslations } from 'next-intl'
 import Button from '@/shared/ui/Button/Button'
 import SwitchButton from '@/shared/ui/SwitchButton/SwitchButton'
 import { useCommonStore } from '@/entities/Common/model/store'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useModal } from '@/shared/context/ModalContext'
+import CongratulationsBody from './CongratulationsBody/CongratulationsBody'
+import CongratulationsHeader from './CongratulationsBody/CongratulationsHeader'
 
 
 const OpenCaseBar = () => {
@@ -21,23 +24,61 @@ const OpenCaseBar = () => {
     // For translation
     const t = useTranslations();
 
+    const currentCaseNumber = useCommonStore(state => state.currentCaseNumber)
+    const caseCount = useCommonStore(state => state.caseCount)
+
     // Get setCaseCount function
     const setCaseCount = useCommonStore(state => state.setCaseCount)
 
+    const setCurrentCaseNumber = useCommonStore(state => state.setCurrentCaseNumber)
+    const selectedCaseItems = useCommonStore(state => state.selectedCaseItems)
+
     // Case count value
     const [count, setCount] = useState<number>(0);
+
+    // Selected case items
+    const [caseItems, setCaseItems] = useState<any[]>([]);
 
     // For pagination function
     const setPagination = (value: number) => {
         setCount(value)
     }
+    
+    const { openModal, closeModal } = useModal();
 
     // For open case function
     const openCase = () => {
         if (count > 0) {
             setCaseCount(count);
+            setCurrentCaseNumber(0);
         }
     }
+
+    useEffect(() => {
+        setCaseCount(0)
+    }, [])
+
+    useEffect(() => {
+        setCaseItems(selectedCaseItems);
+    }, [selectedCaseItems])
+
+    useEffect(() => {
+        if (caseCount == currentCaseNumber && caseCount > 0) {
+            setTimeout(() => {
+                openModal(
+                    <CongratulationsBody items={caseItems} onClose={closeModal} />,
+                    {},
+                    <CongratulationsHeader />,
+                    '',
+                    {
+                        body: '',
+                        modal: 'relative w-full lg:h-full h-screen flex lg:items-start justify-center items-center',
+                    }
+                );
+            }, 1500);
+        }
+    }, [caseCount, currentCaseNumber])
+
 
     return (
         <div>
