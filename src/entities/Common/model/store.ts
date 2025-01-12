@@ -17,6 +17,8 @@ export interface IState {
 	itemPosition: string
 	caseCount: number
 	openFarm: boolean
+	currentCaseNumber: number
+	selectedCaseItems: any[]
 }
 export interface IActions {
 	setChatHidden: (value: boolean) => void
@@ -31,6 +33,8 @@ export interface IActions {
 	setItemPosition: (value: string) => void
 	setCaseCount: (value: number) => void
 	setOpenFarm: (value: boolean) => void
+	setCurrentCaseNumber: (value: number) => void
+	setSelectedCaseItems: (value: any[]) => void
 }
 
 export const initialState: IState = {
@@ -43,9 +47,11 @@ export const initialState: IState = {
 	signinState: false,
 	headerState: 0,
 	mobileRightBarState: false,
-	itemPosition: 'center',
+	itemPosition: 'right',
 	caseCount: 0,
-	openFarm: true
+	openFarm: true,
+	currentCaseNumber: 0,
+	selectedCaseItems: []
 }
 
 export const useCommonStore = create<IState & IActions>()(
@@ -150,6 +156,22 @@ export const useCommonStore = create<IState & IActions>()(
 							undefined,
 							'SET_OPEN_FARM'
 						),
+					setCurrentCaseNumber: value =>
+						set(
+							state => {
+								state.currentCaseNumber = value
+							},
+							undefined,
+							'SET_CURRENT_CASE_NUMBER'
+						),
+					setSelectedCaseItems: value => 
+						set(
+							state => {
+								state.selectedCaseItems = value
+							},
+							undefined,
+							'SET_SELETED_CASE_ITEMS'
+						)
 				}),
 				{
 					name: 'common'
