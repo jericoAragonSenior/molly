@@ -261,5 +261,13 @@
 		"odds": "odds",
 		"try_again": "Try again"
 	},
-	"open": "open"
+	"open": "open",
+	"case_congratulation": {
+		"title": "Congratulations!",
+		"try_again":"Try again",
+		"sell_everything": "Sell everything",
+		"go_inventory": "Go inventory",
+		"top_title": "Congratulations, you have won the following items:",
+		"bottom_title": "You can sell the entire item or try to open the case again."
+	}
 }
