@@ -1,9 +1,8 @@
 "use client"
-import TopBar from '@/widgets/Header/ui/TopBar'
 import { Client } from 'react-hydration-provider'
 import Loading from '@/app/[locale]/loading'
 import dynamic from 'next/dynamic'
-import React, { Suspense } from 'react'
+import React, { Suspense, useEffect } from 'react'
 
 import { ChatButton } from '@/widgets/Chat/ui/ChatButton'
 import { ChatLoader } from '@/widgets/Chat/ui/ChatLoader'
@@ -28,13 +27,20 @@ const DesktopLayout = ({ children }: { children: React.ReactNode }) => {
 
     const pathname = usePathname();
 
+    const setItemPosition = useCommonStore(state => state.setItemPosition)
+
+    useEffect(() => {
+            setItemPosition("right")
+            // eslint-disable-next-line react-hooks/exhaustive-deps
+        }, [])
+
     return (
         <div className='layout-main relative z-[0] grid grid-cols-[auto_1fr_auto] lg:block lg:pb-[70px]'>
             <div className='lg:layout-main__inner  lg:grid-rows[auto-1fr]'>
                 <div className='layout-main grid grid-cols-[auto_1fr_auto]'>
                     <Sidebar />
                     {
-                        itemPosition == "right" && pathname != '/' &&
+                        itemPosition == "left" && pathname != '/' &&
                         <HeaderLiveKeed className='h-screen w-[100px]' />
                     }
                     <div className='h-screen overflow-y-auto app-scrollbar lg:overflow-visible lg:h-auto'>
@@ -55,7 +61,7 @@ const DesktopLayout = ({ children }: { children: React.ReactNode }) => {
                         <Footer className='container-common' />
                     </div>
                     {
-                        itemPosition == "left" && pathname != '/' &&
+                        itemPosition == "right" && pathname != '/' &&
                         <HeaderLiveKeed className='h-screen w-[100px]' />
                     }
                 </div>
