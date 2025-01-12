@@ -19,7 +19,7 @@ interface CongratulationsBodyProps {
     onClose: () => void
 }
 
-const CongratulationsBody = ({items, onClose}: CongratulationsBodyProps) => {
+const CongratulationsBody = ({ items, onClose }: CongratulationsBodyProps) => {
 
     // For translation
     const t = useTranslations();
@@ -45,7 +45,7 @@ const CongratulationsBody = ({items, onClose}: CongratulationsBodyProps) => {
                             <span className='text-[#5F6C87] text-[14px]'>{t('case_congratulation.top_title')}</span>
                         </div>
                         <Backshape className={cls.backshape} />
-                        
+
                         <div className='max-w-[320px] h-full overflow-hidden flex justify-center items-center'>
                             <Image
                                 src={BackdropRays}
@@ -55,7 +55,7 @@ const CongratulationsBody = ({items, onClose}: CongratulationsBodyProps) => {
                                 width={320}
                             />
                         </div>
-                        
+
                         <div className={clsx(cls.congratulation_inner, cls.center, '!absolute top-1/2')}>
                             <div className={clsx('w-[250px] h-[285px]', cls.congratulation, cls['purple'])}>
                             </div>
@@ -84,12 +84,12 @@ const CongratulationsBody = ({items, onClose}: CongratulationsBodyProps) => {
             }
 
             {
-                items.length > 1 && 
+                items.length > 1 &&
                 <div className='max-w-[768px] md:max-w-full min-w-[300px] flex justify-center flex-wrap gap-3 mt-4'>
                     {
-                        items.map(item => (
-                            <ActiveCaseItem title={item.title} name={item.name} price={item.price} theme={item.type} picUrl={item.picUrl} />
-                        ))   
+                        items.map((item, index) => (
+                            <ActiveCaseItem key={index} title={item.title} name={item.name} price={item.price} theme={item.type} picUrl={item.picUrl} />
+                        ))
                     }
                 </div>
             }
@@ -131,14 +131,14 @@ const CongratulationsBody = ({items, onClose}: CongratulationsBodyProps) => {
                         <Button fullWidth={true} hexagon={true} classNames={{
                             base: "w-full h-full"
                         }}
-                         >
+                        >
                             <span className='text-[#000000] text-[15px] font-[900]'>{t('case_congratulation.go_inventory')}</span>
                         </Button>
                     </div>
                 </div>
             </div>
         </div>
-       
+
     )
 }
 
