@@ -1,8 +1,6 @@
 "use client"
 import clsx from 'clsx';
 import cls from './IntroBar.module.sass'
-import { useCommonStore } from '@/entities/Common/model/store';
-import { useEffect } from 'react';
 
 import { useTranslations } from 'next-intl';
 
@@ -17,12 +15,6 @@ const IntroBar = ({ icon, title, content, buttons }: IntroBarProps) => {
 
     const t = useTranslations();
 
-    const setItemPosition = useCommonStore(state => state.setItemPosition)
-
-    useEffect(() => {
-        setItemPosition("left")
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
 
     return (
         <div className={clsx('h-auto w-full flex justify-between items-center px-5 py-[14px]', cls.header_gradient)}>
