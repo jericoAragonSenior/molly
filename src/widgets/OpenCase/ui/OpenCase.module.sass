@@ -39,7 +39,8 @@
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
-  height: 100%
+  height: 340px
+  width: 340px
 
 .grid
   position: relative
@@ -111,18 +112,18 @@
       background:  linear-gradient(90deg, rgba(253, 206, 36, 0.753) 56.8%, #FDCD24 65.65%),linear-gradient(270deg, rgba(253, 206, 36, 0.664) 56.55%, #FDCD24 69.17%)
       clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%)
       box-shadow: 0px 0px 24px 0px #FD3E2459
-      box-shadow: 0px 0px 12px 0px #FD3E2440
+
       padding: 2px
 
       &_inner
         clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%)
         background: linear-gradient(0deg, #E2B617, #E2B617),linear-gradient(180deg, rgba(253, 205, 36, 0) 0%, rgba(253, 205, 36, 0.65) 100%)
+        box-shadow: 0px 0px 12px 0px #FD3E2440
 
         &:hover
           background: #ffd231
 
     &_green
-      background:  linear-gradient(90deg, rgba(253, 206, 36, 0.753) 56.8%, #FDCD24 65.65%),linear-gradient(270deg, rgba(253, 206, 36, 0.664) 56.55%, #FDCD24 69.17%)
       background: linear-gradient(90deg, rgba(36, 253, 188, 0.479) 56.8%, #24FDBC 65.65%),linear-gradient(270deg, rgba(36, 253, 188, 0.432) 56.55%, #24FDBC 69.17%)
       clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%)
       box-shadow: 0px 0px 24px 0px #10AA7C59
@@ -136,6 +137,15 @@
         &:hover
           background: #19c592
 
+    &_purple
+      background: #8714E1
+      clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%)
+      &_inner
+        background: #8714E1
+
+        &:hover
+          background: #901fe6
+          
 
 .livefeed
   &_logo
@@ -243,3 +253,66 @@
       width: 100%
       height: 100%
       border-radius: 12px
+
+// Congratulation Modal
+
+.congratulation_logo 
+  left: 50%
+  transform: translate(-50%, 0%)
+
+.congratulation
+  position: relative
+  filter: blur(60px)
+ 
+  &.grey
+    background: radial-gradient(circle, rgba(70,70,70,1) 0%, rgba(0,0,0,0) 150%)
+  &.light-blue
+    background: radial-gradient(circle, rgba(11,177,229,1) 0%, rgba(0,0,0,0) 150%)
+  &.blue
+    background: radial-gradient(circle, rgba(11,72,229,1) 0%, rgba(0,0,0,0) 150%)
+  &.purple
+    background: radial-gradient(circle, rgba(107,11,229,1) 0%, rgba(0,0,0,0) 150%)
+  &.pink
+    background: radial-gradient(circle, rgba(174,17,200,1) 0%, rgba(0,0,0,0) 150%)
+  &.red
+    background: radial-gradient(circle, rgba(185,32,32,1) 0%, rgba(0,0,0,0) 150%)
+  &.yellow
+    background: radial-gradient(circle, rgba(225,181,20,1) 0%, rgba(0,0,0,0) 150%)
+  &.shadow_grey
+    background: linear-gradient(180deg, rgba(47, 55, 74, 0.25) 0%, rgba(35, 41, 58, 0.25) 100%),linear-gradient(140.14deg, rgba(20, 25, 37, 0) 53.41%, rgba(24, 182, 232, 0.65) 100%)
+  &.shadow_light-blue
+    background: linear-gradient(180deg, rgba(47, 55, 74, 0.25) 0%, rgba(35, 41, 58, 0.25) 100%),linear-gradient(140.14deg, rgba(20, 25, 37, 0) 53.41%, rgba(63, 72, 95, 0.65) 100%)
+  &.shadow_blue
+    background: linear-gradient(180deg, rgba(47, 55, 74, 0.25) 0%, rgba(35, 41, 58, 0.25) 100%),linear-gradient(140.14deg, rgba(20, 25, 37, 0) 53.41%, rgba(24, 57, 232, 0.65) 100%)
+  &.shadow_purple
+    background: linear-gradient(180deg, rgba(47, 55, 74, 0.25) 0%, rgba(35, 41, 58, 0.25) 100%),linear-gradient(140.14deg, rgba(20, 25, 37, 0) 53.41%, rgba(103, 24, 232, 0.65) 100%)
+  &.shadow_pink
+    background: linear-gradient(180deg, rgba(47, 55, 74, 0.25) 0%, rgba(35, 41, 58, 0.25) 100%),linear-gradient(140.14deg, rgba(20, 25, 37, 0) 53.41%, rgba(191, 24, 232, 0.65) 100%)
+  &.shadow_red
+    background: linear-gradient(180deg, rgba(47, 55, 74, 0.25) 0%, rgba(35, 41, 58, 0.25) 100%),linear-gradient(140.14deg, rgba(20, 25, 37, 0) 53.41%, rgba(180, 38, 72, 0.65) 100%)
+  &.shadow_yellow
+    background: linear-gradient(180deg, rgba(47, 55, 74, 0.25) 0%, rgba(35, 41, 58, 0.25) 100%),linear-gradient(140.14deg, rgba(20, 25, 37, 0) 53.41%, rgba(253, 205, 36, 0.65) 100%)
+
+  &_backdrop
+    z-index: 1
+
+  &_inner
+    position: relative
+    z-index: 2
+    height: 100%
+    padding: 8px 5px
+    display: flex
+    flex-direction: column
+    gap: 2px
+  &_pic
+    width: 100%
+ 
+  &_title
+    flex-shrink: 0
+    width: 100%
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+    font-size: 8px
+    align-self: start
+    @apply text-text-primary
