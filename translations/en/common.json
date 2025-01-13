@@ -269,5 +269,16 @@
 		"go_inventory": "Go inventory",
 		"top_title": "Congratulations, you have won the following items:",
 		"bottom_title": "You can sell the entire item or try to open the case again."
+	},
+	"profile_main": {
+		"title": "profile",
+		"balance": "Balance",
+		"deposit": "Deposit",
+		"profile": "Profile",
+		"history_games": "History games",
+		"transaction_history": "Transaction history",
+		"achievements": "Achievements",
+		"verification": "Verification",
+		"settings": "Settings"
 	}
 }
