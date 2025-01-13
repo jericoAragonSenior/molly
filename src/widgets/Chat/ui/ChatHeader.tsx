@@ -41,7 +41,7 @@ export const ChatHeader = () => {
 			</div>
 			<button
 				type='button'
-				onClick={() => { setViewChatHidden(true); setItemPosition("center") }}
+				onClick={() => { setViewChatHidden(true); setItemPosition("hidden") }}
 				className={cls.btn_close}
 			>
 				{breakpoints.lg ? <IconAngleRight className='w-[18px] h-[18px]' /> : <IconClose className='w-[20px] h-[20px] fill-[#404F71] stroke-[#10AA7C]' />}
