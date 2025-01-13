@@ -16,7 +16,7 @@ import { useCommonStore } from '@/entities/Common/model/store'
 import { usePathname, useRouter } from '@/shared/config/i18n/navigation'
 
 const Chat = dynamic(() => import('@/widgets/Chat/ui/Chat'), { ssr: false, loading: () => <ChatLoader /> })
-const MainLiveFeed = dynamic(() => import('@/features/LiveFeed/ui/MainLiveFeed'), {
+const MainLiveKeed = dynamic(() => import('@/features/LiveFeed/ui/MainLiveKeed'), {
     ssr: false
 })
 
@@ -30,7 +30,7 @@ const DesktopLayout = ({ children }: { children: React.ReactNode }) => {
     const setItemPosition = useCommonStore(state => state.setItemPosition)
 
     useEffect(() => {
-            setItemPosition("right")
+            setItemPosition("hidden")
             // eslint-disable-next-line react-hooks/exhaustive-deps
         }, [])
 
@@ -51,7 +51,7 @@ const DesktopLayout = ({ children }: { children: React.ReactNode }) => {
                             <Header className='px-[40px] lg:pl-5 lg:pr-6 md:pr-3' />
                             {
                                 itemPosition == "center" && pathname != '/' &&
-                                <MainLiveFeed className='mt-3 pl-[40px] lg:pl-5 md:pl-3' />
+                                <MainLiveKeed className='mt-3 pl-[40px] lg:pl-5 md:pl-3' />
                             }
                             <div className='w-screen'></div>
                             <main className='layout-main__page'>
