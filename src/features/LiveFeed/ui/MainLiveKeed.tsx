@@ -8,11 +8,11 @@ import { useAppResponsive } from '@/shared/lib/useResponsive'
 
 import { LiveFeed } from './LiveFeed'
 
-interface MainLiveFeedProps {
+interface MainLiveKeedProps {
 	className?: string
 }
 
-const MainLiveFeed: FC<MainLiveFeedProps> = ({ className }) => {
+const MainLiveKeed: FC<MainLiveKeedProps> = ({ className }) => {
 	const pathname = usePathname()
 
 	const breakpoints = useAppResponsive()
@@ -30,4 +30,4 @@ const MainLiveFeed: FC<MainLiveFeedProps> = ({ className }) => {
 	return null
 }
 
-export default MainLiveFeed
+export default MainLiveKeed
