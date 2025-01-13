@@ -1,3 +1,4 @@
+"use client"
 import clsx from "clsx";
 import cls from "./OpenCase.module.sass";
 
@@ -6,11 +7,15 @@ import { useTranslations } from "next-intl";
 
 import { itemsList } from "../model/items";
 import { CardLiveFeed } from "@/shared/ui/CardLiveFeed/CardLiveFeed";
+import { useCommonStore } from "@/entities/Common/model/store";
 
 const CaseLiveFeed = () => {
 
     // For translation
     const t = useTranslations();
+
+    const itemPosition = useCommonStore(state => state.itemPosition)
+    
 
     // Build live feeds
     const items = itemsList.map(item => (
@@ -24,7 +29,7 @@ const CaseLiveFeed = () => {
     ))
 
     return (
-        <div className="px-5 w-full h-auto relative flex flex-col mt-2">
+        <div className={clsx("px-5 w-full h-auto relative flex-col mt-2", itemPosition == 'hidden' ? 'flex' : 'hidden')}>
             <div className={clsx(cls.livefeed_logo, "-mb-2")}>
                 <div className={clsx(cls.livefeed_logo_inner, "flex justify-center gap-1 pt-2.5")}>
                     <IconCrown className={clsx("w-3 h-3", cls.crown_bg)} />
