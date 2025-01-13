@@ -1,0 +1,57 @@
+.h
+  overflow: hidden
+  min-height: calc(74px + 8px + 10px)
+  padding-top: 10px
+  &_inner
+    position: relative
+    z-index: 2
+    padding-top: 25px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 12px
+
+.bg
+  position: relative
+  display: flex
+  justify-content: center
+  &_pic
+    position: absolute
+    z-index: 1
+    top: 8px
+    left: 50%
+    transform: translateX(-50%)
+    width: auto
+
+
+.title
+  flex-grow: 1
+  @apply font-primary-bold text-text-primary
+  text-align: center
+  font-size: 32px
+
+
+.profile
+  &_main
+    background: linear-gradient(180deg, #1F2534 0%, rgba(31, 37, 52, 0.25) 100%)
+    padding: 2px
+    border-radius: 12px
+
+    &_inner
+      background: linear-gradient(180deg, #191F2D 0%, rgba(25, 31, 45, 0.25) 100%)
+      border-radius: 12px
+
+.wallet_icon
+  fill: #10AA7C
+
+.deposit_btn
+  padding: 1px
+  background: linear-gradient(90deg, rgba(36, 253, 188, 0) 77.44%, #24FDBC 89.52%),linear-gradient(270deg, rgba(36, 253, 188, 0.445) 40.76%, #24FDBC 57.96%)
+  border-radius: 8px
+
+  &_inner
+    background: linear-gradient(0deg, #10AA7C, #10AA7C),linear-gradient(180deg, rgba(36, 253, 188, 0) 0%, rgba(36, 253, 188, 0.65) 100%)
+    border-radius: 8px
+
+    &_font
+      font-family: Gotham Bold, system-ui, -apple-system, BlinkMacSystemFont, sans-serif
