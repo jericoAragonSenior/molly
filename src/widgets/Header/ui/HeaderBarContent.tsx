@@ -121,13 +121,11 @@ export const HeaderBarContent: FC<HeaderBarContentProps> = ({ className }) => {
 						<div className={cls.level_count}>99</div>
 					</div>
 				</div>
-				<Media greaterThanOrEqual='lg'>
-					<div className={cls.settings}>
-						<HeaderSettings className='ml-3' />
-					</div>
-				</Media>
+				<div className={cls.settings}>
+					<HeaderSettings className='ml-3' />
+				</div>
 				<div className={cls.notif}>
-					<HeaderNotifications className='ml-2 lg:ml-0' />
+					<HeaderNotifications className='ml-2' />
 				</div>
 			</div>
 			:
@@ -153,11 +151,9 @@ export const HeaderBarContent: FC<HeaderBarContentProps> = ({ className }) => {
 						/>
 					</div>
 				</div>
-				<Media greaterThanOrEqual='lg'>
-					<div className={cls.settings}>
-						<HeaderSettings className='ml-3' />
-					</div>
-				</Media>
+				<div className={cls.settings}>
+					<HeaderSettings className='ml-3' />
+				</div>
 			</div>
 	)
 }
