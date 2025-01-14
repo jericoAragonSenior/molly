@@ -10,6 +10,8 @@ import { CaseToolbarFixed } from '@/entities/CaseToolbar/ui/CaseToolbarFixed'
 import { useCommonStore } from '@/entities/Common/model/store'
 
 import { useAppResponsive } from '@/shared/lib/useResponsive'
+import { usePathname } from '@/shared/config/i18n/navigation'
+import { AppRoute } from '@/shared/const/pages'
 
 interface FixedTopBarProps {
 	className?: string
@@ -26,6 +28,7 @@ export const FixedTopBar: FC<FixedTopBarProps> = ({ className }) => {
 	const headerBarInView = useCommonStore(state => state.headerBarInView)
 	const fixedCaseToolbarInView = useCommonStore(state => state.fixedCaseToolbarInView)
 
+	const pathname = usePathname();
 	const breakpoints = useAppResponsive()
 
 	useEffect(() => {
@@ -69,7 +72,10 @@ export const FixedTopBar: FC<FixedTopBarProps> = ({ className }) => {
 					['w-full']: fixedCaseToolbarInView
 				})}
 			>
-				<CaseToolbarFixed className='grow' />
+				{
+					(pathname == AppRoute.MAIN || pathname == AppRoute.CASES) &&
+					<CaseToolbarFixed className='grow' />
+				}
 				<HeaderBarFixed />
 			</motion.div>
 		</div>
