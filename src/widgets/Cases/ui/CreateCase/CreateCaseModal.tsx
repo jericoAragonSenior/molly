@@ -29,7 +29,7 @@ const CreateCaseModal = () => {
     }
 
     return (
-        <div className={clsx(cls.create_modal, "w-[1183px] lg:w-full flex flex-col")}>
+        <div className={clsx(cls.create_modal, "w-[1183px] max-h-[calc(100vh-130px)] min-h-[calc(100vh-130px)] lg:w-full flex flex-col overflow-auto app-scrollbar")}>
             <div className={clsx("fixed top-[60px] hidden md:flex z-[40]", isLeftBar ? "rotate-0 duration-100" : "rotate-180 duration-100")} onClick={openLeftBar}>
                 <IconArrow className="w-9 h-9 fill-[#0e201b] stroke-primary-400" />
             </div>
@@ -58,7 +58,7 @@ const CreateCaseModal = () => {
                     <div className={clsx(cls.modal_body, "w-full h-full")}>
                         <div className={clsx(cls.modal_body_inner, "w-full h-full flex flex-col p-5")}>
                             <ModalBar />
-                            <div className="flex-1 overflow-auto py-3 app-scrollbar relative">
+                            <div className="flex-1 overflow-auto my-3 app-scrollbar relative">
                                 <CaseItems />
                             </div>
                         </div>
