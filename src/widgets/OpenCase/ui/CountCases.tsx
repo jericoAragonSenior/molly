@@ -39,7 +39,7 @@ const CountCases = () => {
                             <div className="flex w-auto relative h-auto py-2 justify-center items-center" key={'case1' + i}>
                                 <div className=" absolute w-full h-full bg-black z-[1] opacity-0">
                                 </div>
-                                <div className={clsx("w-[990px] h-auto relative overflow-hidden flex justify-center items-center 3md:w-[720px]", cls.section)}>
+                                <div className={clsx("w-[990px] h-auto relative overflow-hidden flex justify-center items-center md:!rounded-none", cls.section)}>
                                     <CaseSection selectedItem={selectedItem} className="h-auto" items={selectItems} />
                                 </div>
                                 <div className={clsx("w-[4px] bg-[#FFC600] h-full absolute z-[2]", cls.center, cls.pointer_shadow)}>
@@ -62,10 +62,10 @@ const CountCases = () => {
                         const selectedItem = getRandomNumber(0, selectItems.length - 1)
                         selected.push(selectItems[selectedItem]);
                         newCase2.push(
-                            <div className="flex w-auto h-auto py-2 relative" key={'case2' + i}>
+                            <div className="flex w-auto h-auto py-2 relative md:w-1/2" key={'case2' + i}>
                                 <div className=" absolute w-full h-full bg-black z-[1] opacity-0">
                                 </div>
-                                <div className={clsx("w-[555px] h-auto relative overflow-hidden flex justify-center items-center md:w-[310px]", cls.section)}>
+                                <div className={clsx("w-[555px] h-auto relative overflow-hidden flex justify-center items-center md:w-full md:!rounded-none", cls.section)}>
                                     <CaseSection selectedItem={selectedItem} className="h-auto" items={selectItems} />
                                 </div>
                                 <div className={clsx("w-[2px] bg-[#FFC600] h-full absolute  z-[1]", cls.center, cls.pointer_shadow)}>
@@ -88,10 +88,10 @@ const CountCases = () => {
                         const selectedItem = getRandomNumber(0, selectItems.length - 1)
                         selected.push(selectItems[selectedItem]);
                         newCase3.push(
-                            <div className="flex w-auto h-auto py-2 relative" key={'case3' + i}>
+                            <div className={clsx("flex w-auto h-auto py-2 relative", i == 0 ? 'md:w-full' : 'md:w-1/2')} key={'case3' + i}>
                                 <div className=" absolute w-full h-full bg-black z-[1] opacity-0">
                                 </div>
-                                <div className={clsx("w-[361px] h-auto relative overflow-hidden flex justify-center items-center md:w-[310px]", cls.section)}>
+                                <div className={clsx("w-[361px] h-auto relative overflow-hidden flex justify-center items-center md:w-full md:!rounded-none", cls.section)}>
                                     <CaseSection selectedItem={selectedItem} className="h-auto" items={selectItems} isBig={false} />
                                 </div>
                                 <div className={clsx("w-[1.3px] bg-[#FFC600] h-full absolute  z-[1]", cls.center, cls.pointer_shadow)}>
@@ -112,10 +112,10 @@ const CountCases = () => {
                         const selectedItem = getRandomNumber(0, selectItems.length - 1)
                         selected.push(selectItems[selectedItem]);
                         newCase4.push(
-                            <div className="flex w-auto h-auto py-2 relative" key={'case4' + i}>
+                            <div className="flex w-auto h-auto py-2 relative md:w-1/2" key={'case4' + i}>
                                 <div className=" absolute w-full h-full bg-black z-[1] opacity-0">
                                 </div>
-                                <div className={clsx("w-[279px] h-auto relative overflow-hidden flex justify-center items-center md:w-[310px]", cls.section)}>
+                                <div className={clsx("w-[279px] h-auto relative overflow-hidden flex justify-center items-center md:w-full md:!rounded-none", cls.section)}>
                                     <CaseSection selectedItem={selectedItem} className="h-auto" items={selectItems} isBig={false} />
                                 </div>
                                 <div className={clsx("w-[1px] bg-[#FFC600] h-full absolute  z-[1]", cls.center, cls.pointer_shadow)}>
@@ -138,10 +138,10 @@ const CountCases = () => {
                         const selectedItem = getRandomNumber(0, selectItems.length - 1)
                         selected.push(selectItems[selectedItem]);
                         newCase5.push(
-                            <div className="flex w-auto h-auto py-2 relative" key={'case5' + i}>
+                            <div className={clsx("flex w-auto h-auto py-2 relative", i == 2 ? 'md:w-full' : 'md:w-1/2')} key={'case5' + i}>
                                 <div className=" absolute w-full h-full bg-black z-[1] opacity-0">
                                 </div>
-                                <div className={clsx("w-[220px] h-auto relative overflow-hidden flex justify-center items-center md:w-[310px]", cls.section)}>
+                                <div className={clsx("w-[220px] h-auto relative overflow-hidden flex justify-center items-center md:w-full md:!rounded-none", cls.section)}>
                                     <CaseSection selectedItem={selectedItem} className="h-auto" items={selectItems} isBig={false} />
                                 </div>
                                 <div className={clsx("w-[0.8px] bg-[#FFC600] h-full absolute  z-[1]", cls.center, cls.pointer_shadow)}>
@@ -164,10 +164,10 @@ const CountCases = () => {
                         const selectedItem = getRandomNumber(0, selectItems.length - 1)
                         selected.push(selectItems[selectedItem]);
                         newCase10.push(
-                            <div className="flex w-auto h-auto py-2 relative" key={'case10' + i}>
+                            <div className="flex w-auto h-auto py-2 relative md:w-1/2" key={'case10' + i}>
                                 <div className=" absolute w-full h-full bg-black z-[1] opacity-0">
                                 </div>
-                                <div className={clsx("w-[220px] h-auto relative overflow-hidden flex justify-center items-center md:w-[310px]", cls.section)}>
+                                <div className={clsx("w-[220px] h-auto relative overflow-hidden flex justify-center items-center md:w-full md:!rounded-none", cls.section)}>
                                     <CaseSection selectedItem={selectedItem} className="h-auto" items={selectItems} isBig={false} />
                                 </div>
                                 <div className={clsx("w-[0.8px] bg-[#FFC600] h-full absolute z-[1]", cls.center, cls.pointer_shadow)}>
@@ -189,7 +189,7 @@ const CountCases = () => {
     }, [caseCount])
 
     return (
-        <div className="w-full h-auto flex relative justify-center gap-3 items-center flex-wrap">
+        <div className="w-full h-auto flex relative justify-center gap-3 md:gap-0 items-center flex-wrap">
             {
                 cases.map((item) => item)
             }
