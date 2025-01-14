@@ -8,7 +8,6 @@ import cls from "./Support.module.sass"
 import clsx from "clsx";
 import SelectProblem from "./SelectProblem";
 import Button from "@/shared/ui/Button/Button";
-import SvgCreateNewTicket from '@/shared/assets/create-new-ticket-btn.svg'
 import IconUploadFile from '@/shared/assets/icons/icon-select-file.svg'
 
 const CreateNewTicket = () => {
@@ -18,7 +17,7 @@ const CreateNewTicket = () => {
     const [subject, setSubject] = useState('');
 
     return (
-        <div className={clsx(cls.modal, 'py-6 gap-4')}>
+        <div className={clsx(cls.modal, 'py-6 gap-4 max-h-[calc(100vh-150px)] overflow-auto app-scrollbar')}>
             <div className="flex flex-col gap-3 w-full">
                 <span className=" text-[#545778] font-[500] text-[15px]">{t('create_new_ticket.select_problem')}</span>
                 <SelectProblem />
@@ -33,7 +32,7 @@ const CreateNewTicket = () => {
                     theme='theme-1'
                     placeholder={t('create_new_ticket.subject_placeholder')}
                     classNames={{
-                        inputWrapper: [cls.box, '!bg-[#0D1018] !border-0 ] !p-6'],
+                        inputWrapper: [cls.box, '!bg-[#0D1018] !border-0 !rounded-[9px] !p-6'],
                         input: [cls.box_value, 'w-full text-[14px]'],
                         label: ['text-[10px]'],
                         mainWrapper: "w-full",
@@ -56,21 +55,21 @@ const CreateNewTicket = () => {
                         <span className="text-[12px]">{t('create_new_ticket.create_ticket').toUpperCase()}</span>
                     </span>
                 </Button> */}
-                <Button
-                    theme='grey-4'
-                    strokeSize='reg'
-                    hexagon
-                    hexagonAxis='x'
-                    classNames={{
-                        base: 'relative w-auto h-auto',
-                        content: 'px-6 py-4 text-xs'
-                    }}
-                >
-                    {t('create_new_ticket.create_ticket').toUpperCase()}
-                </Button>
+                <div className={clsx(cls.create_ticket, 'w-[168px] h-[38px]')}>
+                    <div className={cls.create_ticket_inner}>
+                        <Button
+                            classNames={{
+                                base: 'relative w-full h-full',
+                            }}
+                        >
+                            {t('create_new_ticket.create_ticket').toUpperCase()}
+                        </Button>
+                    </div>
+                </div>
+                
             </div>
-            <div className=" rounded-lg border-[#1B2130] border-[1px] p-2 w-full overflow-auto app-scrollbar">
-                <span className="text-[#545778] font-[13px]">zip,rar,svg,txt,png,jpeg,jpg,mp4,mp3,pdf,docx,doc,xlsx,xls,webp</span>
+            <div className=" rounded-lg border-[#1B2130] border-[1px] p-2 w-full h-auto relative text-wrap break-words">
+                <div className="text-[#545778] font-[13px] text-wrap h-full relative">zip,rar,svg,txt,png,jpeg,jpg,mp4,mp3,pdf,docx,doc,xlsx,xls,webp</div>
             </div>
         </div>
     )
