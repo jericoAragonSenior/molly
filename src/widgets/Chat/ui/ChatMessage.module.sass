@@ -4,7 +4,10 @@
   border-radius: 12px
   padding: 2px
   background: linear-gradient(90deg, rgba(25,30,45,1) 0%, rgba(16,21,31,1) 100%)
-  &.my, &.admin
+  &.toadmin
+    box-shadow: 0px 0px 5px 0px #fdce2449
+
+  &.my, &.admin, &.toadmin
     .avatar
       &::after
         content: ''
@@ -28,6 +31,12 @@
       width: 25%
       height: 100%
       background: linear-gradient(45deg, rgba(253,205,36,1) 0%, rgba(253,205,36,0) 50%)
+    .tag
+      border-color: #FDCD24
+      color: #FDCD24
+      background-color: rgba(226, 182, 23, 0.15)
+
+  &.toadmin
     .tag
       border-color: #FDCD24
       color: #FDCD24
