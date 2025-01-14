@@ -24,7 +24,7 @@ const Page = async () => {
 		<>
 			<div className='mt-4'>
 				<CasesHeader />
-				<CaseToolbar className='container-common' isHeader={false} />
+				<CaseToolbar className='container-common' />
 				<CasesSection categoryKey='caseLimited' />
 				<CasesSection categoryKey='caseBranded' />
 			</div>
