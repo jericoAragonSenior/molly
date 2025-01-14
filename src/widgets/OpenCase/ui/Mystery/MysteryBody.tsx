@@ -55,9 +55,9 @@ const MysteryBody = () => {
 
                     <BackDropButton classNames={{ body: '!w-full', inner: '!gap-[14px]' }} theme={BackDropTheme.YELLOW} icon={IconRefesh} content={t('case_mystery.luck_text')} />
 
-                    <div className={clsx(cls.mystery_content_bg, 'w-full p-4 flex gap-4')}>
-                        <IconHint className='w-7 h-7 fill-[#404B67]' />
-                        <div className='flex flex-col gap-5 text-[#7683A4] text-[12px] font-[500]'>
+                    <div className={clsx(cls.mystery_content_bg, 'w-full p-4 flex gap-4 relative')}>
+                        <IconHint className='w-[34px] h-[34px] fill-[#404B67] absolute' />
+                        <div className='flex flex-col gap-5 text-[#7683A4] text-[12px] font-[500] ml-14'>
                             <span>{t('case_mystery.content1')}</span>
                             <span>{t('case_mystery.content2')}</span>
                         </div>
