@@ -11,7 +11,6 @@ import { Header } from '@/widgets/Header/ui/Header'
 import { MobileBar } from '@/widgets/MobileBar/ui/MobileBar'
 import { MobileMenu } from '@/widgets/MobileMenu/ui/MobileMenu'
 import { Sidebar } from '@/widgets/Sidebar/ui/Sidebar'
-import MainLiveKeed from '@/features/LiveFeed/ui/MainLiveKeed'
 
 const Chat = dynamic(() => import('@/widgets/Chat/ui/Chat'), { ssr: false, loading: () => <ChatLoader /> })
 
@@ -27,7 +26,6 @@ const MobileLayout = ({ children }: { children: React.ReactNode }) => {
                         <FixedTopBar className='px-10' />
                     </Client>
                     <Header className='px-[40px] lg:pl-5 lg:pr-6 md:pr-3 sm:pr-1 sm:pl-2 sm:gap-0' />
-                    <MainLiveKeed className='mt-3 pl-[40px] lg:pl-5 md:pl-3' />
                     <main className='layout-main__page'>
                         <Suspense fallback={<Loading />}>{children}</Suspense>
                     </main>
