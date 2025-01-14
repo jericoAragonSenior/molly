@@ -49,12 +49,24 @@ const CreateNewTicket = () => {
                     <div className="text-white w-auto text-[14px] font-[500]">{t('create_new_ticket.max_size')}</div>
                     <IconUploadFile className="fill-[#545778] w-5 h-5" />
                 </div>
-                <Button disableAnimation className="relative w-auto h-auto">
+                {/* <Button disableAnimation className="relative w-auto h-auto">
                     <SvgCreateNewTicket />
                     <span className="flex gap-2 absolute items-center text-[#0D1018]">
                         <span className="text-[24px]">+</span>
                         <span className="text-[12px]">{t('create_new_ticket.create_ticket').toUpperCase()}</span>
                     </span>
+                </Button> */}
+                <Button
+                    theme='grey-4'
+                    strokeSize='reg'
+                    hexagon
+                    hexagonAxis='x'
+                    classNames={{
+                        base: 'relative w-auto h-auto',
+                        content: 'px-6 py-4 text-xs'
+                    }}
+                >
+                    {t('create_new_ticket.create_ticket').toUpperCase()}
                 </Button>
             </div>
             <div className=" rounded-lg border-[#1B2130] border-[1px] p-2 w-full overflow-auto app-scrollbar">
