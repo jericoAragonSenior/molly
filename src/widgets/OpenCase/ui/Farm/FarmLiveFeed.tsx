@@ -7,7 +7,10 @@ const FarmLiveFeed = () => {
     const openFarm = useCommonStore(state => state.openFarm)
     
     return (
-        openFarm == true && <CaseLiveFeed />
+        openFarm == true &&
+        <div className={'w-full overflow-hidden flex justify-start'}>
+            <CaseLiveFeed />
+        </div>
     )
 }
 
