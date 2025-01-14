@@ -140,7 +140,7 @@
 
 @media ( max-width: 768px )
   .modal
-    width: calc(100vw  -  40px)
+    width: calc(100vw  -  80px)
 
 .bar
 
@@ -173,3 +173,16 @@
       display: flex
       justify-content: center
       align-items: center
+
+.chat_shadow
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    border-radius: 15px
+    width: 33px
+    height: 33px
+    transform: translate(-50%, -50%)
+    background-color: rgba(253, 62, 36, 0.25)
+    filter: blur(5px)
