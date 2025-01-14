@@ -17,7 +17,7 @@ export const HeaderNav: FC<HeaderNavProps> = ({ className }) => {
 	const t = useTranslations()
 	const pathname = usePathname()
 	return (
-		<div className={clsx(className, cls.nav, 'py-3 flex flex-wrap items-center gap-x-[30px] xl:gap-x-4 gap-y-3 3sm:bg-[#141924] 3sm:w-full 3sm:justify-center 3sm:py-4')}>
+		<div className={clsx(className, cls.nav, 'py-3 flex flex-wrap items-center gap-x-[30px] xl:gap-x-4 gap-y-3')}>
 			{headerNavItems.map(item => (
 				<Link
 					title={t(item.label)}
