@@ -5,18 +5,18 @@ const TermsBody = () => {
     const t = useTranslations();
 
     return (
-        <div className="w-full flex flex-col gap-7 p-7">
+        <div className="w-full flex flex-col gap-7 p-7 2sm:text-center">
             <span className="text-[#545778] text-[14px] font-[500]">
                 {t('terms_content.title')}
             </span>
             <span className="text-[#D1D9EB] text-[18px] font-[400]">
                 {t('terms_content.license')}
             </span>
-            <span className="flex flex-col gap-7 text-[#545778] text-[14px] font-[500]">
+            <span className="flex flex-col gap-7 text-[#545778] text-[14px] font-[500] 2sm:text-center">
                 <span>{t('terms_content.content1')}</span>
                 <span>{t('terms_content.content2')}</span>
                 <span>{t('terms_content.content3')}</span>
-                <span className="flex flex-col">
+                <span className="flex flex-col 2sm:text-center">
                     <span>
                         {t('terms_content.result1')}
                     </span>
