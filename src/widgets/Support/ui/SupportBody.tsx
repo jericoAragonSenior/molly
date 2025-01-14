@@ -41,44 +41,55 @@ const SupportBodyHeader = ({ tikcetNumber, subjectOfAppeal, lastUpdate, response
 
 
     return (
-        <div className="w-full h-[90px] justify-between">
-            <div className="w-auto gap-6 h-full items-center flex px-5">
-                <IconChat className={clsx(responseType == "closed" ? "fill-[#545778] text-[#545778]" : ["fill-[#FDCD24] text-[#FDCD24]", cls.chat_shadow])} />
-                <div className={clsx("flex-col gap-2 flex lg:hidden")}>
-                    <span className="text-[#545778] text-[13px] font-[500]">{t('support_chat_header.id_ticket')}</span>
-                    <span className="text-[#D1D9EB] font-[500] text-[15px]">{tikcetNumber}</span>
+        <div className="w-full min-h-[90px] py-4 justify-between">
+            <div className="w-full gap-6 h-full items-center flex px-5">
+                <div className="relative w-auto h-auto lg:hidden">
+                    <div className={responseType == "closed" ? '' : cls.chat_shadow}>
+                        <IconChat className={clsx(responseType == "closed" ? "fill-[#545778] text-[#545778]" : ["fill-[#FDCD24] text-[#FDCD24]"])} />
+                    </div>
                 </div>
-                <div className={clsx("flex flex-col gap-2 md:hidden", !chatViewHidden && "hidden")}>
+                <div className="flex-1 flex justify-between items-center flex-wrap md:gap-3 2sm:justify-start 2sm:gap-4">
+                    <div className="relative w-auto h-auto lg:flex hidden">
+                        <div className={responseType == "closed" ? '' : cls.chat_shadow}>
+                            <IconChat className={clsx(responseType == "closed" ? "fill-[#545778] text-[#545778]" : ["fill-[#FDCD24] text-[#FDCD24]"])} />
+                        </div>
+                    </div>
+                    <div className={clsx("flex-col gap-2 flex  3sm:items-start")}>
+                        <span className="text-[#545778] text-[13px] font-[500]">{t('support_chat_header.id_ticket')}</span>
+                        <span className="text-[#D1D9EB] font-[500] text-[15px]">{tikcetNumber}</span>
+                    </div>
+                    <div className={clsx("flex flex-col gap-2 3sm:items-start", !chatViewHidden && "hidden")}>
 
-                   <span className="text-[#545778] text-[13px] font-[500]">{t('support_chat_header.subject_of_appeal')}</span>
-                    <span className="text-[#D1D9EB] font-[500] text-[15px]">{subjectOfAppeal}</span>
-                </div>
-                <div className="flex flex-col gap-2 md:hidden">
-                    <span className="text-[#545778] text-[13px] font-[500]">{t('support_chat_header.last_update')}</span>
-                    <span className="text-[#D1D9EB] font-[500] text-[15px]">{lastUpdate}</span>
-                </div>
-                <div className="flex flex-col gap-2">
-                    <span className="text-[#545778] text-[13px] font-[500] md:hidden">{t('support_chat_header.status_of_the_req')}</span>
+                        <span className="text-[#545778] text-[13px] font-[500]">{t('support_chat_header.subject_of_appeal')}</span>
+                        <span className="text-[#D1D9EB] font-[500] text-[15px] 3sm:text-start">{subjectOfAppeal}</span>
+                    </div>
+                    <div className="flex flex-col gap-2 3sm:items-start">
+                        <span className="text-[#545778] text-[13px] font-[500]">{t('support_chat_header.last_update')}</span>
+                        <span className="text-[#D1D9EB] font-[500] text-[15px]">{lastUpdate}</span>
+                    </div>
+                    <div className="flex flex-col gap-2 3sm:items-start md:w-full md:justify-center">
+                        <span className="text-[#545778] text-[13px] font-[500]">{t('support_chat_header.status_of_the_req')}</span>
 
-                    <span className="flex gap-3 md:gap-2">
+                        <span className="flex gap-3 md:gap-2 md:justify-center">
 
 
-                        <IconMessage
-                            className={clsx(
-                                responseType === "response" && "fill-[#24FDBC]",
-                                responseType === "consideration" && "fill-[#545778]",
-                                responseType === "closed" && "fill-[#E72121]"
-                            )}
-                        />
-                        <span className={clsx(
-                            "font-[500] text-[15px]",
-                            responseType === "closed" && "text-[#df3131]",
-                            responseType === "consideration" && "text-[#545778]",
-                            responseType === "response" && "text-[#D1D9EB]"
-                        )}>
-                            {response}
+                            <IconMessage
+                                className={clsx(
+                                    responseType === "response" && "fill-[#24FDBC]",
+                                    responseType === "consideration" && "fill-[#545778]",
+                                    responseType === "closed" && "fill-[#E72121]"
+                                )}
+                            />
+                            <span className={clsx(
+                                "font-[500] text-[15px] 3sm:text-start",
+                                responseType === "closed" && "text-[#df3131]",
+                                responseType === "consideration" && "text-[#545778]",
+                                responseType === "response" && "text-[#D1D9EB]"
+                            )}>
+                                {response}
+                            </span>
                         </span>
-                    </span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -94,13 +105,15 @@ const SupportBodyContent = ({ messagesList }: SupportBodyContentProps) => {
             <div className="gap-4 flex flex-col min-h-[270px] max-h-[322px] overflow-auto">
                 {
                     messagesList.map((item, index) =>
-                        <div key={index} className={clsx("flex w-full", item.type == "admin" ? "justify-start" : "justify-end")}>
-                            <ChatMessage {...item} className=" md:w-full w-1/2" titleClass="!text-[#FDCD24]" />
+                        <div key={index} className={clsx("flex w-full", item.type == "toadmin" ? "justify-start pl-2 md:pr-2 md:pl-3 md:pb-2" : "justify-end")}>
+                            <ChatMessage {...item} className=" md:w-full w-1/2" titleClass={item.type == "toadmin" ? "!text-[#FDCD24]" : ""}
+                                contentClass={item.type == "toadmin" ? "!text-[#f39e9e] !text-[13px]" : ""} 
+                            />
                         </div>
                     )
                 }
             </div>
-            <ChatBar className="w-full !mx-0 !my-2" />
+            <ChatBar className="w-full !mx-0 !my-2" isEmoji={false} />
         </div>
     )
 }
