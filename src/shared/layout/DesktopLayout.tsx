@@ -10,13 +10,13 @@ import { FixedTopBar } from '@/widgets/FixedTopBar/ui/FixedTopBar'
 import { Footer } from '@/widgets/Footer/ui/Footer'
 import { Header } from '@/widgets/Header/ui/Header'
 import { Sidebar } from '@/widgets/Sidebar/ui/Sidebar'
-import { HeaderLiveKeed } from '@/features/LiveFeed/ui/HeaderLiveKeed'
+import { HeaderLiveFeed } from '@/features/LiveFeed/ui/HeaderLiveFeed'
 import { useCommonStore } from '@/entities/Common/model/store'
 
-import { usePathname, useRouter } from '@/shared/config/i18n/navigation'
+import { usePathname } from '@/shared/config/i18n/navigation'
 
 const Chat = dynamic(() => import('@/widgets/Chat/ui/Chat'), { ssr: false, loading: () => <ChatLoader /> })
-const MainLiveKeed = dynamic(() => import('@/features/LiveFeed/ui/MainLiveKeed'), {
+const MainLiveFeed = dynamic(() => import('@/features/LiveFeed/ui/MainLiveFeed'), {
     ssr: false
 })
 
@@ -30,7 +30,7 @@ const DesktopLayout = ({ children }: { children: React.ReactNode }) => {
     const setItemPosition = useCommonStore(state => state.setItemPosition)
 
     useEffect(() => {
-            setItemPosition("hidden")
+            setItemPosition("right")
             // eslint-disable-next-line react-hooks/exhaustive-deps
         }, [])
 
@@ -41,7 +41,7 @@ const DesktopLayout = ({ children }: { children: React.ReactNode }) => {
                     <Sidebar />
                     {
                         itemPosition == "left" && pathname != '/' &&
-                        <HeaderLiveKeed className='h-screen w-[100px]' />
+                        <HeaderLiveFeed className='h-screen w-[100px]' />
                     }
                     <div className='h-screen overflow-y-auto app-scrollbar lg:overflow-visible lg:h-auto'>
                         <div className='layout-main__content min-h-screen pb-[30px]'>
@@ -51,7 +51,7 @@ const DesktopLayout = ({ children }: { children: React.ReactNode }) => {
                             <Header className='px-[40px] lg:pl-5 lg:pr-6 md:pr-3' />
                             {
                                 itemPosition == "center" && pathname != '/' &&
-                                <MainLiveKeed className='mt-3 pl-[40px] lg:pl-5 md:pl-3' />
+                                <MainLiveFeed className='mt-3 pl-[40px] lg:pl-5 md:pl-3' />
                             }
                             <div className='w-screen'></div>
                             <main className='layout-main__page'>
@@ -62,7 +62,7 @@ const DesktopLayout = ({ children }: { children: React.ReactNode }) => {
                     </div>
                     {
                         itemPosition == "right" && pathname != '/' &&
-                        <HeaderLiveKeed className='h-screen w-[100px]' />
+                        <HeaderLiveFeed className='h-screen w-[100px]' />
                     }
                 </div>
             </div>
