@@ -76,7 +76,6 @@ const OpenCaseBar = () => {
                     }
                 );
             }, 1500);
-            setCurrentCaseNumber(0)
         }
     }, [caseCount, currentCaseNumber])
 
