@@ -46,13 +46,13 @@ const Collapse = ({ header, content, headerIcon, classNames, line }: CollapsePro
 
     return (
         <div className={clsx(classNames?.base, isActive ? classNames?.baseVisible : classNames?.baseInvisible)}>
-            <Button onPress={() => setIsActive(!isActive)} classNames={{ base: [classNames?.headerBase, isActive ? classNames?.headerBaseVisible : classNames?.headerBaseInVisible], content: classNames?.headerContent }}
+            <Button onPress={() => setIsActive(!isActive)} classNames={{ base: [classNames?.headerBase, isActive ? classNames?.headerBaseVisible : classNames?.headerBaseInVisible, 'w-full justify-between'], content: classNames?.headerContent }}
                 endContent={
                     <div className={clsx(classNames.icon, isActive && classNames.iconVisible)}>
                         {headerIcon}
                     </div>
                 }>
-                <span className={clsx(classNames?.headerTitle, isActive ? classNames?.headerTitleVisible : classNames.headerTitleInVisible)}>{typeof (header) == "string" ? t(header) : header}</span>
+                <span className={clsx(classNames?.headerTitle, isActive ? classNames?.headerTitleVisible : classNames.headerTitleInVisible, 'w-full justify-between')}>{typeof (header) == "string" ? t(header) : header}</span>
 
             </Button>
             {
