@@ -48,7 +48,7 @@ export const Modal: React.FC<ModalProps> = ({
             <div className={clsx('fixed w-screen h-screen z-[302] overflow-y-auto', classNames.body)}>
                 <div className={clsx(classNames.modal)}>
                     <div onClick={handleBackdropClick} className={clsx('fixed w-screen h-screen duration-150 top-0 left-0', cls.blur_background, isOpen ? 'visible bg-[#0D1018D9]' : 'invisible bg-none')}></div>
-                    <div className="relative border-none" ref={modalRef}>
+                    <div className="relative border-none p-6" ref={modalRef}>
                         <div className={clsx(cls.modal)}>
                             <div className={clsx(cls.header, 'flex justify-between items-center w-auto h-auto p-1 gap-4 min-h-[30px]')}>
                                 <div className={clsx('flex gap-3 items-center')}>
