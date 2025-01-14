@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import React from 'react'
 
 import { ISelectItem, Select } from '@/shared/ui/Select/Select'
+import clsx from 'clsx'
 
 
 
@@ -41,6 +42,10 @@ const SelectGame = () => {
                 classNames={
                     {
                         itemLabel: "text-[#D1D9EB]",
+                        itemInner: 'hidden',
+                        trigger: clsx('!bg-[#121722] !rounded-[8px] !border-none gap-1 !py-[14px] !h-[48px] !px-[18px]'),
+                        selectorIcon: clsx("!bg-[#252C3F] !fill-[#252C3F]"),
+                        innerWrapper: 'bg-none h-[20px]'
                     }
                 }
             />
