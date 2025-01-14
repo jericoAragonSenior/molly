@@ -47,7 +47,8 @@
 		"weapon_type": "Weapon type",
 		"mode": "Mode",
 		"enough_balance": "Enough balance",
-		"clear": "Clear"
+		"clear": "Clear",
+		"cases": "Community cases"
 	},
 	"chat": {
 		"chat": "Chat",
