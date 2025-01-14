@@ -18,7 +18,7 @@ interface HeaderLiveFeedProps {
     title?: string
 }
 
-export const HeaderLiveKeed: FC<HeaderLiveFeedProps> = ({ className, axis = 'y', title }) => {
+export const HeaderLiveFeed: FC<HeaderLiveFeedProps> = ({ className, axis = 'y', title }) => {
     const t = useTranslations()
 
     const { lg } = useAppResponsive()
