@@ -21,7 +21,7 @@ export const supportItems: ISupportItem[] = [
                 avatarUrl: '/images/avatars/2.jpg',
                 name: 'Aleksandr',
                 message: 'Aliquam erat volutpat. Sed odio ligula, faucibus vitae varius ut, bibendum quis sem. Phasellus nec lorem et erat varius finibus non vitae ante. Aenean sit amet imperdiet ligula, malesuada maximus dui.',
-                type: 'admin',
+                type: 'toadmin',
                 timestamp: '15:28'
             },
         ]
@@ -45,7 +45,7 @@ export const supportItems: ISupportItem[] = [
                 avatarUrl: '/images/avatars/2.jpg',
                 name: 'Aleksandr',
                 message: 'Aliquam erat volutpat. Sed odio ligula, faucibus vitae varius ut, bibendum quis sem. Phasellus nec lorem et erat varius finibus non vitae ante. Aenean sit amet imperdiet ligula, malesuada maximus dui.',
-                type: 'admin',
+                type: 'toadmin',
                 timestamp: '15:28'
             },
         ]
@@ -70,7 +70,7 @@ export const supportItems: ISupportItem[] = [
                 avatarUrl: '/images/avatars/2.jpg',
                 name: 'Aleksandr',
                 message: 'Aliquam erat volutpat. Sed odio ligula, faucibus vitae varius ut, bibendum quis sem. Phasellus nec lorem et erat varius finibus non vitae ante. Aenean sit amet imperdiet ligula, malesuada maximus dui.',
-                type: 'admin',
+                type: 'toadmin',
                 timestamp: '15:28'
             },
         ]
@@ -94,7 +94,7 @@ export const supportItems: ISupportItem[] = [
                 avatarUrl: '/images/avatars/2.jpg',
                 name: 'Aleksandr',
                 message: 'Aliquam erat volutpat. Sed odio ligula, faucibus vitae varius ut, bibendum quis sem. Phasellus nec lorem et erat varius finibus non vitae ante. Aenean sit amet imperdiet ligula, malesuada maximus dui.',
-                type: 'admin',
+                type: 'toadmin',
                 timestamp: '15:28'
             },
         ]
@@ -118,7 +118,7 @@ export const supportItems: ISupportItem[] = [
                 avatarUrl: '/images/avatars/2.jpg',
                 name: 'Aleksandr',
                 message: 'Aliquam erat volutpat. Sed odio ligula, faucibus vitae varius ut, bibendum quis sem. Phasellus nec lorem et erat varius finibus non vitae ante. Aenean sit amet imperdiet ligula, malesuada maximus dui.',
-                type: 'admin',
+                type: 'toadmin',
                 timestamp: '15:28'
             },
         ]
