@@ -11,6 +11,7 @@ import { useCommonStore } from '@/entities/Common/model/store'
 import { useTranslations } from 'next-intl'
 
 import IconHint from '@/shared/assets/icons/icon-hint.svg'
+import IconBorder from '@/shared/assets/icons/icon-dotted-border.svg'
 import OpenFarm from './OpenFarm'
 
 export const FarmBody = () => {
@@ -71,12 +72,7 @@ export const FarmBody = () => {
                 
             </div>
             <div className={clsx('relative w-full justify-center overflow-hidden', openFarm == false ? "hidden" : "flex")}>
-                <div className={clsx(cls.border_bg, 'h-0.5 bg-opacity-10 opacity-90 absolute w-full')}>
-
-                </div>
-                <div className={clsx(" border-[2px] w-2/5 border-dotted")}>
-
-                </div>
+                <IconBorder />
             </div>
         </div>
     )
