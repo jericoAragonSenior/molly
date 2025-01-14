@@ -7,12 +7,14 @@ import Backshape from '@/shared/assets/open-case-backshape.svg'
 import openCaseBg from '@/shared/assets/open-case-bg.png'
 import IconSpeaking from '@/shared/assets/icons/icon-speaking-message.svg'
 import { CaseBadge } from '@/shared/ui/CaseCard/CaseBadge'
+import IconBorder from '@/shared/assets/icons/icon-dotted-border.svg'
 
 import clsx from 'clsx'
 import cls from './OpenCase.module.sass'
 import { useCommonStore } from '@/entities/Common/model/store'
 import { useTranslations } from 'next-intl'
 import CountCases from './CountCases'
+import CaseBar from './CaseBar'
 
 interface OpenCaseProps {
 	className?: string
@@ -40,15 +42,15 @@ export const OpenCase: FC<OpenCaseProps> = ({ className }) => {
 	return (
 		<div className={clsx(cls.base, className)}>
 			
-
+			<CaseBar title={t('open_case.beach_season')} />
 			<div className={cls.container}>
-				<div className={cls.type}>{t('open_case.selected_top')}</div>
+				<div className={clsx(cls.type, 'md:hidden flex')}>{t('open_case.selected_top')}</div>
 				<div
 					className={cls.inner}
 					style={{ backgroundImage: `url(${openCaseBg.src})` }}
 				>
 					<Backshape className={cls.backshape} />
-					<div className={clsx(cls.backshape, '3sm:!left-0 3sm:!transform-none 3sm:!top-0', caseCountState == 0 ? "flex" : "hidden")}>
+					<div className={clsx(cls.backshape, '', caseCountState == 0 ? "flex" : "hidden")}>
 						<Image
 							src={'/images/case/case-full-2.png'}
 							alt='case'
@@ -56,10 +58,12 @@ export const OpenCase: FC<OpenCaseProps> = ({ className }) => {
 							height={320}
 						/>
 					</div>
-					<div className={clsx(cls.grid, 'justify-between w-full 2sm:flex-col flex-row 2sm:justify-center', caseCountState == 0 ? "flex" : "hidden")}>
-						<div className={clsx(cls.desc, 'pt-20 pl-20 3sm:pl-0 2sm:pt-2')}>
-							<div className={cls.desc_title}>{t('open_case.limited_edition')}</div>
-							<div className={cls.desc_text}>{t('open_case.limited_content')}</div>
+					<div className={clsx(cls.grid, 'justify-between w-full 2sm:flex-col flex-row 2sm:justify-center relative', caseCountState == 0 ? "flex" : "hidden")}>
+						<div className={clsx(cls.desc, 'pt-20 pl-20 relative md:absolute md:!justify-between md:!-top-5 md:pt-0 md:w-full md:flex md:!flex-row md:px-3')}>
+							<div className='flex flex-col gap-1'>
+								<div className={clsx(cls.desc_title, 'md:!text-start')}>{t('open_case.limited_edition')}</div>
+								<div className={clsx(cls.desc_text, 'md:!text-start')}>{t('open_case.limited_content')}</div>
+							</div>
 							<CaseBadge
 								label='2455 / 10000'
 								icon={IconLightning}
@@ -67,7 +71,7 @@ export const OpenCase: FC<OpenCaseProps> = ({ className }) => {
 								className={clsx(cls.desc_badge, "!relative !left-0 !transform-none")}
 							/>
 						</div>
-						<div className={clsx('h-full flex justify-end sm:-mr-7')}>
+						<div className={clsx('h-full flex justify-end sm:-mr-7 md:hidden')}>
 							<div className={clsx('absolute', cls.rotate_180)}>
 								<Image
 									src={'/images/case/girl-1.png'}
@@ -100,11 +104,8 @@ export const OpenCase: FC<OpenCaseProps> = ({ className }) => {
 					
 				</div>
 			</div>
-			<div className={clsx('relative w-full justify-center flex overflow-hidden')}>
-				<div className={clsx(cls.border_bg, 'min-h-0.5 bg-opacity-10 opacity-90 w-full')}>
-
-				</div>
-				
+			<div className={clsx('relative w-full justify-center overflow-hidden')}>
+				<IconBorder />
 			</div>
 		</div>
 	)
