@@ -117,7 +117,7 @@ const ProvablyFairBody = () => {
                             theme='theme-1'
                             placeholder={t('create_new_ticket.subject_placeholder')}
                             classNames={{
-                                inputWrapper: [cls.box, '!bg-[#121722] !border-0 ] !p-6'],
+                                inputWrapper: [cls.box, '!bg-[#121722] !border-0 !rounded-[8px] !p-6'],
                                 input: [cls.box_value, 'w-full text-[14px] !text-white'],
                                 label: ['text-[10px]'],
                                 mainWrapper: "w-full",
@@ -134,7 +134,7 @@ const ProvablyFairBody = () => {
                             theme='theme-1'
                             placeholder={t('create_new_ticket.subject_placeholder')}
                             classNames={{
-                                inputWrapper: [cls.box, '!bg-[#121722] !border-0 ] !p-6'],
+                                inputWrapper: [cls.box, '!bg-[#121722] !rounded-[8px] !border-0 ] !p-6'],
                                 input: [cls.box_value, 'w-full text-[14px] !text-white'],
                                 label: ['text-[10px]'],
                                 mainWrapper: "w-full",
