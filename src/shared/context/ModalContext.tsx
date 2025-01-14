@@ -17,7 +17,8 @@ interface ModalContextType {
         options?: ModalOptions,
         headerIcon?: ReactNode,
         headerTitle?: string,
-        classNames?: ClassNamesConfig
+        classNames?: ClassNamesConfig,
+        closeButton?: boolean
     ) => void;
     closeModal: () => void;
     isOpen: boolean;
@@ -26,6 +27,7 @@ interface ModalContextType {
     headerIcon: ReactNode | null;
     headerTitle: string;
     classNames: ClassNamesConfig;
+    isCloseButton?: boolean
 }
 
 const ModalContext = createContext<ModalContextType | undefined>(undefined);
@@ -37,13 +39,15 @@ export const ModalProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     const [headerIcon, setHeaderIcon] = useState<ReactNode | null>(null);
     const [headerTitle, setHeaderTitle] = useState<string>('');
     const [classNames, setClassNames] = useState<ClassNamesConfig>({ body: "", modal: "" });
+    const [isCloseButton, setIsCloseButton] = useState<boolean>(true);
 
     const openModal = (
         content: ReactNode,
         options: ModalOptions = {},
         headerIcon: ReactNode | null = null,
         headerTitle: string = '',
-        classNames: ClassNamesConfig = { body: "", modal: "" }
+        classNames: ClassNamesConfig = { body: "", modal: "" },
+        closeButton?: boolean
     ) => {
         setContent(content);
         setOptions(options);
@@ -51,7 +55,9 @@ export const ModalProvider: React.FC<{ children: ReactNode }> = ({ children }) =
         setHeaderTitle(headerTitle);
         setIsOpen(true);
         setClassNames(classNames)
-        console.log(classNames)
+        if (closeButton == true || closeButton == false) {
+            setIsCloseButton(closeButton);
+        }
     };
 
     const closeModal = () => {
@@ -63,7 +69,7 @@ export const ModalProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     };
 
     return (
-        <ModalContext.Provider value={{ openModal, closeModal, isOpen, content, options, headerIcon, headerTitle, classNames }}>
+        <ModalContext.Provider value={{ openModal, closeModal, isOpen, content, options, headerIcon, headerTitle, classNames, isCloseButton }}>
             {children}
         </ModalContext.Provider>
     );
