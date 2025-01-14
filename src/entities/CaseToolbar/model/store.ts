@@ -19,6 +19,7 @@ interface IState extends StateWithIndexSignature {
 	mode: string
 	priceRange: PriceRange
 	isEnoughBalance: boolean
+	cases: string
 }
 
 interface IActions {
@@ -31,6 +32,7 @@ export const initialState: IState = {
 	search: '',
 	weaponType: '',
 	mode: '',
+	cases: '',
 	priceRange: [0, 20000],
 	isEnoughBalance: false
 }
