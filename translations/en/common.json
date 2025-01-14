@@ -242,7 +242,10 @@
 		"fast_mod": "Fast mode",
 		"instant_result": "Instant results",
 		"top_drops": "top drops",
-		"case_content": "Case contents"
+		"case_content": "Case contents",
+		"refill": "don't leave",
+		"refill_btn": "Refill balance",
+		"refill_text": "Insufficient funds to open a case"
 	},
 	"case_mystery": {
 		"title": "Mystery Case",
