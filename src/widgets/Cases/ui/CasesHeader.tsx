@@ -37,28 +37,31 @@ const CasesHeader = () => {
     }
 
     return (
-        <div className={clsx("flex mx-10 lg:mx-5", cls.header_border)}>
-            <div className={clsx(cls.header_body, "flex  justify-between sm:justify-center items-center")}>
-                <div className="flex gap-4 items-center h-[96px]">
-                    <div className="w-[96px] h-[96px] flex sm:hidden">
+        <div className={clsx("flex mx-10 lg:mx-5 2sm:!mt-10", cls.header_border)}>
+            <div className={clsx(cls.header_body, "flex  justify-between sm:justify-center items-center md:flex-col md:pb-3")}>
+                <div className="flex gap-4 items-center h-[96px] md:text-center relative">
+                    <div className="w-[96px] h-[96px] flex 2sm:absolute 2sm:-top-1/2 2sm:-translate-x-1/2 2sm:left-1/2">
                         <IconCases />
                     </div>
-                    <div className="md:hidden flex-col gap-[6px] flex">
+                    <div className="flex-col gap-[6px] flex 2sm:mt-4">
                         <span className=" uppercase text-[14px] font-[700] text-[#BFC7D8]">{t('cases_header.title')}</span>
                         <span className="text-[12px] font-[500] text-[#566484]">{t('cases_header.content')}</span>
                     </div>
                 </div>
-                <Button className={clsx(cls.header_btn, "flex items-center mr-4")}
-                    classNames={{
-                        content: "w-full h-full"
-                    }}
-                    onPress={createCase}
-                >
-                    <div className={clsx(cls.header_btn_inner, "flex justify-center items-center gap-2")}>
-                        <IconPlus className="w-[20px] h-[20px]" />
-                        <span className={clsx("font-[900] text-[14px] text-[#121722] uppercase", cls.header_btn_font)}>{t('cases_header.create_case')}</span>
+                <div className={clsx(cls.header_btn, "flex items-center mr-4")}>
+                    <div className={clsx(cls.header_btn_inner)}>
+                        <Button 
+                            classNames={{
+                                base: "w-full h-full",
+                            }}
+                            onPress={createCase}
+                            startContent={<IconPlus className="w-[20px] h-[20px]" />}
+                        >
+                            <span className={clsx("font-[900] text-[14px] text-[#121722] uppercase", cls.header_btn_font)}>{t('cases_header.create_case')}</span>
+                        </Button>
                     </div>
-                </Button>
+                </div>
+                
             </div>
         </div>
     )
