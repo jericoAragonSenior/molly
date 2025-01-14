@@ -9,6 +9,7 @@ import { FC } from 'react'
 import React from 'react'
 
 import { ISelectItem, Select } from '@/shared/ui/Select/Select'
+import clsx from 'clsx'
 
 
 const SelectProblem = () => {
@@ -42,7 +43,8 @@ const SelectProblem = () => {
                 items={items}
                 classNames={
                     {
-                        itemLabel: "text-[#D1D9EB]"
+                        itemLabel: "text-[#D1D9EB]",
+                        trigger: clsx('!rounded-[9px] !border-none gap-1 !py-[14px] !h-[48px] !px-[18px]'),
                     }
                 }
             />
