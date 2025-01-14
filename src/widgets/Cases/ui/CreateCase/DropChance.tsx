@@ -40,7 +40,7 @@ const DropChance = () => {
                         </div>
                         <div className={clsx(cls.chance_item_active, "flex flex-1")}>
                             <div className={clsx(cls.chance_item_active_inner, "w-full flex justify-center py-2.5 items-center")}>
-                                <div className="flex gap-0.5">
+                                <div className="flex gap-0.5 items-center">
                                     <span className="text-white text-[14px] font-[700]">
                                         +
                                     </span>
