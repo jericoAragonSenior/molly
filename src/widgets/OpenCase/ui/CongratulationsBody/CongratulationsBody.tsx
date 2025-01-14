@@ -36,7 +36,7 @@ const CongratulationsBody = ({ items, onClose }: CongratulationsBodyProps) => {
     }
 
     return (
-        <div className='w-full h-full max-h-[calc(100vh-150px)] overflow-hidden lg:max-h-full  relative overflow-y-auto app-scrollbar flex flex-col items-center gap-5'>
+        <div className='w-full h-full max-h-[calc(100vh-150px)] overflow-x-hidden lg:max-h-full  relative app-scrollbar flex flex-col items-center gap-5 mt-4'>
             {
                 items.length == 1 &&
                 <div className={clsx('w-[490px] 3sm:w-full h-auto py-4 relative')}>
