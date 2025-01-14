@@ -16,23 +16,25 @@ interface CardLiveFeedProps {
 export const CardLiveFeed: FC<CardLiveFeedProps> = ({ className, theme, title, pic }) => {
 	return (
 		<div className={clsx(cls.item, cls[theme], className)}>
-			<Image
-				src={BackdropRays}
-				fill
-				sizes='100%'
-				alt='backdrop'
-				className={cls.item_backdrop}
-			/>
-			<div className={cls.item_inner}>
-				<div className={cls.item_pic}>
-					<Image
-						src={pic}
-						width={68}
-						height={50}
-						alt={title}
-					/>
+			<div className={clsx(cls.item_body, cls[theme])}>
+				<Image
+					src={BackdropRays}
+					fill
+					sizes='100%'
+					alt='backdrop'
+					className={cls.item_backdrop}
+				/>
+				<div className={cls.item_inner}>
+					<div className={cls.item_pic}>
+						<Image
+							src={pic}
+							width={68}
+							height={50}
+							alt={title}
+						/>
+					</div>
+					<div className={cls.item_title}>{title}</div>
 				</div>
-				<div className={cls.item_title}>{title}</div>
 			</div>
 		</div>
 	)
