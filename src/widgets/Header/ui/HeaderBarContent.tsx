@@ -91,7 +91,7 @@ export const HeaderBarContent: FC<HeaderBarContentProps> = ({ className }) => {
 
 	return (
 		isSignin == true ?
-			<div className={clsx(className, 'flex items-center', cls.bar)}>
+			<div className={clsx(className, 'flex items-center !pt-1', cls.bar)}>
 				{/* <HeaderLangSwitcher className='mr-3' /> */}
 				<div className={cls.balance}>
 					<Balance />
@@ -121,21 +121,24 @@ export const HeaderBarContent: FC<HeaderBarContentProps> = ({ className }) => {
 						<div className={cls.level_count}>99</div>
 					</div>
 				</div>
-				<div className={cls.settings}>
-					<HeaderSettings className='ml-3' />
-				</div>
+				<Media greaterThanOrEqual='lg'>
+					<div className={cls.settings}>
+						<HeaderSettings className='ml-3' />
+					</div>
+				</Media>
 				<div className={cls.notif}>
-					<HeaderNotifications className='ml-2' />
+					<HeaderNotifications className='ml-2 lg:ml-0' />
 				</div>
 			</div>
 			:
-			<div className={clsx(className, 'flex items-center', cls.bar)} onClick={signInModal}>
+			<div className={clsx(className, 'flex items-center !pt-1', cls.bar)}>
 
 				<div
 					className={clsx(
 						cls.avatar_wrapper,
 						'ml-2 relative z-[1] shrink-0 w-[58px] h-[58px] flex items-center justify-center cursor-pointer'
 					)}
+					onClick={signInModal}
 				>
 					<IconAvatarFrame
 						className={clsx(
@@ -151,9 +154,11 @@ export const HeaderBarContent: FC<HeaderBarContentProps> = ({ className }) => {
 						/>
 					</div>
 				</div>
-				<div className={cls.settings}>
-					<HeaderSettings className='ml-3' />
-				</div>
+				<Media greaterThanOrEqual='lg'>
+					<div className={cls.settings}>
+						<HeaderSettings className='ml-3' />
+					</div>
+				</Media>
 			</div>
 	)
 }
