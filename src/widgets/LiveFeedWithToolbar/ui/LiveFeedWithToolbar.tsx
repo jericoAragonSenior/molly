@@ -27,7 +27,6 @@ export const LiveFeedWithToolbar: FC<LiveFeedWithToolbarProps> = ({ className })
 					<CaseToolbar
 						className='mt-2.5'
 						withContainer={false}
-						isHeader={false}
 					/>
 				</div>
 			</div>
