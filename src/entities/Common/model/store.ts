@@ -47,7 +47,7 @@ export const initialState: IState = {
 	signinState: false,
 	headerState: 0,
 	mobileRightBarState: false,
-	itemPosition: 'hidden',
+	itemPosition: 'right',
 	caseCount: 0,
 	openFarm: true,
 	currentCaseNumber: 0,
