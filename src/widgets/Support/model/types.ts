@@ -1,4 +1,4 @@
-export type MessageType = 'default' | 'admin' | 'my'
+export type MessageType = 'default' | 'admin' | 'my' | 'toadmin'
 export type ResponseType = 'response' | 'consideration' | 'closed'
 
 
