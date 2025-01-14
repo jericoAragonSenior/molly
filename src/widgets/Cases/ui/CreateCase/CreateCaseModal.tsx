@@ -10,8 +10,6 @@ import CreateCaseFooter from "./CreateCaseFooter";
 import ModalBar from "./ModalBar";
 import CaseItems from "./CaseItems";
 
-import IconArrow from "@/shared/assets/icons/icon-arrow-round.svg"
-
 const CreateCaseModal = () => {
 
     // For translation
@@ -20,21 +18,12 @@ const CreateCaseModal = () => {
     // Values for case information
     const [caseName, setCaseName] = useState<string>('');
 
-    // LeftBar state
-    const [isLeftBar, setIsLeftBar] = useState<boolean>(false);
 
-    // Open Leftbar(responsive)
-    const openLeftBar = () => {
-        setIsLeftBar(!isLeftBar)
-    }
 
     return (
         <div className={clsx(cls.create_modal, "w-[1183px] max-h-[calc(100vh-130px)] min-h-[calc(100vh-130px)] lg:w-full flex flex-col overflow-auto app-scrollbar")}>
-            <div className={clsx("fixed top-[60px] hidden md:flex z-[40]", isLeftBar ? "rotate-0 duration-100" : "rotate-180 duration-100")} onClick={openLeftBar}>
-                <IconArrow className="w-9 h-9 fill-[#0e201b] stroke-primary-400" />
-            </div>
-            <div className="w-full flex relative">
-                <div className={clsx("min-w-[410px] max-w-[410px] p-5 flex flex-col gap-[15px] md:fixed relative md:max-h-[calc(100vh-90px)] md:min-h-[calc(100vh-90px)] md:overflow-auto sm:max-w-full overflow-auto sm:min-w-full md:top-[90px] md:bg-[#1A202E] md:z-[39]", isLeftBar == false ? "md:-left-full duration-200" : "md:left-1 duration-200")}>
+            <div className="w-full flex relative md:flex-col">
+                <div className={clsx("min-w-[300px] max-w-[410px] md:max-w-[700px] 3sm:max-w-[500px] 2sm:max-w-[350px] sm:max-w-[300px] p-5 flex flex-col gap-[15px] relative md:w-full")}>
                     <Input
                         value={caseName}
                         onChange={v => {
@@ -44,7 +33,7 @@ const CreateCaseModal = () => {
                         theme='theme-1'
                         placeholder={t('create_case.case_name_placeholder')}
                         classNames={{
-                            inputWrapper: [' !rounded-md'],
+                            inputWrapper: ['!rounded-md'],
                             input: ['w-full text-[14px]'],
                             label: ['text-[10px]'],
                             mainWrapper: "w-full"
@@ -56,7 +45,7 @@ const CreateCaseModal = () => {
                 </div>
                 <div className="flex flex-1 py-5 h-[700px]">
                     <div className={clsx(cls.modal_body, "w-full h-full")}>
-                        <div className={clsx(cls.modal_body_inner, "w-full h-full flex flex-col p-5")}>
+                        <div className={clsx(cls.modal_body_inner, "w-full h-full flex flex-col p-5 2sm:px-1")}>
                             <ModalBar />
                             <div className="flex-1 overflow-auto my-3 app-scrollbar relative">
                                 <CaseItems />
