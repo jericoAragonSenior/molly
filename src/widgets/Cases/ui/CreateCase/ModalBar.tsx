@@ -20,8 +20,8 @@ const ModalBar = () => {
     return (
         <div className="w-full flex gap-[15px] flex-col">
             <span className="text-white text-[14px] font-[500] w-full">{t('create_case.select_up')}</span>
-            <div className="w-full flex justify-between gap-2">
-                <div className="flex gap-2 flex-1 lg:flex-col flex-row">
+            <div className="w-full flex justify-between gap-2 h-auto 2sm:flex-wrap 2sm:justify-start 2sm:flex-col">
+                <div className="flex gap-2 flex-1 lg:flex-col flex-row 2sm:flex-wrap 2sm:justify-start">
                     <Input
                         value={viewSearch}
                         onChange={v => {
@@ -42,13 +42,13 @@ const ModalBar = () => {
                         <SelectCaseType className="w-full h-full" />
                     </div>
                 </div>
-                <div className="flex gap-2 lg:flex-col flex-row h-[48px]">
-                    <div className={clsx(cls.modal_body_bar_type, "h-full")}>
+                <div className="flex gap-2 lg:flex-col flex-row h-full 2sm:flex-row 2sm:justify-center">
+                    <div className={clsx(cls.modal_body_bar_type, "h-full md:h-[48px]")}>
                         <div className={clsx(cls.modal_body_bar_type_inner, "px-3 h-full flex items-center")}>
                             <span className="text-[#60719A] text-[12px] font-[500]">{t('create_case.price_descending')}</span>
                         </div>
                     </div>
-                    <div className={clsx(cls.modal_body_bar_type, "h-full")}>
+                    <div className={clsx(cls.modal_body_bar_type, "h-full md:h-[48px]")}>
                         <div className={clsx(cls.modal_body_bar_type_inner, "py-[7px] px-3 flex justify-center items-center h-full")}>
                             <IconRefresh className="w-6 h-6 fill-[#60719A]" />
                         </div>
