@@ -12,6 +12,7 @@ import { VolumeSlider } from '@/entities/Volume/ui/VolumeSlider'
 import IconLogout from '@/shared/assets/icons/icon-logout.svg'
 import IconSettings from '@/shared/assets/icons/icon-settings.svg'
 import IconSteamLogo from '@/shared/assets/icons/icon-steam-logo.svg'
+import { useAppResponsive } from '@/shared/lib/useResponsive'
 import Button from '@/shared/ui/Button/Button'
 import { ButtonHexSquare } from '@/shared/ui/ButtonHexSquare/ButtonHexSquare'
 
@@ -28,20 +29,25 @@ export const HeaderSettings: FC<HeaderSettingsProps> = ({ className }) => {
 	const setSigninState = useCommonStore(state => state.setSigninState)
 	const signinState = useCommonStore(state => state.signinState)
 
+	const breakpoints = useAppResponsive()
+
 	const logOut = () => {
 		setSigninState(false)
 	}
 
 	return (
 		<Popover
+			showArrow={breakpoints.lg ? true : false}
+			placement={breakpoints.lg ? 'bottom' : 'bottom-end'}
+			offset={breakpoints.lg ? 10 : 5}
 			classNames={{
 				base: [cls.base, cls['_with-arrow']]
 			}}
 		>
 			<PopoverTrigger>
-				<ButtonHexSquare className={clsx('w-[34px] h-[38px]', cls.trigger, className)}>
+				<ButtonHexSquare className={clsx('w-[34px] h-[38px] md:w-[22px] md:h-[24px]', cls.trigger, className)}>
 					<IconSettings
-						className={clsx('w-[20px] h-[20px]  text-[#64749B]', cls.trigger_icon)}
+						className={clsx('w-[20px] h-[20px] md:w-[10px] md:h-[10px] text-[#64749B]', cls.trigger_icon)}
 					/>
 				</ButtonHexSquare>
 			</PopoverTrigger>
@@ -59,7 +65,7 @@ export const HeaderSettings: FC<HeaderSettingsProps> = ({ className }) => {
 						<VolumeSlider />
 					</div>
 
-					<div className={clsx('grid gap-2.5', signinState && 'grid-cols-2')}>
+					<div className={clsx('grid gap-2.5 lg:block', signinState && 'grid-cols-2')}>
 						<Button
 							strokeSize='thin'
 							theme='grey-2'
@@ -68,7 +74,7 @@ export const HeaderSettings: FC<HeaderSettingsProps> = ({ className }) => {
 						>
 							{t('settings.trade')}
 						</Button>
-						{signinState && (
+						{breakpoints.lg && signinState && (
 							<Button
 								strokeSize='thin'
 								theme='gradient-red-2'
