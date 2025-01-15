@@ -48,13 +48,6 @@ const CreateNewTicket = () => {
                     <div className="text-white w-auto text-[14px] font-[500]">{t('create_new_ticket.max_size')}</div>
                     <IconUploadFile className="fill-[#545778] w-5 h-5" />
                 </div>
-                {/* <Button disableAnimation className="relative w-auto h-auto">
-                    <SvgCreateNewTicket />
-                    <span className="flex gap-2 absolute items-center text-[#0D1018]">
-                        <span className="text-[24px]">+</span>
-                        <span className="text-[12px]">{t('create_new_ticket.create_ticket').toUpperCase()}</span>
-                    </span>
-                </Button> */}
                 <div className={clsx(cls.create_ticket, 'w-[168px] h-[38px]')}>
                     <div className={cls.create_ticket_inner}>
                         <Button
