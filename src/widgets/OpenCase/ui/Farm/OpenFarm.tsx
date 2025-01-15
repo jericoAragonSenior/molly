@@ -32,7 +32,7 @@ const OpenFarm = () => {
 
     return (
         <div className="flex flex-col gap-5 items-center">
-            <div className="w-full flex justify-center gap-[45px] flex-wrap">
+            <div className="w-full flex justify-center gap-[45px] 3sm:gap-0 3sm:justify-between px-1 flex-wrap">
                 {
                     badgeItems.map(item => (
                         <BadgeTitle icon={<item.icon className={item.iconClassName} />} title={item.title} content={item.content} key={item.title} />
