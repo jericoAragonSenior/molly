@@ -11,17 +11,17 @@ interface BadgeTitleProps {
 
 const BadgeTitle = ({icon: Icon, title, content}: BadgeTitleProps) => {
     return (
-        <div className={clsx('relative w-[210px] h-[98px]', cls.badge_box)}>
-            <div className={clsx(cls.badge_inner, 'relative')}>
-                <div className={clsx('w-auto h-full absolute', cls.badge_center)}>
+        <div className={clsx('relative w-[210px] h-[98px] 3sm:w-[30%] 3sm:mt-[35px]', cls.badge_box)}>
+            <div className={clsx(cls.badge_inner, 'relative 3sm:pt-[20px]')}>
+                <div className={clsx('w-auto h-full absolute 3sm:-top-1/2 3sm:!left-1/2', cls.badge_center)}>
                     <div className=' relative w-[98px] flex justify-center items-center h-full'>
                         <IconBadgeTitle className='absolute top-0 left-0 -z-[1]'/>
                         {Icon}
                     </div>
                 </div>
-                <div className='flex flex-col gap-2  justify-center items-center h-full w-full'>
+                <div className='flex flex-col gap-2  justify-center items-center h-full w-full 3sm:gap-1'>
                     <span className='text-white text-[18px]'>{title}</span>
-                    <span className='text-[#55698F] text-[14px] uppercase'>{content}</span>
+                    <span className='text-[#55698F] text-[14px] 3sm:text-[12px] uppercase text-center'>{content}</span>
                 </div>
             </div>
 
