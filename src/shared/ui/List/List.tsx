@@ -10,19 +10,20 @@ interface ListProps {
         content?: string
     }
     items: IListItem[]
+    axis?: string
 }
 
 
-const List: FC<ListProps> = ({ classNames, items }) => {
+const List: FC<ListProps> = ({ classNames, items, axis="y" }) => {
 
     const t = useTranslations();
 
     return (
-        <div className={clsx('w-full bg-[#1D2433] p-[2px] rounded-lg', classNames?.base)}>
-            <div className={clsx('w-full bg-[#181E2B] gap-3 flex flex-col rounded-lg py-5', classNames?.content)}>
+        <div className={clsx('w-auto bg-[#1D2433] p-[2px] rounded-lg', classNames?.base, axis == "x" && "!rounded-none overflow-y-auto")}>
+            <div className={clsx('w-auto bg-[#181E2B] gap-3 flex rounded-lg flex-col py-5', classNames?.content, axis == "x" && "!flex-row !py-2 !overflow-y-auto !px-3 !rounded-none")}>
                 {
                     items.map((item) => (
-                        <ListItem content={t(item.title)} startIcon={item?.startIcon} endIcon={item?.endIcon} key={item.id} />
+                        <ListItem content={t(item.title)} startIcon={item?.startIcon} endIcon={item?.endIcon} key={item.id} axis={axis} />
                     ))
                 }
             </div>
