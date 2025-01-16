@@ -14,15 +14,8 @@ import Button from "@/shared/ui/Button/Button";
 import ListItme from "@/entities/ListItem/ui/ListItem";
 import { profileList } from "@/widgets/Profile/model/items";
 
-import { motion } from "framer-motion";
-import IconUser from '@/shared/assets/icons/icon-user-avatar.svg'
+import { useAppResponsive } from "@/shared/lib/useResponsive";
 
-
-
-const mobileAnimationVariants = {
-    active: { opacity: 1 },
-    inactive: { opacity: 0 }
-}
 
 
 const ProfileMain = () => {
@@ -33,8 +26,10 @@ const ProfileMain = () => {
     // Selected profile list item
     const [selectedItem, setSelectedItem] = useState<number>(1)
 
-    // Profile list state(mobile)
-    const [isOpened, setIsOpened] = useState<boolean>(false)
+    // For responsive
+    const breakpoints = useAppResponsive()
+
+
 
     // The function for profile list
     const clickListItem = (item: number) => {
@@ -43,27 +38,10 @@ const ProfileMain = () => {
 
     return (
         <div className="w-full h-auto">
-            <div className="hidden lg:flex">
-                <Button
-                    theme='gradient-outline-green-2'
-                    strokeSize='thin'
-                    backdrop
-                    hexagon
-                    hexagonAxis={'y'}
-                    hexagonAngleOffset={13}
-                    onClick={() => { setIsOpened(!isOpened) }}
-                    classNames={{
-                        base: '!fixed w-[50px] h-[55px] bg-white z-[50] bottom-[170px] right-5 z-[21]',
-                        content: cls.btn_open_content
-                    }}
-                >
-                    <IconUser className="w-7 h-7" />
-                </Button>
-            </div>
-            <div className={clsx(cls.profile_main, 'w-[330px] h-auto mx-4 2lg:fixed 2lg:!bg-[#191F2D] 2lg:w-full 2lg:m-0 2lg:h-[calc(100vh-150px)] 2lg:overflow-auto', isOpened == true ? 'top-[80px] z-[20] duration-150' : 'top-full duration-200')}>
-                <div className={clsx(cls.profile_main_inner, 'w-full h-full p-5')}>
+            <div className={clsx(cls.profile_main, 'w-[330px] h-auto mx-4 lg:!bg-none lg:!w-full lg:!m-0')}>
+                <div className={clsx(cls.profile_main_inner, 'w-full h-full p-5 lg:!bg-none')}>
                     <div className="flex flex-col gap-[14px]">
-                        <div className="w-full p-[15px] bg-[#121722] flex flex-col gap-3 rounded-[14px]">
+                        <div className="w-full p-[15px] bg-[#121722] flex flex-col gap-3 rounded-[14px] lg:hidden">
                             <div className="flex justify-between">
                                 <div className="flex gap-2.5">
                                     <div>
@@ -91,10 +69,13 @@ const ProfileMain = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col gap-0.5 rounded-xl overflow-hidden">
+                        <div className="flex flex-col gap-0.5 lg:gap-0 rounded-xl lg:justify-center h-full lg:flex-row lg:flex-wrap overflow-hidden">
                             {
                                 profileList.map((item) => (
-                                    <ListItme key={item.title} icon={item.icon} onClick={() => clickListItem(item.id)} isActived={item.id == selectedItem} title={t(item.title)} />
+                                    (breakpoints.lg || (!breakpoints.lg && item.id)) != 6 &&
+                                    <div className="w-full lg:w-1/5 lg:px-2 md:px-1 h-full sm:w-1/3" key={item.title} >
+                                        <ListItme icon={item.icon} onClick={() => clickListItem(item.id)} isActived={item.id == selectedItem} title={t(item.title)} />
+                                    </div>
                                 ))
                             }
 
@@ -103,7 +84,7 @@ const ProfileMain = () => {
                 </div>
             </div>
         </div>
-      
+
     )
 }
 
