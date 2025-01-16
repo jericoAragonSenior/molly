@@ -16,7 +16,7 @@ export async function generateMetadata({ params: { locale } }: IMetadata) {
 
 const Support = () => {
     return (
-        <div className='mt-5 flex flex-col gap-4 px-5'>
+        <div className='mt-5 flex flex-col gap-4'>
             <SupportHeader />
             <SupportBody />
         </div>
