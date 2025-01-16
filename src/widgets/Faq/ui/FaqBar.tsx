@@ -12,7 +12,6 @@ import clsx from 'clsx';
 
 import IconSwiper from '@/shared/assets/icons/icon-next-swiper.svg'
 import { useRef, useState } from 'react';
-import Button from '@/shared/ui/Button/Button';
 
 
 const FaqBar = () => {
