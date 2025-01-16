@@ -41,7 +41,8 @@ export const SignIn = () => {
             {
                 body: '',
                 modal: 'relative w-full lg:h-full h-screen flex lg:items-start justify-center items-center'
-            }
+            },
+            true
         );
     }
 
@@ -54,7 +55,8 @@ export const SignIn = () => {
             {
                 body: '',
                 modal: 'relative w-full lg:h-full h-screen flex justify-center items-center'
-            }
+            },
+            true
         );
     }
 
