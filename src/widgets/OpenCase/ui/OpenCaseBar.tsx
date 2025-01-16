@@ -99,16 +99,18 @@ const OpenCaseBar = () => {
                             </div>
                             <div className='w-1/3 flex flex-col gap-4 justify-center items-center 3md:w-auto'>
                                 <span className='text-[#5F6C87] text-[13px] font-[500] 2sm:hidden flex'>{t('open_case.click_open')}</span>
-                                <div className={clsx('w-[313px] h-[48px]', cls.btn_hexagon_yellow)}>
-                                    <div className={clsx('w-full h-full', cls.btn_hexagon_yellow_inner)}>
-                                        <Button fullWidth={true} hexagon={true} classNames={{
-                                            base: "w-full h-full"
-                                        }}
-                                            startContent={<IconCase className='w-[22px] h-[20px]' />}
-                                            onClick={openCase}
-                                        >
-                                            <span className='text-[#000000] text-[15px] font-[900]'>{t('open_case.open_case') + '• $15.50'}</span>
-                                        </Button>
+                                <div className={clsx('min-w-[313px] h-[52px] flex justify-center items-center relative', cls.btn_hexagon_yellow_shadow)}>
+                                    <div className={clsx('w-[313px] h-[48px]', cls.btn_hexagon_yellow)}>
+                                        <div className={clsx('w-full h-full', cls.btn_hexagon_yellow_inner)}>
+                                            <Button fullWidth={true} hexagon={true} classNames={{
+                                                base: "w-full h-full"
+                                            }}
+                                                startContent={<IconCase className='w-[22px] h-[20px]' />}
+                                                onClick={openCase}
+                                            >
+                                                <span className='text-[#000000] text-[15px] font-[900]'>{t('open_case.open_case') + '• $15.50'}</span>
+                                            </Button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -117,15 +119,17 @@ const OpenCaseBar = () => {
                                     <span className='text-[#5F6C87] text-[13px] font-[500]'>{t('open_case.fast_mod')}</span>
                                     <SwitchButton />
                                 </div>
-                                <div className={clsx('w-[313px] h-[48px]', cls.btn_hexagon_green)}>
-                                    <div className={clsx('w-full h-full', cls.btn_hexagon_green_inner)}>
-                                        <Button fullWidth={true} hexagon={true} classNames={{
-                                            base: "w-full h-full"
-                                        }}
-                                            startContent={<IconInstance className='w-[20px] h-[14px]' />}
-                                        >
-                                            <span className='text-[#000000] text-[15px] font-[900]'>{t('open_case.instant_result')}</span>
-                                        </Button>
+                                <div className={clsx('min-w-[313px] h-[52px] flex justify-center items-center relative', cls.btn_hexagon_green_shadow)}>
+                                    <div className={clsx('w-[313px] h-[48px]', cls.btn_hexagon_green)}>
+                                        <div className={clsx('w-full h-full', cls.btn_hexagon_green_inner)}>
+                                            <Button fullWidth={true} hexagon={true} classNames={{
+                                                base: "w-full h-full"
+                                            }}
+                                                startContent={<IconInstance className='w-[20px] h-[14px]' />}
+                                            >
+                                                <span className='text-[#000000] text-[15px] font-[900]'>{t('open_case.instant_result')}</span>
+                                            </Button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
