@@ -216,7 +216,10 @@
 	"cases_header": {
 		"title": "CREATE YOUR OWN CUSTOM CASES",
 		"content": "You can create cases with items and odds of your choice.",
-		"create_case": "create case"
+		"create_case": "create case",
+		"to_favorites": "to favorites",
+		"add_to_battle": "add to battle",
+		"percent_of_income": "percentage of your income"
 	},
 	"create_case": {
 		"title": "Case Creation",
