@@ -45,7 +45,7 @@ const FaqBar = () => {
     }
 
     return (
-        <div className='flex relative'>
+        <div className='flex relative px-5 md:px-0'>
             <Swiper
                 spaceBetween={12}
                 slidesPerView={breakpoints?.['3xl'] ? 5 : breakpoints?.md ? 3 : breakpoints?.['sm'] ? 2 : 1}
@@ -57,16 +57,16 @@ const FaqBar = () => {
                 {slides}
             </Swiper>
             <div className={clsx(cls.item, '!absolute z-[10] right-3 flex justify-center h-full items-center')} >
-                <Button className={clsx(cls.swiper_button_next, cls.item_icon, swiperIndex == faqBarItems.length - 1 ? cls.item_disable : '', 'relative')} onPress={nextSwiper}>
+                <div className={clsx(cls.swiper_button_next, cls.item_icon, swiperIndex == faqBarItems.length - 1 ? cls.item_disable : '', 'relative')} onClick={nextSwiper}>
                     <IconSwiper />
-                </Button>
+                </div>
 
             </div>
 
             <div className={clsx(cls.item, '!absolute z-[10] left-3 flex justify-center h-full items-center')} >
-                <Button className={clsx(cls.swiper_button_next, cls.item_icon, 'rotate-180')} onPress={prevSwiper}>
+                <div className={clsx(cls.swiper_button_next, cls.item_icon, 'rotate-180')} onClick={prevSwiper}>
                     <IconSwiper />
-                </Button>
+                </div>
             </div>
         </div >
     )
