@@ -25,7 +25,7 @@ const CaseLiveFeed = () => {
 
     return (
         <div className="w-full overflow-hidden">
-            <div className="px-5 w-full h-auto relative flex flex-col mt-2">
+            <div className="px-5 w-full h-auto relative flex flex-col mt-2 3sm:px-1">
                 <div className={clsx(cls.livefeed_logo, "-mb-[2px] z-[1]")}>
                     <div className={clsx(cls.livefeed_logo_inner, "flex justify-center gap-1 pt-2.5")}>
                         <IconCrown className={clsx("w-3 h-3", cls.crown_bg)} />
