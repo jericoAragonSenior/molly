@@ -105,9 +105,9 @@ const SupportBodyContent = ({ messagesList }: SupportBodyContentProps) => {
             <div className="gap-4 flex flex-col min-h-[270px] max-h-[322px] overflow-auto">
                 {
                     messagesList.map((item, index) =>
-                        <div key={index} className={clsx("flex w-full", item.type == "toadmin" ? "justify-start pl-2 md:pr-2 md:pl-3 md:pb-2" : "justify-end")}>
-                            <ChatMessage {...item} className=" md:w-full w-1/2" titleClass={item.type == "toadmin" ? "!text-[#FDCD24]" : ""}
-                                contentClass={item.type == "toadmin" ? "!text-[#f39e9e] !text-[13px]" : ""} 
+                        <div key={index} className={clsx("flex w-full", item.type != "toadmin" ? "justify-start pl-2 md:pr-2 md:pl-3 md:pb-2" : "justify-end")}>
+                            <ChatMessage {...item} className=" md:w-full w-1/2" titleClass={item.type == "toadmin" ? clsx("!text-[#FDCD24]", cls.chat_admin_shadow) : ""}
+                                contentClass={item.type == "toadmin" ? "!text-[#545778] !text-[13px]" : "!text-[#545778]"} 
                             />
                         </div>
                     )
