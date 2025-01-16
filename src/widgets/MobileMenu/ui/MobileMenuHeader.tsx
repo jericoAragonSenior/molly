@@ -53,8 +53,8 @@ export const MobileMenuHeader: FC<MobileMenuHeaderProps> = ({ className }) => {
 			{
 				body: '',
 				modal: 'relative w-full lg:h-full h-screen flex lg:items-start justify-center items-center'
-			}
-
+			},
+			true
 		);
 	};
 
@@ -67,7 +67,8 @@ export const MobileMenuHeader: FC<MobileMenuHeaderProps> = ({ className }) => {
 			{
 				body: '',
 				modal: 'relative w-full lg:h-full h-screen flex lg:items-start justify-center items-center'
-			}
+			},
+			true
 		);
 	}
 
@@ -80,7 +81,8 @@ export const MobileMenuHeader: FC<MobileMenuHeaderProps> = ({ className }) => {
 			{
 				body: '',
 				modal: 'relative w-full lg:h-full h-screen flex justify-center items-center'
-			}
+			},
+			true
 		);
 	}
 
