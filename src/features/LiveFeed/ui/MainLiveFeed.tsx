@@ -5,7 +5,7 @@ import { FC } from 'react'
 import { usePathname } from '@/shared/config/i18n/navigation'
 import { AppRoute } from '@/shared/const/pages'
 import { useAppResponsive } from '@/shared/lib/useResponsive'
-
+import { headerItemList } from '../model/items'
 import { LiveFeed } from './LiveFeed'
 
 interface MainLiveFeedProps {
@@ -23,6 +23,7 @@ const MainLiveFeed: FC<MainLiveFeedProps> = ({ className }) => {
 				axis='x'
 				title='livefeed.title'
 				className={className}
+				itemsList={headerItemList}
 			/>
 		)
 	}
