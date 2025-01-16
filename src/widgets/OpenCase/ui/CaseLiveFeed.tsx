@@ -1,3 +1,4 @@
+"use client"
 import clsx from "clsx";
 import cls from "./OpenCase.module.sass";
 
@@ -19,11 +20,11 @@ const CaseLiveFeed = () => {
         <SwiperSlide
             key={item.id}
         >
-        <CardLiveFeed
-            title={item.title}
-            pic={item.picUrl}
-            theme={item.rarity}
-            className={cls.card}
+            <CardLiveFeed
+                title={item.title}
+                pic={item.picUrl}
+                theme={item.rarity}
+                className={cls.card}
             />
         </SwiperSlide>
     ))
@@ -48,16 +49,16 @@ const CaseLiveFeed = () => {
                                 className='relative w-full'
                                 tabIndex={8}
                                 direction={'horizontal'}
-                                >
-                                    {items}
+                            >
+                                {items}
                             </Swiper>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-       
-        
+
+
     )
 }
 
