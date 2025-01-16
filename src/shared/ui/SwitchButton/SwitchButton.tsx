@@ -1,7 +1,5 @@
 "use client"
 
-import clsx from "clsx";
-import cls from "./SwitchButton.module.sass"
 import { useState } from "react";
 
 interface SwitchButtonProps {
@@ -28,17 +26,10 @@ const SwitchButton = ({ prevClick, nextClick }: SwitchButtonProps) => {
     }
 
     return (
-        <div className={clsx(cls.switch_btn, 'w-[42px] h-[22px] hover:cursor-pointer')} onClick={switchHandle}>
-            <div className={clsx('w-full h-full relative', cls.switch_btn_inner)}>
-                <div className={clsx(cls.switch_btn_icon, 'absolute', isPrev ? "left-0 duration-150" : "right-0 duration-150")}>
-                    <div className={clsx(cls.switch_btn_icon_inner)}>
-                        <div className={clsx(cls.switch_btn_icon_inner_center)}>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <label className="inline-flex items-center cursor-pointer border-none">
+            <input type="checkbox" value="" className="sr-only peer" onClick={() => switchHandle()}  />
+            <div style={{ boxShadow: "none" }} className="border-none relative w-11 h-6 bg-[#22bb55] rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#E2B617]"></div>
+        </label>
     )
 }
 
