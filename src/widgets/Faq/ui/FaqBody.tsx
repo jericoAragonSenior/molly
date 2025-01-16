@@ -9,7 +9,7 @@ const FaqBody = () => {
 
 
     return (
-        <div className='flex flex-col w-full h-auto gap-4'>
+        <div className='flex flex-col w-full h-auto gap-4 px-5 md:px-0'>
             {
                 faqDatas.map(item => {
                     return <Collapse header={item.title} content={item.content} headerIcon={<IconDown />} key={item.title} line={true}
