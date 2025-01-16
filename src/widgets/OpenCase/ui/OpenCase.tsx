@@ -44,7 +44,7 @@ export const OpenCase: FC<OpenCaseProps> = ({ className }) => {
 			
 			<CaseBar title={t('open_case.beach_season')} />
 			<div className={cls.container}>
-				<div className={clsx(cls.type, 'md:hidden flex')}>{t('open_case.selected_top')}</div>
+				<div className={clsx(cls.type, 'md:hidden flex text-center justify-center')}>{t('open_case.selected_top')}</div>
 				<div
 					className={cls.inner}
 					style={{ backgroundImage: `url(${openCaseBg.src})` }}
