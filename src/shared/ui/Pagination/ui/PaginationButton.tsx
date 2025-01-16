@@ -11,7 +11,7 @@ const PaginationButton = ({content, isActive, onClick}: PaginationButtonProps) =
     return (    
         <div className={clsx(isActive == true ? cls.button_active : cls.button_body)} onClick={onClick}>
             <div className={clsx(isActive == true ? cls.button_active_inner : cls.button_body_inner)}>
-                <span className={clsx('text-14px', isActive == true ? "text-[#121722]" : "text-white")}>{content}</span>
+                <span className={clsx('text-[14px]', isActive == true ? "text-[#121722]" : "text-white")}>{content}</span>
             </div>
         </div>
     )
