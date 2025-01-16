@@ -70,7 +70,7 @@ const BigCaseItem = ({ title, picUrl, name, type, className }: BigCaseItemProps)
                     </div>
                 </div>
             </div>
-            <div className={clsx(" absolute w-[158px] h-[112px]", cls.center)}>
+            <div className={clsx("w-[158px] h-[112px]")}>
                 <div className={clsx("relative w-full h-full flex justify-center items-center", getBackground(type))}>
                     <Image src={picUrl} height={88} width={119} alt="box" />
                 </div>
