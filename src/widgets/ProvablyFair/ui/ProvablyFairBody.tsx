@@ -59,8 +59,8 @@ const ProvablyFairBody = () => {
     }
 
     return (
-        <div className="h-auto w-full relative flex md:flex-col flex-row px-5 md:px-0">
-            <div className={clsx("min-w-[237px] h-full sticky top-[30px] md:w-auto md:overflow-auto")}>
+        <div className="h-auto w-full relative flex lg:flex-col flex-row px-5 lg:px-0">
+            <div className={clsx("min-w-[237px] h-full sticky top-[30px] lg:w-auto lg:overflow-auto")}>
                 <List items={listItems} axis={breakpoints.lg ? "y" : "x"} />
             </div>
             <div className="flex flex-col gap-4 w-full px-4 flex-1 h-auto">
