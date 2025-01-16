@@ -30,7 +30,7 @@ const DesktopLayout = ({ children }: { children: React.ReactNode }) => {
     const setItemPosition = useCommonStore(state => state.setItemPosition)
 
     useEffect(() => {
-            setItemPosition("right")
+            setItemPosition("center")
             // eslint-disable-next-line react-hooks/exhaustive-deps
         }, [])
 
