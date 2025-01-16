@@ -31,7 +31,7 @@ export const Modal: React.FC<ModalProps> = ({
     headerTitle,
     autoClose,
     classNames,
-    closeButton
+    closeButton = true
 }) => {
     // Optionally handle autoClose logic here
     if (!isOpen) return null;
@@ -67,7 +67,7 @@ export const Modal: React.FC<ModalProps> = ({
                                     <Button
                                         startContent={<Close />}
                                         className={clsx('flex justify-center items-center min-w-[30px] min-h-[30px]', cls.header_content)}
-                                        onPress={onClose}
+                                        onClick={onClose}
                                     />
                                 }
                                 
