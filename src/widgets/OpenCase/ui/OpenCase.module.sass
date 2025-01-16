@@ -19,7 +19,6 @@
 .border
   &_top
     position: absolute
-    top: 60px
     left: 50%
     transform: translateX(-50%) translateY(-100%)
     width: auto
@@ -112,20 +111,43 @@
 
 .btn
   &_hexagon
+    position: relative
     &_yellow
       background:  linear-gradient(90deg, rgba(253, 206, 36, 0.753) 56.8%, #FDCD24 65.65%),linear-gradient(270deg, rgba(253, 206, 36, 0.664) 56.55%, #FDCD24 69.17%)
       clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%)
-      box-shadow: 0px 0px 24px 0px #FD3E2459
-
+      position: relative
       padding: 2px
 
       &_inner
         clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%)
         background: linear-gradient(0deg, #E2B617, #E2B617),linear-gradient(180deg, rgba(253, 205, 36, 0) 0%, rgba(253, 205, 36, 0.65) 100%)
-        box-shadow: 0px 0px 12px 0px #FD3E2440
-
         &:hover
           background: #ffd231
+    &_yellow_shadow
+      &::after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        z-index: -1
+        width: calc(100% - 10px)
+        height: calc(100% + 5px)
+        background-color: #FD3E2459
+        filter: blur(8px)
+    &_green_shadow
+      &::after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        z-index: -1
+        width: calc(100% - 10px)
+        height: calc(100% + 5px)
+        background-color: #10AA7C59
+        filter: blur(8px)
+
 
     &_green
       background: linear-gradient(90deg, rgba(36, 253, 188, 0.479) 56.8%, #24FDBC 65.65%),linear-gradient(270deg, rgba(36, 253, 188, 0.432) 56.55%, #24FDBC 69.17%)
@@ -218,6 +240,65 @@
     border-radius: 12px
     border: 2px solid #263B4C
     box-shadow: 0px 0px 32px 0px #00000080 inset
+
+.item
+  position: relative
+  z-index: 1
+  display: flex
+  align-items: center
+  gap: 6px
+  background-color: transparent
+  transition: background-color 0.3s
+  cursor: pointer
+  background: #27325280
+  backdrop-filter: blur(4px)
+  border-radius: 10px
+  border: 1px solid #27325280
+  &.active, &:hover
+    &::after
+      opacity: 1
+      transform: scale(1)
+    .item
+      &_icon
+        &::after
+          opacity: 1
+        svg
+          @apply stroke-primary-2 fill-primary
+      &_label
+        @apply text-text-primary
+  &.active
+    border: 1px solid #18E4A7 !important
+    background: #1AE9AB1A !important
+
+
+  &_icon
+    position: relative
+    flex-shrink: 0
+    &::after
+      content: ''
+      position: absolute
+      z-index: 1
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 70%
+      height: 70%
+      background-color: rgba(0, 154, 99, 0.65)
+      filter: blur(8px)
+      opacity: 0
+      transition: opacity 0.3s
+    svg
+      position: relative
+      z-index: 2
+      stroke: #2F374A
+      fill: #2F374A
+      transition: 0.3s
+      transition-property: fill, stroke
+  &_label
+    line-height: 1.3
+    text-align: center
+    color: #2F374A
+    transition: color 0.3s
 
 
 
