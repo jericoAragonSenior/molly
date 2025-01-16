@@ -12,6 +12,8 @@ import { FeedButton } from './Button/Button'
 import cls from './LiveFeed.module.sass'
 import { LiveFeedItem } from '../model/types'
 
+import { Swiper, SwiperSlide } from 'swiper/react'
+
 interface LiveFeedProps {
 	className?: string
 	axis?: 'x' | 'y'
@@ -25,13 +27,16 @@ export const LiveFeed: FC<LiveFeedProps> = ({ className, axis = 'y', title, item
 	const { lg } = useAppResponsive()
 
 	const items = itemsList.map(item => (
-		<CardLiveFeed
+		<SwiperSlide
 			key={item.id}
-			title={item.title}
-			pic={item.picUrl}
-			theme={item.rarity}
-			className={cls.card}
-		/>
+		>
+			<CardLiveFeed
+				title={item.title}
+				pic={item.picUrl}
+				theme={item.rarity}
+				className={cls.card}
+				/>
+		</SwiperSlide>
 	))
 
 	return (
@@ -60,7 +65,19 @@ export const LiveFeed: FC<LiveFeedProps> = ({ className, axis = 'y', title, item
 					className={cls.bar_btn}
 				/>
 			</div>
-			<div className={clsx(cls.track)}>{items}</div>
+			<div className='overflow-hidden relative'>
+				<Swiper
+				spaceBetween={2}
+				slidesPerView={'auto'}
+				loop={true}
+				wrapperClass={clsx('flex w-full', axis == 'y' ? 'flex-col h-screen' : 'flex-row')}
+				className='relative w-full'
+				tabIndex={8}
+				direction={axis == 'y' ? 'vertical' : 'horizontal'}
+				>
+					{items}
+				</Swiper>
+			</div>
 		</div>
 	)
 }
