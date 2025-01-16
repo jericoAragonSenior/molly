@@ -16,6 +16,7 @@ import { Input } from "@/shared/ui/Input/Input";
 import IconDoubleArrow from '@/shared/assets/icons/icon-double-arrow.svg'
 import IconCopy from '@/shared/assets/icons/icon-copy.svg'
 import IconCheck from '@/shared/assets/icons/icon-check-2.svg'
+import { useAppResponsive } from "@/shared/lib/useResponsive";
 
 
 const ProvablyFairBody = () => {
@@ -27,6 +28,11 @@ const ProvablyFairBody = () => {
     const [serverSeed, setServerSeed] = useState<string>('7e2d8926de5f4df1e1205f28cc022bb2');
     const [isShow, setIsShow] = useState<boolean>(false)
     const [isCopy, setIsCopy] = useState<boolean>(false)
+
+    // For responsive
+    const breakpoints = useAppResponsive()
+    
+
 
     const leftClick = () => {
         setClickSide('left')
@@ -53,12 +59,9 @@ const ProvablyFairBody = () => {
     }
 
     return (
-        <div className="h-auto w-full relative flex">
-            <div className={clsx("w-auto h-auto fixed top-[85px] left-3 md:flex hidden z-[46] p-2 rounded-md  duration-150 transform", isShow && cls.rotateX)} onClick={showHeader}>
-                <IconDoubleArrow className="w-6 h-6 fill-[#24FDBC]" />
-            </div>
-            <div className={clsx("min-w-[237px] h-full sticky top-[100px] md:top-[10px] duration-150 z-[45] md:fixed md:h-auto md:max-w-0 md:min-w-0 md:overflow-hidden", isShow && "!min-w-[237px] transition-all")}>
-                <List items={listItems} />
+        <div className="h-auto w-full relative flex md:flex-col flex-row px-5 md:px-0">
+            <div className={clsx("min-w-[237px] h-full sticky top-[30px] md:w-auto md:overflow-auto")}>
+                <List items={listItems} axis={breakpoints.lg ? "y" : "x"} />
             </div>
             <div className="flex flex-col gap-4 w-full px-4 flex-1 h-auto">
                 <div className={clsx(cls.body)}>
@@ -80,7 +83,7 @@ const ProvablyFairBody = () => {
                             }
                         </div>
                         <pre className={clsx("break-words whitespace-pre-wrap")}>
-                            <code className={clsx("w-full block whitespace-pre-wrap overflow-auto")}>
+                            <code className={clsx("w-full block whitespace-pre-wrap overflow-auto !font-normal")}>
                                 {code}
                             </code>
                         </pre>
