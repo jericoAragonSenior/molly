@@ -87,8 +87,8 @@ const OpenCaseBar = () => {
     return (
         <div>
             <div className='relative w-full overflow-hidden h-auto py-3'>
-                <div className='w-full absolute bottom-0 h-[74px] -z-10 flex'>
-                    <HeaderBg className={clsx(cls.border_top)} />
+                <div className='w-full absolute bottom-0 h-[74px] -z-10 flex md:hidden'>
+                    <HeaderBg className={clsx(cls.border_top, isRefill == true ? 'top-[30px]' : 'top-[70px]')} />
                 </div>
                 {
                     isRefill == true ?
