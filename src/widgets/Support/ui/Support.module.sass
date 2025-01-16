@@ -211,3 +211,17 @@
     height: calc(100% + 5px)
     background-color: #10AA7C59
     filter: blur(8px)
+
+.chat_admin_shadow
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    z-index: -1
+    transform: translate(-50%, -50%)
+    width: calc(100% - 5px)
+    height: calc(100% - 10px)
+    background-color: #FF3D00A6
+    filter: blur(8px)
