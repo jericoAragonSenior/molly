@@ -45,7 +45,7 @@ const FaqBar = () => {
     }
 
     return (
-        <div className='flex relative px-5 md:px-0'>
+        <div className='flex relative px-5 md:px-1'>
             <Swiper
                 spaceBetween={12}
                 slidesPerView={breakpoints?.['3xl'] ? 5 : breakpoints?.md ? 3 : breakpoints?.['sm'] ? 2 : 1}
