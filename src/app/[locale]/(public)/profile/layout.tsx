@@ -18,7 +18,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
         <div className='mt-5 flex-col flex'>
             <ProfileHeader />
-            <div className='flex'>
+            <div className='flex lg:flex-col'>
                 <div className='w-auto h-screen'>
                     <ProfileMain />
                 </div>
