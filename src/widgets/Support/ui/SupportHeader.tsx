@@ -31,7 +31,8 @@ const SupportHeader = () => {
             {
                 body: '',
                 modal: 'relative w-full lg:h-full h-screen flex lg:items-start justify-center items-center'
-            }
+            },
+            true
         )
     }
 
