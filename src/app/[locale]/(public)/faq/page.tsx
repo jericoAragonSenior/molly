@@ -18,7 +18,7 @@ export async function generateMetadata({ params: { locale } }: IMetadata) {
 
 const Faq = () => {
     return (
-        <div className='mt-5 flex flex-col gap-4 px-5'>
+        <div className='mt-5 flex flex-col gap-4'>
             <FaqHeader />
             <FaqBar />
             <FaqBody />
