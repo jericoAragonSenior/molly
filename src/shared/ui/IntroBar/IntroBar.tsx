@@ -23,7 +23,7 @@ const IntroBar = ({ icon, title, content, buttons }: IntroBarProps) => {
                     <div className='fill-white w-6 h-6 '>
                         {icon}
                     </div>
-                    <span className={clsx('font-[1000] font-[Gotham Ultra] italic text-[20px] block', cls.mask_text)}>{t(title).toUpperCase()}</span>
+                    <span className={clsx('font-[1000] font-[Gotham Ultra] italic text-[20px] block px-[5px]', cls.mask_text)}>{t(title).toUpperCase()}</span>
                 </div>
                 <div className='w-[2px] bg-[#1C2232] h-8 rotate-[20deg] md:hidden flex'></div>
                 <span className={clsx('font-[Gotham Ultra] italic text-[12px] text-[#545778] ,block lg:hidden')}>{t(content)}</span>
