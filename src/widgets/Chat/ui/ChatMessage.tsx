@@ -114,7 +114,7 @@ export const ChatMessage: FC<ChatMessageProps> = ({
 					<div className='flex items-center justify-between gap-2.5'>
 						<div className='flex items-center flex-wrap gap-2.5'>
 							<div className={clsx(cls.name, titleClass)}>{name}</div>
-							{(type === 'admin' || type == 'toadmin') && <div className={cls.tag}>Admin</div>}
+							{(type === 'admin') && <div className={cls.tag}>Admin</div>}
 						</div>
 						<div className={cls.time}>{timestamp}</div>
 					</div>
