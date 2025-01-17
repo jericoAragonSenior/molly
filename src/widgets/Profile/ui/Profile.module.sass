@@ -55,3 +55,54 @@
 
     &_font
       font-family: Gotham Bold, system-ui, -apple-system, BlinkMacSystemFont, sans-serif
+
+.item
+  display: flex
+  background-color: transparent
+  transition: background-color 0.3s
+  cursor: pointer
+  align-items: center
+
+  &_icon
+    position: relative
+    flex-shrink: 0
+    &::after
+      content: ''
+      position: absolute
+      z-index: 1
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 60%
+      height: 80%
+      background-color: rgba(0, 154, 99, 0.65)
+      filter: blur(8px)
+      opacity: 1
+      transition: opacity 0.3s
+
+// Inventory
+
+
+.upgrade_btn
+  background: linear-gradient(90deg, rgba(253, 205, 36, 0) 122.17%, #FDCD24 141.22%),linear-gradient(270deg, rgba(253, 205, 36, 0) 6.54%, #FDCD24 33.68%)
+  padding: 1px
+  border-radius: 8px
+  &_inner
+    background: linear-gradient(0deg, #E2B617, #E2B617),linear-gradient(180deg, rgba(253, 205, 36, 0) 0%, rgba(253, 205, 36, 0.65) 100%)
+    border-radius: 8px
+
+.shopping_btn
+  background: linear-gradient(90deg, rgba(36, 253, 188, 0.479) 56.8%, #24FDBC 65.65%),linear-gradient(270deg, rgba(36, 253, 188, 0.432) 56.55%, #24FDBC 69.17%)
+  padding: 1px
+  border-radius: 8px
+  &_inner
+    background: linear-gradient(0deg, #10AA7C, #10AA7C),linear-gradient(180deg, rgba(36, 253, 188, 0) 0%, rgba(36, 253, 188, 0.65) 100%)
+    border-radius: 8px
+
+.blod_btn
+  background: linear-gradient(180deg, #8ACCFF 0%, #2D74D4 100%)
+  padding: 1px
+  border-radius: 8px
+  &_inner
+    background: linear-gradient(180deg, #3BADFF 0%, #1D33A3 100%)
+    border-radius: 8px
