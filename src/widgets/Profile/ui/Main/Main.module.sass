@@ -1,0 +1,168 @@
+// Main Header
+.user
+  &_main
+    background: linear-gradient(180deg, #1F2534 0%, rgba(31, 37, 52, 0.25) 100%)
+    padding: 2px
+    border-radius: 12px
+
+    &_inner
+      background: linear-gradient(180deg, #191F2D 0%, rgba(25, 31, 45, 0.25) 100%)
+      border-radius: 12px
+
+.image
+  &_over
+    background: linear-gradient(345.75deg, rgba(18, 23, 34, 0.65) 39.59%, rgba(18, 23, 34, 0) 81.45%)
+
+.avatar
+  &_wrapper
+    aspect-ratio: cos(30deg)
+    clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0)
+    background: linear-gradient(180deg, rgba(253, 205, 36, 0.19) 12.1%, #FDCD24 100%)
+    padding: 2px
+
+    &_inner
+      height: 100%
+      width: 100%
+      background: #111620
+      clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0)
+      padding: 10px 8px
+
+      &_img
+        height: 100%
+        width: 100%
+        background: #D9D9D9
+        clip-path: polygon(0% 25%, 0% 76%, 50% 100%, 100% 75%, 100% 25%, 50% 0%)
+
+.level
+  &_wrapper
+    height: 46px
+    width: 41px
+    aspect-ratio: cos(30deg)
+    clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0)
+    background: #121722
+    padding: 7px
+
+    &_inner
+      &_border
+        aspect-ratio: cos(30deg)
+        clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0)
+        background: #FDCD24
+        padding: 1px
+        &_body
+          aspect-ratio: cos(30deg)
+          clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0)
+          background: #E2B617
+
+.arrow
+  margin-left: 24px
+  width: 11px
+  height: 10px
+  padding: 1px
+  padding-bottom: 0
+  transform: rotate(180deg)
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%)
+  background-color: #222738 !important
+  backdrop-filter: blur(45px)
+
+.base._with-arrow
+  &::before
+    --tw-translate-y: -1px
+    --tw-rotate: 45deg
+    z-index: 11
+    border: 1px solid #222738
+    width: 10px
+    height: 10px
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%)
+    background-color: rgba(25, 33, 48, 0.7) !important
+    backdrop-filter: blur(4px)
+
+.deposit_btn
+  padding: 1px
+  background: linear-gradient(90deg, rgba(36, 253, 188, 0) 77.44%, #24FDBC 89.52%),linear-gradient(270deg, rgba(36, 253, 188, 0.445) 40.76%, #24FDBC 57.96%)
+  border-radius: 8px
+
+  &_inner
+    background: linear-gradient(0deg, #10AA7C, #10AA7C),linear-gradient(180deg, rgba(36, 253, 188, 0) 0%, rgba(36, 253, 188, 0.65) 100%)
+    border-radius: 8px
+
+    &_font
+      font-family: Gotham Bold, system-ui, -apple-system, BlinkMacSystemFont, sans-serif
+
+// Main Trader
+
+.box
+  border-radius: 8px
+  &_value
+  &_listbox
+    .box_item
+      border-radius: 6px
+      padding: 4px 6px
+    &_content
+      border-radius: 12px
+
+.input
+  &.box_value
+    &::placeholder
+      color: #484E5B
+  &_icon
+    fill: #484E5B
+
+// MainBestDrop
+
+.item
+  &_bg
+    &_yellow
+      background: radial-gradient(50% 50% at 50% 50%, rgba(253, 205, 36, 0.35) 0%, rgba(18, 23, 34, 0) 100%)
+
+    &_pink
+      background: radial-gradient(50% 50% at 50% 50%, rgba(255, 0, 245, 0.45) 0%, rgba(18, 23, 34, 0) 100%)
+
+    &_purple
+      background: radial-gradient(50% 50% at 50% 50%, rgba(173, 0, 255, 0.45) 0%, rgba(18, 23, 34, 0) 100%)
+
+    &_blue
+      background: radial-gradient(50% 50% at 50% 50%, rgba(0, 56, 255, 0.45) 0%, rgba(18, 23, 34, 0) 100%)
+
+    &_limit_blue
+      background: radial-gradient(50% 50% at 50% 50%, rgba(53, 170, 255, 0.45) 0%, rgba(18, 23, 34, 0) 100%)
+
+  &_mark
+    &_yellow
+      background: #FDCD24
+
+    &_pink
+      background: #FF00F5
+
+    &_purple
+      background: #8000FF
+
+    &_blue
+      background: #0038FF
+
+    &_limit_blue
+      background: #35AAFF
+
+// MainInventory
+.upgrade_btn
+  background: linear-gradient(90deg, rgba(253, 205, 36, 0) 122.17%, #FDCD24 141.22%),linear-gradient(270deg, rgba(253, 205, 36, 0) 6.54%, #FDCD24 33.68%)
+  padding: 1px
+  border-radius: 8px
+  &_inner
+    background: linear-gradient(0deg, #E2B617, #E2B617),linear-gradient(180deg, rgba(253, 205, 36, 0) 0%, rgba(253, 205, 36, 0.65) 100%)
+    border-radius: 8px
+
+.shopping_btn
+  background: linear-gradient(90deg, rgba(36, 253, 188, 0.479) 56.8%, #24FDBC 65.65%),linear-gradient(270deg, rgba(36, 253, 188, 0.432) 56.55%, #24FDBC 69.17%)
+  padding: 1px
+  border-radius: 8px
+  &_inner
+    background: linear-gradient(0deg, #10AA7C, #10AA7C),linear-gradient(180deg, rgba(36, 253, 188, 0) 0%, rgba(36, 253, 188, 0.65) 100%)
+    border-radius: 8px
+
+.blod_btn
+  background: linear-gradient(180deg, #8ACCFF 0%, #2D74D4 100%)
+  padding: 1px
+  border-radius: 8px
+  &_inner
+    background: linear-gradient(180deg, #3BADFF 0%, #1D33A3 100%)
+    border-radius: 8px
