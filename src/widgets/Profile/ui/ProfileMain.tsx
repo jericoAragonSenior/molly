@@ -1,6 +1,7 @@
 
 "use client"
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 import clsx from "clsx";
 import cls from "./Profile.module.sass";
@@ -8,13 +9,14 @@ import cls from "./Profile.module.sass";
 import IconWallet from '@/shared/assets/icons/icon-profile-wallet.svg'
 import IconEye from '@/shared/assets/icons/icon-eye.svg'
 import IconPlus from '@/shared/assets/icons/icon-black-plus.svg'
-import { useTranslations } from "next-intl";
 import Button from "@/shared/ui/Button/Button";
+import { useRouter } from "@/shared/config/i18n/navigation";
+import { useAppResponsive } from "@/shared/lib/useResponsive";
 
 import ListItme from "@/entities/ListItem/ui/ListItem";
-import { profileList } from "@/widgets/Profile/model/items";
 
-import { useAppResponsive } from "@/shared/lib/useResponsive";
+import { mobileProfileList, profileList } from "@/widgets/Profile/model/items";
+
 
 
 
@@ -24,16 +26,20 @@ const ProfileMain = () => {
     const t = useTranslations();
 
     // Selected profile list item
-    const [selectedItem, setSelectedItem] = useState<number>(1)
+    const [selectedItem, setSelectedItem] = useState<number>(0)
 
     // For responsive
     const breakpoints = useAppResponsive()
 
+    // To move the route
+    const navigation = useRouter();
+
 
 
     // The function for profile list
-    const clickListItem = (item: number) => {
+    const clickListItem = (item: number, link: string) => {
         setSelectedItem(item)
+        navigation.push(link);
     }
 
     return (
@@ -69,14 +75,18 @@ const ProfileMain = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col gap-0.5 lg:gap-0 rounded-xl lg:justify-center h-full lg:flex-row lg:flex-wrap overflow-hidden">
+                        <div className="flex flex-col gap-0.5 lg:gap-0 lg:justify-center h-full rounded-xl lg:rounded-none lg:flex-row overflow-x-auto 2sm:justify-start">
                             {
-                                profileList.map((item) => (
-                                    (breakpoints.lg || (!breakpoints.lg && item.id)) != 6 &&
-                                    <div className="w-full lg:w-1/5 lg:px-2 md:px-1 h-full sm:w-1/3" key={item.title} >
-                                        <ListItme icon={item.icon} onClick={() => clickListItem(item.id)} isActived={item.id == selectedItem} title={t(item.title)} />
+                                breakpoints.lg ? profileList.map((item) => (
+                                    <div className="w-full h-full" key={item.title} >
+                                        <ListItme icon={item.icon} onClick={() => clickListItem(item.id, item.link)} isActived={item.id == selectedItem} title={t(item.title)} />
                                     </div>
-                                ))
+                                )) :
+                                    mobileProfileList.map((item) => (
+                                        <div className="w-full lg:w-1/5 lg:px-2 md:px-1 h-full 2sm:w-1/3 lg:pb-2" key={item.title} >
+                                            <ListItme icon={item.icon} onClick={() => clickListItem(item.id, item.link)} isActived={item.id == selectedItem} title={t(item.title)} />
+                                        </div>
+                                    ))
                             }
 
                         </div>
