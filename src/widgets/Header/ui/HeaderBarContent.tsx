@@ -22,7 +22,7 @@ import SignInModal from '@/widgets/Auth/SignInModal'
 import { useModal } from '@/shared/context/ModalContext'
 import SignUpModal from '@/widgets/Auth/SignUpModal'
 import ForgetPassword from '@/widgets/Auth/ForgetPasswordModal'
-
+import { useRouter } from '@/shared/config/i18n/navigation'
 
 interface HeaderBarContentProps {
 	className?: string
@@ -30,7 +30,11 @@ interface HeaderBarContentProps {
 
 export const HeaderBarContent: FC<HeaderBarContentProps> = ({ className }) => {
 
+	// For translation
 	const t = useTranslations()
+
+	// Navigation
+	const navigation = useRouter()
 
 	const signinState = useCommonStore(state => state.signinState)
 	const setSigninState = useCommonStore(state => state.setSigninState)
@@ -87,6 +91,11 @@ export const HeaderBarContent: FC<HeaderBarContentProps> = ({ className }) => {
 		);
 	}
 
+	// The function to go profile page
+	const goToProfile = () => {
+		navigation.push('/profile');
+	}
+
 	useEffect(() => {
 		setIsSignin(signinState)
 	}, [signinState])
@@ -104,6 +113,7 @@ export const HeaderBarContent: FC<HeaderBarContentProps> = ({ className }) => {
 						cls.avatar_wrapper,
 						'ml-2 relative z-[1] shrink-0 w-[58px] h-[58px] flex items-center justify-center cursor-pointer'
 					)}
+					onClick={goToProfile}
 				>
 					<IconAvatarFrame
 						className={clsx(
