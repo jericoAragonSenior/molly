@@ -1,5 +1,5 @@
 import { IMetadata } from '@/shared/types/metadata'
-import UserBody from '@/widgets/Profile/ui/User/UserBody';
+import User from '@/widgets/Profile/ui/User/User';
 
 export async function generateMetadata({ params: { locale } }: IMetadata) {
     // const t = await getTranslations({ locale, namespace: 'Main' })
@@ -15,9 +15,9 @@ export async function generateMetadata({ params: { locale } }: IMetadata) {
 
 const UserProfile = () => {
     return (
-        <div className='w-full h-full pr-4'>
+        <div className='w-full h-full px-4'>
             <div className='w-full h-full'>
-                <UserBody />
+                <User />
             </div>
         </div>
     )
