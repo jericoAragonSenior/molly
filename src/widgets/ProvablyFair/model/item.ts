@@ -1,4 +1,4 @@
-import { IListItem } from "./type"
+import { IBody, IListItem } from "./type"
 
 export const listItems: IListItem[] = [
     {
@@ -68,3 +68,49 @@ async retrieveRandomHashv2(n, gameHash) {
     }
 }
 `
+
+// Body data
+export const bodyData: IBody[] = [
+    {
+        id: "review",
+        title: "Review",
+        contents: [
+            "This is for Review section"
+        ]
+    },
+    {
+        id: "implementation",
+        title: "Implementation",
+        contents: [
+            "This is for Implementation section"
+        ]
+    },
+    {
+        id: "conversion",
+        title: "Conversion",
+        contents: [
+            "This is for Conversion section"
+        ]
+    },
+    {
+        id: "game-events",
+        title: "Game events",
+        contents: [
+            "This is for Game events section"
+        ]
+    },
+    {
+        id: "decoding",
+        title: "Decoding",
+        contents: [
+            "This is for Decoding section"
+        ]
+    },
+    {
+        id: "calculation",
+        title: "Calculation",
+        contents: [
+            "This is for Calculation section"
+        ]
+    }
+]

@@ -5,4 +5,11 @@ export interface IListItem {
 	title: string
 }
 
+// Body data interface
+export interface IBody {
+	id: string
+	title: string
+	contents: string[]
+}
+
 export type ClickSide = 'left' | 'right'
