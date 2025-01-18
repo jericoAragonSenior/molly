@@ -20,7 +20,7 @@ interface MainBestDropProps {
 }
 
 
-const MainBestDrop = ({title, type, name, imgUrl}: MainBestDropProps) => {
+const MainBestDrop = ({ title, type, name, imgUrl }: MainBestDropProps) => {
 
     // For translation
     const t = useTranslations();
@@ -84,7 +84,7 @@ const MainBestDrop = ({title, type, name, imgUrl}: MainBestDropProps) => {
                     <div className={clsx("rounded-[12px] p-5 bg-[#121722] flex flex-col relative overflow-hidden w-full h-full")}>
                         <div className={clsx("flex items-start justify-between w-full")}>
                             <div className={clsx("flex flex-col justify-end items-end gap-[3px]")}>
-                                <span className="text-[#2F374A] font-[500] text-[13px] uppercase">{ title}</span>
+                                <span className="text-[#2F374A] font-[500] text-[13px] uppercase">{title}</span>
                             </div>
                             <div className={clsx("w-[12px] h-[12px] rounded-[3px]", getMarkBackground(type))}>
                             </div>
@@ -93,12 +93,12 @@ const MainBestDrop = ({title, type, name, imgUrl}: MainBestDropProps) => {
                             <div className={clsx("w-full flex justify-center md:w-auto", !chatViewHidden && "3lg:!w-auto")}>
                                 <div className="relative w-[180px] h-[127px]">
                                     <div className={clsx("relative w-full h-full flex justify-center items-center", getBackground(type))}>
-                                        <Image src={'/images/case/skin-2.png'} height={127} width={180} alt="box" />
+                                        <Image src={imgUrl} height={127} width={180} alt="box" />
                                     </div>
                                 </div>
                             </div>
                             <div className="flex flex-col gap-2.5">
-                                <span className="text-[#2F374A] text-[14px] font-[500] xs:text-[9px]">{'AK-47 | Fire Serpent'}</span>
+                                <span className="text-[#2F374A] text-[14px] font-[500] xs:text-[9px]">{name}</span>
                                 <span className="text-[#D1D9EB] text-[16px] font-[500] xs:text-[10px]">$ {'242,02'}</span>
                             </div>
                         </div>
@@ -116,8 +116,8 @@ const MainBestDrop = ({title, type, name, imgUrl}: MainBestDropProps) => {
             <div className="flex-1 flex h-full">
                 <div className={clsx("w-full flex h-full flex-wrap sm:mt-3")}>
                     {
-                        bestDropData.map(item => (
-                            <div className={clsx(item?.icon ? "w-1/2" : "w-1/4", "p-1 sm:!w-1/3",
+                        bestDropData.map((item, index) => (
+                            <div key={index} className={clsx(item?.icon ? "w-1/2" : "w-1/4", "p-1 sm:!w-1/3",
                                 item.id == 2 && "sm:!order-4",
                                 item.id == 4 && "sm:!order-2",
                                 item.id == 3 && "sm:!order-7",
