@@ -2,7 +2,7 @@ import clsx from "clsx";
 import cls from "../Cases.module.sass";
 import { useTranslations } from "next-intl";
 import { Input } from "@/shared/ui/Input/Input";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import SelectType from "./SelectType";
 import SelectCaseImage from "./SelectCaseImage";
 import SetDropChances from "./SetDropChances";
@@ -43,19 +43,19 @@ const CreateCaseModal = () => {
                     <SelectCaseImage />
                     <SetDropChances />
                 </div>
-                <div className="flex flex-1 py-5 h-[700px]">
+                <div className="flex flex-1 py-5 h-[700px] relative">
                     <div className={clsx(cls.modal_body, "w-full h-full")}>
                         <div className={clsx(cls.modal_body_inner, "w-full h-full flex flex-col p-5 2sm:px-1")}>
                             <ModalBar />
                             <div className="flex-1 overflow-auto my-3 app-scrollbar relative">
-                                <CaseItems />
+                                <CaseItems  />
                             </div>
                         </div>
                     </div>
+                    <div className={clsx(cls.chance_body, ' absolute left-0 bottom-0 w-full h-[98px] z-[35]')}>
+                    </div>
                 </div>
-                <div className={clsx(cls.chance_body, ' absolute left-0 bottom-1 w-full h-[98px] z-[35]')}>
-
-                </div>
+                
             </div>
             <CreateCaseFooter />
         </div>
