@@ -1,4 +1,4 @@
-import { IProfileItem, IBestDropData, IInvestoryItemType } from "./types";
+import { IProfileItem, IBestDropData, IInvestoryItemType, ImageBgType } from "./types";
 
 import IconUser from '@/shared/assets/icons/icon-user-avatar.svg'
 import IconGames from '@/shared/assets/icons/icon-game-history.svg'
@@ -88,7 +88,7 @@ export const mobileProfileList: IProfileItem[] = [
 
 // Best drop
 export const bestDrop = {
-    type: "pink",
+    type: "pink" as ImageBgType,
     imgUrl: "/images/case/skin-2.png",
     price: "242,02",
     title: "ft",
