@@ -120,28 +120,32 @@ const ProvablyFairBody = () => {
 
 
     // Hook function
-    // useEffect(() => {
-    //     const observer = new IntersectionObserver((entries) => {
-    //         entries.forEach((entry) => {
-    //             if (entry.isIntersecting) {
-    //                 const id = entry.target.id;
-    //                 updateActiveState(id);
-    //             }
-    //         });
-    //     }, { rootMargin: '150px' });
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    console.log(id, entry.target.getBoundingClientRect().top)
 
-    //     // Observe each section
-    //     refs.current.forEach((ref) => {
-    //         if (ref) {
-    //             observer.observe(ref);
-    //         }
-    //     });
+                    updateActiveState(id);
+                }
+            });
+        }, {
+            threshold: 0.1 // Adjust threshold as needed
+        });
 
-    //     return () => {
-    //         // Clean up the observer on component unmount
-    //         observer.disconnect();
-    //     };
-    // }, [router]);
+        // Observe each section
+        refs.current.forEach((ref) => {
+            if (ref) {
+                observer.observe(ref);
+            }
+        });
+
+        return () => {
+            // Clean up the observer on component unmount
+            observer.disconnect();
+        };
+    }, [router]);
 
     return (
         <div className="h-auto w-full relative flex lg:flex-col flex-row px-5 lg:px-0">
