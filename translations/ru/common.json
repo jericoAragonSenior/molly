@@ -283,6 +283,24 @@
 		"transaction_history": "История транзакций",
 		"achievements": "Достижения",
 		"verification": "Проверка",
-		"settings": "Настройки"
+		"settings": "Настройки",
+		"attain": "Достичь",
+		"promocode": "Промо-код"
+	},
+	"profile_page": {
+		"leave_site": "Покинуть сайт",
+		"trade_url": "Торговый URL",
+		"trade_url_content": "Получите предметы в свой инвентарь Steam",
+		"trade_url_placeholder": "Торговля-URL",
+		"trade_link": "Где получить TRADE-URL?",
+		"case_opened": "Открытые дела",
+		"upgrades": "Обновления",
+		"lotto": "Лото играли",
+		"refferal_level": "Уровень реферала",
+		"refferal_number": "Количество рефералов",
+		"all_earned": "Все заработано",
+		"earned_from_cases": "Заработано на кейсах",
+		"promocode": "Промо-код",
+		"cases_created": "Создано дел"
 	}
 }

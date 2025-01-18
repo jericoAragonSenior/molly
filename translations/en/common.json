@@ -286,6 +286,24 @@
 		"transaction_history": "Transaction history",
 		"achievements": "Achievements",
 		"verification": "Verification",
-		"settings": "Settings"
+		"settings": "Settings",
+		"attain": "Attain",
+		"promocode": "Promocode"
+	},
+	"profile_page":{
+		"leave_site": "Leave site",
+		"trade_url": "Trade URL",
+		"trade_url_content": "Get items in your Steam inventory",
+		"trade_url_placeholder": "Trade-URL",
+		"trade_link": "Where to get TRADE-URL ?",
+		"case_opened": "Cases Opened",
+		"upgrades": "Upgrades",
+		"lotto": "Lotto played",
+		"refferal_level": "Refferal Level",
+		"refferal_number": "Number of referrals",
+		"all_earned": "All earned",
+		"earned_from_cases": "Earned from cases",
+		"promocode": "Promocode",
+		"cases_created": "Cases created"
 	}
 }
