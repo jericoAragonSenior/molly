@@ -15,7 +15,7 @@ export async function generateMetadata({ params: { locale } }: IMetadata) {
 
 const UserProfile = () => {
     return (
-        <div className='w-full h-full px-4'>
+        <div className='w-full h-full px-4  lg:!p-0'>
             <div className='w-full h-full'>
                 <User />
             </div>
