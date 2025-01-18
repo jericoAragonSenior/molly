@@ -7,6 +7,7 @@ import cls from "../Cases.module.sass"
 import IconBagTick from "@/shared/assets/icons/icon-bag-tick.svg"
 import IconPlus from "@/shared/assets/icons/icon-black-plus.svg"
 import ProgressBar from "@/shared/ui/ProgressBar/ProgressBar";
+import { progressData } from "../../model/items";
 
 const CreateCaseFooter = () => {
     // For translation
@@ -30,7 +31,7 @@ const CreateCaseFooter = () => {
                     </div>
                     <div className="flex-1 px-4 h-full justify-center items-center gap-[5px] flex flex-col md:order-1 md:w-full">
                         <span className="text-[9px] uppercase text-[#60719A] font-[700]">{t('cases_header.percent_of_income')}</span>
-                        <ProgressBar />
+                        <ProgressBar items={progressData} />
                     </div>
                     <div className={clsx(cls.shadow, 'py-[1px] !z-10 px-[1px] relative md:order-3')}>
                         <Button
