@@ -37,7 +37,7 @@ const SelectCaseImage = () => {
             <span className='text-[10px] text-[#49526D] uppercase'>{t('create_case.select_case_image')}</span>
             <div className='flex relative w-full'>
                 <Swiper
-                    spaceBetween={breakpoints.lg ? 30 : 0}
+                    spaceBetween={breakpoints.lg ? 0 : 0}
                     slidesPerView={breakpoints?.['2sm'] ? 7 : 5}
                     loop={false}
                     tabIndex={swiperIndex}
