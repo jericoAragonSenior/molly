@@ -357,3 +357,24 @@ export const investoryItems: IInvestoryItemType[] = [
     }
 ]
 
+// Profile(user)
+export const userBestDropData: IBestDropData[] = [
+    {
+        id: 1,
+        icon: IconCase,
+        title: "48 592",
+        content: "profile_page.case_opened"
+    },
+    {
+        id: 1,
+        icon: IconCase,
+        title: "48 592",
+        content: "profile_page.case_opened"
+    },
+    {
+        id: 1,
+        icon: IconCase,
+        title: "48 592",
+        content: "profile_page.case_opened"
+    }
+]
