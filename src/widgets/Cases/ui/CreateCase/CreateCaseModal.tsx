@@ -2,7 +2,7 @@ import clsx from "clsx";
 import cls from "../Cases.module.sass";
 import { useTranslations } from "next-intl";
 import { Input } from "@/shared/ui/Input/Input";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import SelectType from "./SelectType";
 import SelectCaseImage from "./SelectCaseImage";
 import SetDropChances from "./SetDropChances";
