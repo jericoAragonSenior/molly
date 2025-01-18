@@ -72,9 +72,20 @@ const ProvablyFairBody = () => {
 
     // The function to click list item
     const clickListItem = (index: number) => {
-        if (refs.current[index + 3]) {
-            refs.current[index + 3]?.scrollIntoView({ behavior: 'smooth' });
+        const element = refs.current[index + 3];
+        // Check if the element exists and is an instance of HTMLElement
+        if (element instanceof HTMLElement) {
+            const topOffset = 100; // The offset you want to apply
+            const elementPosition = element.getBoundingClientRect().top + window.scrollY; // Get the element's position relative to the document
+            const offsetPosition = elementPosition - topOffset; // Calculate the target scroll position
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth', // Smooth scrolling
+            });
             setActiveNumber(index)
+        } else {
+            console.error("Element not found or is not an HTML element.");
         }
     }
 
@@ -131,7 +142,7 @@ const ProvablyFairBody = () => {
                 }
             });
         }, {
-            threshold: 0.1 // Adjust threshold as needed
+            threshold: 1 // Adjust threshold as needed
         });
 
         // Observe each section
