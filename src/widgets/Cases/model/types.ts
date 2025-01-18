@@ -42,3 +42,11 @@ export interface ICaseItemType {
 	price: string
 	type: ImageBgType
 }
+
+// Progress type interface
+export interface IProgress {
+	id: number
+	title: string
+	min: number
+	max: number
+}
