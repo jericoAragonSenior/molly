@@ -73,7 +73,7 @@ const MainHeader = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className={clsx(cls.level_wrapper, 'absolute bottom-4 right-[17px] 3sm:!w-[18px] 3sm:!h-[22px] 3sm:!p-[2px] 3sm:bottom-0.5 3sm:right-2', !chatViewHidden && '!p-[2px] !w-[26px] !h-[30px] bottom-0.5 right-1')}>
+                                <div className={clsx(cls.level_wrapper, 'absolute bottom-4 right-[17px] 3sm:!w-[18px] 3sm:!h-[22px] 3sm:!p-[2px] 3sm:bottom-0.5 3sm:right-2', !chatViewHidden && '!p-[2px] !w-[26px] !h-[30px] !bottom-[2px] !right-0.5')}>
                                     <div className={clsx(cls.level_wrapper_inner_border)}>
                                         <div className={clsx(cls.level_wrapper_inner_body, 'flex justify-center items-center h-full w-full')}>
                                             <span className="text-[#121722] text-[14px] font-[700] 3sm:text-[10px]">2</span>
