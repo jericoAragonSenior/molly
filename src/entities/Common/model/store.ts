@@ -19,6 +19,7 @@ export interface IState {
 	openFarm: boolean
 	currentCaseNumber: number
 	selectedCaseItems: any[]
+	isScrollTop: boolean
 }
 export interface IActions {
 	setChatHidden: (value: boolean) => void
@@ -35,6 +36,7 @@ export interface IActions {
 	setOpenFarm: (value: boolean) => void
 	setCurrentCaseNumber: (value: number) => void
 	setSelectedCaseItems: (value: any[]) => void
+	setIsScrollTop: (value: boolean) => void
 }
 
 export const initialState: IState = {
@@ -51,7 +53,8 @@ export const initialState: IState = {
 	caseCount: 0,
 	openFarm: true,
 	currentCaseNumber: 0,
-	selectedCaseItems: []
+	selectedCaseItems: [],
+	isScrollTop: false
 }
 
 export const useCommonStore = create<IState & IActions>()(
@@ -171,7 +174,15 @@ export const useCommonStore = create<IState & IActions>()(
 							},
 							undefined,
 							'SET_SELETED_CASE_ITEMS'
-						)
+						),
+					setIsScrollTop: value =>
+						set(
+							state => {
+								state.isScrollTop = value
+							},
+							undefined,
+							'SET_SET_SCROLLTOP_STATE'
+						),
 				}),
 				{
 					name: 'common'
