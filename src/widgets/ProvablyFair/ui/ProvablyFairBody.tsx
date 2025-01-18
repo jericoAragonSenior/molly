@@ -45,7 +45,7 @@ const ProvablyFairBody = () => {
 
     // For responsive
     const breakpoints = useAppResponsive()
-    
+
     // Create an array of refs
     const refs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -88,7 +88,7 @@ const ProvablyFairBody = () => {
             }
         }
         setActiveNumber(newIndex)
-    } 
+    }
 
 
     // Move scroll top of screen
@@ -120,28 +120,28 @@ const ProvablyFairBody = () => {
 
 
     // Hook function
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.id;
-                    updateActiveState(id);
-                }
-            });
-        });
+    // useEffect(() => {
+    //     const observer = new IntersectionObserver((entries) => {
+    //         entries.forEach((entry) => {
+    //             if (entry.isIntersecting) {
+    //                 const id = entry.target.id;
+    //                 updateActiveState(id);
+    //             }
+    //         });
+    //     }, { rootMargin: '150px' });
 
-        // Observe each section
-        refs.current.forEach((ref) => {
-            if (ref) {
-                observer.observe(ref);
-            }
-        });
+    //     // Observe each section
+    //     refs.current.forEach((ref) => {
+    //         if (ref) {
+    //             observer.observe(ref);
+    //         }
+    //     });
 
-        return () => {
-            // Clean up the observer on component unmount
-            observer.disconnect();
-        };
-    }, [router]);
+    //     return () => {
+    //         // Clean up the observer on component unmount
+    //         observer.disconnect();
+    //     };
+    // }, [router]);
 
     return (
         <div className="h-auto w-full relative flex lg:flex-col flex-row px-5 lg:px-0">
