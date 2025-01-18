@@ -8,7 +8,7 @@ import DropChance from "./DropChance";
 import { chances } from "../../model/items";
 import clsx from "clsx";
 import cls from "../Cases.module.sass"
-import { A11y, Mousewheel, Scrollbar } from "swiper/modules";
+import { Mousewheel } from "swiper/modules";
 
 const SetDropChances = () => {
 
