@@ -11,10 +11,12 @@ interface ListProps {
     }
     items: IListItem[]
     axis?: string
+    onClickItem?: (index: number) => void
+    active?: number
 }
 
 
-const List: FC<ListProps> = ({ classNames, items, axis = "y" }) => {
+const List: FC<ListProps> = ({ classNames, items, axis="y", active, onClickItem }) => {
 
     const t = useTranslations();
 
@@ -22,8 +24,8 @@ const List: FC<ListProps> = ({ classNames, items, axis = "y" }) => {
         <div className={clsx('w-auto bg-[#1D2433] p-[2px] rounded-lg', classNames?.base, axis == "x" && "!rounded-none overflow-y-auto justify-between")}>
             <div className={clsx('w-auto bg-[#181E2B] gap-3 flex rounded-lg flex-col py-5', classNames?.content, axis == "x" && "!flex-row !py-2 !overflow-y-auto !px-3 !rounded-none")}>
                 {
-                    items.map((item) => (
-                        <ListItem content={t(item.title)} startIcon={item?.startIcon} endIcon={item?.endIcon} key={item.id} axis={axis} />
+                    items.map((item, index) => (
+                        <ListItem isActive={active == index} onClick={onClickItem && (() => onClickItem(index))} content={t(item.title)} startIcon={item?.startIcon} endIcon={item?.endIcon} key={item.id} axis={axis} />
                     ))
                 }
             </div>
