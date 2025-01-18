@@ -110,7 +110,7 @@ const CaseItem = ({ title, content, percent, picUrl, name, price, type, classNam
             setIsHovered(true)
         }
         else {
-            setIsHovered(!isHovered)
+            setIsHovered(false)
             if (isRotated == true) {
                 if (isOpened == false) {
                     setIsRotation(true)
