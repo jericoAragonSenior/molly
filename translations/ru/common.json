@@ -302,5 +302,12 @@
 		"earned_from_cases": "Заработано на кейсах",
 		"promocode": "Промо-код",
 		"cases_created": "Создано дел"
+	},
+	"user_profile": {
+		"games_played": "Сыграно игр",
+		"winnings": "Сумма выигрыша",
+		"top_winnings": "Лучшие выигрыши",
+		"best_drop": "Лучший дроп",
+		"investory": "Инвесторы"
 	}
 }

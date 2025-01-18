@@ -305,5 +305,12 @@
 		"earned_from_cases": "Earned from cases",
 		"promocode": "Promocode",
 		"cases_created": "Cases created"
+	},
+	"user_profile": {
+		"games_played": "Games played",
+		"winnings": "Winnings amount",
+		"top_winnings": "Top winnings",
+		"best_drop": "Best drop",
+		"investory": "Investory"
 	}
 }
