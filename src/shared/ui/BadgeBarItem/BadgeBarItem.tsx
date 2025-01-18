@@ -13,19 +13,19 @@ interface BadgeBarItemProps {
 
 const BadgeBarItem = ({ title, content, icon: Icon, titleType = "bg", titleIcon }: BadgeBarItemProps) => {
     return (
-        <div className={clsx("h-full bg-[#22293A] p-[1px] rounded-xl relative")}>
-            <div className={clsx("h-full bg-[#1D2332] rounded-xl items-center flex gap-4", Icon ? "p-4 sm:!px-0" : "py-2 px-4")}>
+        <div className={clsx("h-full bg-[#22293A] p-[1px] rounded-xl ")}>
+            <div className={clsx("h-full bg-[#1D2332] rounded-xl items-center relative flex gap-4", Icon ? "p-4 sm:!px-0" : "py-2 px-4")}>
                 {
                     Icon ?
                         <div className="flex gap-4 sm:flex sm:justify-center sm:items-center sm:w-full sm:h-full">
-                            <div className='w-auto sm:absolute sm:-top-2/3 sm:z-10 sm:translate-y-1/2'>
+                            <div className='w-auto sm:absolute sm:-top-1/2 sm:z-10 sm:translate-y-1/2'>
                                 <div className='bg-[#242C3E] rounded-[10px] p-[1px]'>
                                     <div className='bg-[#1A202E] rounded-[10px] p-3 sm:p-2'>
                                         {<Icon className='w-6 h-6 fill-[#5A6786]' />}
                                     </div>
                                 </div>
                             </div>
-                            <div className='flex flex-col gap-0.5 sm:text-center'>
+                            <div className='flex flex-col gap-0.5 sm:text-center sm:mt-3'>
                                 <span className='text-white text-[16px] font-[Gotham Medium]'>{title}</span>
                                 <span className='text-[#5A6786] text-[12px]'>{content}</span>
                             </div>
@@ -71,11 +71,6 @@ const BadgeBarItem = ({ title, content, icon: Icon, titleType = "bg", titleIcon 
             </div>
         </div>
     )
-}
-
-
-const BadgeItem = () => {
-
 }
 
 
