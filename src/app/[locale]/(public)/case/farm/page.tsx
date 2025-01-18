@@ -24,8 +24,8 @@ export default function Page({ params: { id } }: { params: { id: string } }) {
                 <FarmBar />
                 <FarmBody />
                 <FarmToolBar />
-                <FarmContents />
                 <FarmLiveFeed />
+                <FarmContents />
             </div>
         </>
     )
