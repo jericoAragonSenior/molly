@@ -5,6 +5,8 @@ import MainTrader from "./MainTrader";
 import MainBestDrop from "./MainBestDrop";
 import MainInventory from "./MainInventory";
 
+import { bestDrop } from "../../model/items";
+
 const Main = () => {
     return (
         <div className="w-full flex flex-col gap-4 px-2">
@@ -12,7 +14,7 @@ const Main = () => {
                 <div className={clsx("w-full p-5 3sm:!p-1.5 flex flex-col lg:!bg-none lg:p-2", cls.user_main_inner)}>
                     <MainHeader />
                     <MainTrader />
-                    <MainBestDrop />
+                    <MainBestDrop title={bestDrop.title} imgUrl={bestDrop.imgUrl} name={bestDrop.name} type={bestDrop.type} />
                 </div>
             </div>
             <MainInventory />
