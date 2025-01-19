@@ -45,7 +45,7 @@ const ProvablyFairBody = () => {
 
     // For responsive
     const breakpoints = useAppResponsive()
-
+    
     // Create an array of refs
     const refs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -72,17 +72,8 @@ const ProvablyFairBody = () => {
 
     // The function to click list item
     const clickListItem = (index: number) => {
-        const element = refs.current[index + 3];
-        // Check if the element exists and is an instance of HTMLElement
-        if (element instanceof HTMLElement) {
-            const topOffset = 100; // The offset you want to apply
-            const elementPosition = element.getBoundingClientRect().top + window.scrollY; // Get the element's position relative to the document
-            const offsetPosition = elementPosition - topOffset; // Calculate the target scroll position
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth', // Smooth scrolling
-            });
+        if (refs.current[index + 3]) {
+            refs.current[index + 3]?.scrollIntoView({ behavior: 'smooth' });
             setActiveNumber(index)
         } else {
             console.error("Element not found or is not an HTML element.");
@@ -99,7 +90,7 @@ const ProvablyFairBody = () => {
             }
         }
         setActiveNumber(newIndex)
-    }
+    } 
 
 
     // Move scroll top of screen
@@ -124,8 +115,8 @@ const ProvablyFairBody = () => {
         window.addEventListener('scroll', handleScroll);
         setIsScrollTop(true)
         return () => {
-            window.removeEventListener('scroll', handleScroll);
             setIsScrollTop(false)
+            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
@@ -137,8 +128,8 @@ const ProvablyFairBody = () => {
                 if (entry.isIntersecting) {
                     const id = entry.target.id;
                     console.log(id, entry.target.getBoundingClientRect().top)
-
-                    updateActiveState(id);
+                
+                        updateActiveState(id);
                 }
             });
         }, {
