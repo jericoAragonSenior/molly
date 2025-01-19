@@ -44,7 +44,6 @@ const DesktopLayout = ({ children }: { children: React.ReactNode }) => {
     const handlScroll = () => {
         if (currentBody.current && isScrollTop == true) {
             const height = currentBody.current.scrollTop;
-            console.log(height)
             setIsVisible(height > 50)
         }
     }
@@ -58,6 +57,12 @@ const DesktopLayout = ({ children }: { children: React.ReactNode }) => {
         setItemPosition("center")
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
+
+    useEffect(() => {
+        if (isScrollTop == false) {
+            setIsVisible(false)
+        }
+    }, [isScrollTop])
 
     return (
         <div className='layout-main relative z-[0] grid grid-cols-[auto_1fr_auto] lg:block lg:pb-[70px]'>
@@ -76,7 +81,7 @@ const DesktopLayout = ({ children }: { children: React.ReactNode }) => {
                             <Header className='px-[40px] lg:pl-5 lg:pr-6 md:pr-3' />
                             {
                                 itemPosition == "center" && pathname != '/' && 
-                                <MainLiveFeed className='mt-3 pl-[40px] lg:pl-5 md:pl-3' />
+                                <MainLiveFeed className='mt-6 pl-[40px] lg:pl-5 md:pl-3' />
                             }
                             <div className='w-screen'></div>
                             <main className='layout-main__page'>
