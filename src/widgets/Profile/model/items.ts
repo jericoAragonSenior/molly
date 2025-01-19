@@ -14,6 +14,7 @@ import IconLotto from '@/shared/assets/icons/icon-lotto.svg'
 import IconBucket from '@/shared/assets/icons/icon-bucket.svg'
 
 
+
 export const profileList: IProfileItem[] = [
     {
         id: 1,
@@ -361,20 +362,20 @@ export const investoryItems: IInvestoryItemType[] = [
 export const userBestDropData: IBestDropData[] = [
     {
         id: 1,
-        icon: IconCase,
+        icon: IconGames,
         title: "48 592",
-        content: "profile_page.case_opened"
+        content: "user_profile.games_played"
     },
     {
         id: 1,
-        icon: IconCase,
-        title: "48 592",
-        content: "profile_page.case_opened"
+        icon: IconTransaction,
+        title: "$2 934.33",
+        content: "user_profile.winnings"
     },
     {
         id: 1,
-        icon: IconCase,
-        title: "48 592",
-        content: "profile_page.case_opened"
+        icon: IconArchievement,
+        title: "$934.33",
+        content: "user_profile.top_winnings"
     }
 ]
