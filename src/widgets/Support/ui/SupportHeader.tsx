@@ -61,7 +61,7 @@ const SupportHeader = () => {
                         hexagon
                         hexagonAxis='x'
                         classNames={{
-                            base: 'h-10 2sm:hidden flex',
+                            base: clsx('h-10 2sm:hidden flex', cls.fnav_item),
                             content: 'px-6 text-xs'
                         }}
                         startContent={
