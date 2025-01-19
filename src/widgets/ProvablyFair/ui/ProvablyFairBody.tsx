@@ -32,6 +32,7 @@ const ProvablyFairBody = () => {
     // For "set scroll top" state
     const isScrollTop = useCommonStore(state => state.isScrollTop)
     const setIsScrollTop = useCommonStore(state => state.setIsScrollTop)
+    const setOnScroll = useCommonStore(state => state.setOnScroll)
 
     const [clickSide, setClickSide] = useState<ClickSide>('right');
     const [clientSeed, setClientSeed] = useState<string>('7e2d8926de5f4df1e1205f28cc022bb2');
@@ -45,7 +46,7 @@ const ProvablyFairBody = () => {
 
     // For responsive
     const breakpoints = useAppResponsive()
-    
+
     // Create an array of refs
     const refs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -90,7 +91,7 @@ const ProvablyFairBody = () => {
             }
         }
         setActiveNumber(newIndex)
-    } 
+    }
 
 
     // Move scroll top of screen
@@ -99,6 +100,19 @@ const ProvablyFairBody = () => {
             top: 0,
             behavior: 'smooth',
         });
+    }
+
+    // Scroll function
+    const scrollHandle = () => {
+        for (let i = 0; i < refs.current.length; i++) {
+            const element = refs.current[i];
+            if (element) {
+                const rect = element.getBoundingClientRect();
+                if (rect.top >= 0 && rect.top <= 20) {
+                    updateActiveState(element.id);
+                }
+            }
+        }
     }
 
     // Toggle button visibility based on scroll position
@@ -113,41 +127,17 @@ const ProvablyFairBody = () => {
         };
 
         window.addEventListener('scroll', handleScroll);
+        setOnScroll(scrollHandle)
+
         setIsScrollTop(true)
         return () => {
             setIsScrollTop(false)
             window.removeEventListener('scroll', handleScroll);
+            setOnScroll(() => { })
         };
     }, []);
 
 
-    // Hook function
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.id;
-                    console.log(id, entry.target.getBoundingClientRect().top)
-                
-                        updateActiveState(id);
-                }
-            });
-        }, {
-            threshold: 1 // Adjust threshold as needed
-        });
-
-        // Observe each section
-        refs.current.forEach((ref) => {
-            if (ref) {
-                observer.observe(ref);
-            }
-        });
-
-        return () => {
-            // Clean up the observer on component unmount
-            observer.disconnect();
-        };
-    }, [router]);
 
     return (
         <div className="h-auto w-full relative flex lg:flex-col flex-row px-5 lg:px-0">

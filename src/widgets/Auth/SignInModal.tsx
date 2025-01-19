@@ -63,8 +63,8 @@ const SignInModal: FC<SignInModalProps> = ({ onClickSignUp, onClickForgetPasswor
                             disableAnimation
                             hexagonAxis="x"
                             classNames={{
-                                base: clsx(clickSide == 'signup' && cls.btn_auth_group_signup, 'h-full'),
-                                content: clsx(clickSide == 'signup' && cls.btn_auth_group_signup_inner, 'w-full h-full py-[9px] px-[43px]')
+                                base: clsx(clickSide == 'signup' && cls.btn_auth_group_signin, 'h-full'),
+                                content: clsx(clickSide == 'signup' && cls.btn_auth_group_signin_inner, 'w-full h-full py-[9px] px-[43px]')
                             }}
                             onClick={() => { setClickSide('signup'); onClickSignUp() }}
                         >

@@ -61,8 +61,8 @@ const SignUpModal: FC<SignUpModalProps> = ({ onClickSignIn }) => {
                             disableAnimation
                             hexagonAxis="x"
                             classNames={{
-                                base: clsx(clickSide == 'signup' && cls.btn_auth_group_signup, 'h-full'),
-                                content: clsx(clickSide == 'signup' && cls.btn_auth_group_signup_inner, 'w-full h-full py-[9px] px-[43px]')
+                                base: clsx(clickSide == 'signup' && cls.btn_auth_group_signin, 'h-full'),
+                                content: clsx(clickSide == 'signup' && cls.btn_auth_group_signin_inner, 'w-full h-full py-[9px] px-[43px]')
                             }}
                         >
                             <span className={clsx(clickSide == 'signup' ? "text-[#121722]" : "text-[#d1d9eb6e]", "text-[12px] font-primary-bold uppercase")}>{t('auth.register')}</span>

@@ -2,7 +2,7 @@
 
 import { Input } from "@/shared/ui/Input/Input";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import cls from "./Support.module.sass"
 import clsx from "clsx";
@@ -12,9 +12,22 @@ import IconUploadFile from '@/shared/assets/icons/icon-select-file.svg'
 
 const CreateNewTicket = () => {
 
+    // For translation
     const t = useTranslations();
 
+    // Get subject
     const [subject, setSubject] = useState('');
+
+    // Ref input
+    const fileInputRef = useRef<HTMLInputElement | null>(null);
+
+    // File upload function
+    const clickUplaod = () => {
+        if(fileInputRef.current) {
+            fileInputRef.current.click();
+    
+        }
+    }
 
     return (
         <div className={clsx(cls.modal, 'py-6 gap-4 max-h-[calc(100vh-150px)] overflow-auto app-scrollbar')}>
@@ -44,8 +57,9 @@ const CreateNewTicket = () => {
                 <textarea className={clsx("bg-[#0D1018] border-0 rounded-lg min-h-[200px] max-h-[200px] app-scrollbar", cls.bar_input)} />
             </div>
             <div className="flex justify-end h-auto items-center gap-3 2sm:flex-col">
-                <div className="flex gap-3 w-auto h-full items-center">
+                <div className="flex gap-3 w-auto h-full items-center hover:cursor-pointer" onClick={clickUplaod}>
                     <div className="text-white w-auto text-[14px] font-[500]">{t('create_new_ticket.max_size')}</div>
+                    <input type="file" ref={fileInputRef} style={{ display: 'none' }} />
                     <IconUploadFile className="fill-[#545778] w-5 h-5" />
                 </div>
                 <div className={clsx(cls.button_shadow, 'h-[45px] w-auto z-10 flex justify-center items-center')}>
@@ -56,7 +70,10 @@ const CreateNewTicket = () => {
                                     base: 'relative w-full h-full',
                                 }}
                             >
-                                {t('create_new_ticket.create_ticket').toUpperCase()}
+                                <span className="text-[#0D1018] justify-center items-center text-[12px] font-primary-bold uppercase flex gap-1">
+                                    <span className="text-[18px] font-primary-med">+</span>
+                                    <span>{t('create_new_ticket.create_ticket')}</span>
+                                </span>
                             </Button>
                         </div>
                     </div>

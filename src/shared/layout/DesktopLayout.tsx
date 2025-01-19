@@ -34,6 +34,9 @@ const DesktopLayout = ({ children }: { children: React.ReactNode }) => {
     // For "set top scroll"
     const isScrollTop = useCommonStore(state => state.isScrollTop)
 
+    // Get scroll function
+    const onScroll = useCommonStore(state => state.onScroll)
+
     // Reference div for scroll
     const currentBody = useRef<HTMLDivElement | null>(null);
 
@@ -46,6 +49,7 @@ const DesktopLayout = ({ children }: { children: React.ReactNode }) => {
             const height = currentBody.current.scrollTop;
             setIsVisible(height > 50)
         }
+        onScroll();
     }
 
     // Move scroll on the top
