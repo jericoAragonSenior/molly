@@ -117,7 +117,7 @@ const UserBestDrop = ({ title, type, name, imgUrl }: UserBestDropProps) => {
                 userBestDropData.map((item, index) => (
                     <div key={index} className={clsx("py-1 px-2 lg:w-1/3 w-1/4 2sm:w-1/2 2sm:flex-1 sm:mt-8 sm:px-1", !chatViewHidden && "xl:!w-1/2 xl:!px-1")}
                     >
-                        <BadgeBarItem key={item.id} title={item.title} content={t(item.content)} icon={item.icon} titleType={item?.titleType} />
+                        <BadgeBarItem key={item.id} isUpperContent={true} title={item.title} content={t(item.content)} icon={item.icon} titleType={item?.titleType} />
                     </div>
                 ))
             }
