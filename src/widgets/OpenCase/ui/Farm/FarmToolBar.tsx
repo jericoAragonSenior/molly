@@ -10,7 +10,6 @@ import Pagination from '@/shared/ui/Pagination/ui/Pagination'
 import { farmPaginationData } from '../../model/items'
 import { useTranslations } from 'next-intl'
 import Button from '@/shared/ui/Button/Button'
-import SwitchButton from '@/shared/ui/SwitchButton/SwitchButton'
 import { useCommonStore } from '@/entities/Common/model/store'
 
 
@@ -53,7 +52,6 @@ const FarmToolBar = () => {
                     <div className='w-1/3 flex flex-col gap-4 justify-center items-center 3md:w-auto'>
                         <div className='flex gap-2 2sm:hidden'>
                             <span className='text-[#5F6C87] text-[13px] font-[500]'>{t('open_case.fast_mod')}</span>
-                            <SwitchButton />
                         </div>
                         <div className={clsx('min-w-[313px] h-[52px] flex justify-center items-center relative', cls.btn_hexagon_green_shadow)}>
                             <div className={clsx('w-[313px] h-[48px]', cls.btn_hexagon_green)}>

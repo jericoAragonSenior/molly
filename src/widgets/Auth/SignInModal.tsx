@@ -1,15 +1,15 @@
 
 import clsx from "clsx";
 import cls from "./Auth.module.sass"
-import { Input } from "@/shared/ui/Input/Input";
+import { FC, useState } from "react";
+import { useTranslations } from "next-intl";
 
+import { Input } from "@/shared/ui/Input/Input";
 import IconEmail from "@/shared/assets/icons/icon-email.svg"
 import IconLock from "@/shared/assets/icons/icon-lock.svg"
 import IconStream from "@/shared/assets/icons/icon-steam-logo.svg"
-import { FC, useState } from "react";
-import { useTranslations } from "next-intl";
+import IconTwitch from '@/shared/assets/icons/icon-twitch.svg'
 import Button from "@/shared/ui/Button/Button";
-import { useCommonStore } from "@/entities/Common/model/store";
 
 interface SignInModalProps {
     onClickSignUp: () => void,
@@ -17,19 +17,61 @@ interface SignInModalProps {
     onClickSignIn: () => void
 }
 
+type AuthGroup = "signin" | "signup";
+
 
 const SignInModal: FC<SignInModalProps> = ({ onClickSignUp, onClickForgetPassword, onClickSignIn }) => {
 
+    // For translation
     const t = useTranslations()
 
+    // Get email
     const [email, setEmail] = useState('');
+    // Get password
     const [password, setPassword] = useState('');
+    // Get auth buttons
+    const [clickSide, setClickSide] = useState<AuthGroup>('signin');
 
 
 
     return (
-        <div className={clsx(cls.modal, 'py-6')}>
+        <div className={clsx(cls.modal, 'py-6 max-h-[calc(100vh-150px)] overflow-auto app-scrollbar')}>
             <div className="flex flex-col gap-6">
+                <div className="w-full flex justify-center">
+                    <Button
+                        hexagon
+                        disableAnimation
+                        hexagonAxis="x"
+                        classNames={{
+                            base: clsx(cls.btn_auth_group, "h-auto w-auto"),
+                            content: clsx(cls.btn_auth_group_inner, 'w-full h-full')
+                        }}
+                    >
+                        <Button
+                            hexagon
+                            disableAnimation
+                            hexagonAxis="x"
+                            classNames={{
+                                base: clsx(clickSide == 'signin' && cls.btn_auth_group_signin, 'h-full'),
+                                content: clsx(clickSide == 'signin' && cls.btn_auth_group_signin_inner, 'w-full h-full py-[9px] px-[43px]')
+                            }}
+                        >
+                            <span className={clsx(clickSide == 'signin' ? "text-[#121722]" : "text-[#d1d9eb6e]", "text-[12px] font-primary-bold uppercase")}>{t('auth.login')}</span>
+                        </Button>
+                        <Button
+                            hexagon
+                            disableAnimation
+                            hexagonAxis="x"
+                            classNames={{
+                                base: clsx(clickSide == 'signup' && cls.btn_auth_group_signup, 'h-full'),
+                                content: clsx(clickSide == 'signup' && cls.btn_auth_group_signup_inner, 'w-full h-full py-[9px] px-[43px]')
+                            }}
+                            onClick={() => { setClickSide('signup'); onClickSignUp() }}
+                        >
+                            <span className={clsx(clickSide == 'signup' ? "text-[#121722]" : "text-[#d1d9eb6e]", "text-[12px] font-primary-bold uppercase")}>{t('auth.register')}</span>
+                        </Button>
+                    </Button>
+                </div>
                 <Input
                     value={email}
                     onChange={v => {
@@ -68,13 +110,13 @@ const SignInModal: FC<SignInModalProps> = ({ onClickSignUp, onClickForgetPasswor
                 <span className="hover:cursor-pointer" onClick={onClickForgetPassword}>{t('auth.forget_pwd_btn_text')}</span>
             </span>
             <div className="flex flex-col gap-3">
-                <div className={clsx(cls.bg_gradent_steam_out, cls.border_r_12)}>
+                <div className={clsx(cls.bg_gradent_gray_out, cls.border_r_12)}>
                     <Button
                         classNames={{
-                            content: [cls.btn_content, cls.bg_gradent_gray, cls.border_gradent, 'text-black py-4 border-none'],
+                            content: [cls.btn_content, cls.bg_gradent_gray, cls.border_gradent, 'text-black py-3 border-none'],
                             base: ["w-full", cls.border_r_12]
                         }}
-                        onPress={onClickSignIn}
+                        onClick={onClickSignIn}
                     >
                         <span className="font-[900] text-[14px] text-[rgba(21, 26, 38, 1)]">
                             {t('auth.sigin_btn_text')}
@@ -97,7 +139,7 @@ const SignInModal: FC<SignInModalProps> = ({ onClickSignUp, onClickForgetPasswor
                 <div className={clsx(cls.bg_gradent_steam_out, cls.border_r_12)}>
                     <Button
                         classNames={{
-                            content: [cls.bg_gradent_steam, 'text-white py-4 flex'],
+                            content: [cls.bg_gradent_steam, 'text-white py-3 flex'],
                             base: ["w-full", cls.border_r_12]
                         }}
                         startContent={<IconStream className={clsx(cls.steam_box, cls.steam_icon)} />}
@@ -107,16 +149,16 @@ const SignInModal: FC<SignInModalProps> = ({ onClickSignUp, onClickForgetPasswor
                         </span>
                     </Button >
                 </div>
-                <div className={clsx(cls.bg_gradent_black_out, cls.border_r_12)}>
+                <div className={clsx(cls.bg_gradent_twitch_out, cls.border_r_12)}>
                     <Button
-                        onPress={onClickSignUp}
                         classNames={{
-                            content: [cls.bg_gradent_black, 'text-white py-4 flex'],
+                            content: [cls.bg_gradent_twitch, 'text-white py-3 flex'],
                             base: ["w-full", cls.border_r_12]
                         }}
+                        startContent={<IconTwitch className="w-6 h-6 fill-[#FFFFFF]" />}
                     >
                         <span className="font-[400] text-[14px] text-[rgba(21, 26, 38, 1)]">
-                            {t('auth.create_new_account')}
+                            {t('auth.sigin_in_via_twitch')}
                         </span>
                     </Button>
                 </div>

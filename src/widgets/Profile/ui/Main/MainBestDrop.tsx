@@ -20,7 +20,7 @@ interface MainBestDropProps {
 }
 
 
-const MainBestDrop = ({ title, type, name, imgUrl }: MainBestDropProps) => {
+const MainBestDrop = ({title, type, name, imgUrl}: MainBestDropProps) => {
 
     // For translation
     const t = useTranslations();
@@ -84,7 +84,7 @@ const MainBestDrop = ({ title, type, name, imgUrl }: MainBestDropProps) => {
                     <div className={clsx("rounded-[12px] p-5 bg-[#121722] flex flex-col relative overflow-hidden w-full h-full")}>
                         <div className={clsx("flex items-start justify-between w-full")}>
                             <div className={clsx("flex flex-col justify-end items-end gap-[3px]")}>
-                                <span className="text-[#2F374A] font-[500] text-[13px] uppercase">{title}</span>
+                                <span className="text-[#2F374A] font-[500] text-[13px] uppercase">{ title}</span>
                             </div>
                             <div className={clsx("w-[12px] h-[12px] rounded-[3px]", getMarkBackground(type))}>
                             </div>
@@ -127,7 +127,7 @@ const MainBestDrop = ({ title, type, name, imgUrl }: MainBestDropProps) => {
                             )}
                                 style={{ order: item.id }}
                             >
-                                <BadgeBarItem key={item.id} title={item.title} content={t(item.content)} icon={item.icon} titleType={item?.titleType} />
+                                <BadgeBarItem key={item.id} titleIcon={item?.titleIcon} title={item.title} content={t(item.content)} icon={item.icon} titleType={item?.titleType} />
                             </div>
                         ))
                     }

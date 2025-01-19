@@ -8,10 +8,10 @@ interface BadgeBarItemProps {
     icon?: React.FC<React.SVGProps<SVGSVGElement>>
     titleIcon?: React.FC<React.SVGProps<SVGSVGElement>>
     titleType?: TitleType
-
+    isUpperContent?: boolean
 }
 
-const BadgeBarItem = ({ title, content, icon: Icon, titleType = "bg", titleIcon }: BadgeBarItemProps) => {
+const BadgeBarItem = ({ title, content, icon: Icon, titleType = "bg", titleIcon: TitleIcon, isUpperContent = false }: BadgeBarItemProps) => {
     return (
         <div className={clsx("h-full bg-[#22293A] p-[1px] rounded-xl ")}>
             <div className={clsx("h-full bg-[#1D2332] rounded-xl items-center relative flex gap-4", Icon ? "p-4 sm:!px-0" : "py-2 px-4")}>
@@ -27,7 +27,7 @@ const BadgeBarItem = ({ title, content, icon: Icon, titleType = "bg", titleIcon 
                             </div>
                             <div className='flex flex-col gap-0.5 sm:text-center sm:mt-3'>
                                 <span className='text-white text-[16px] font-[Gotham Medium]'>{title}</span>
-                                <span className='text-[#5A6786] text-[12px]'>{content}</span>
+                                <span className={clsx('text-[#5A6786] text-[12px]', isUpperContent == true && "uppercase")}>{content}</span>
                             </div>
                         </div>
 
@@ -36,7 +36,11 @@ const BadgeBarItem = ({ title, content, icon: Icon, titleType = "bg", titleIcon 
                             <div className="w-full flex items-center justify-center flex-col gap-1">
                                 {
                                     titleType == "bg" &&
-                                    <div className="bg-[#252C3D] w-[69px] py-[10px] rounded-md flex justify-center items-center">
+                                    <div className={clsx("bg-[#252C3D] w-[69px] py-[10px] rounded-md flex justify-center items-center gap-1", TitleIcon && "!w-[83px]")}>
+                                        {
+                                            TitleIcon &&
+                                            <TitleIcon className="fill-white w-4 h-4" />
+                                        }
                                         <span className="text-white text-[12px] font-primary-med">{title}</span>
                                     </div>
                                 }
@@ -61,7 +65,7 @@ const BadgeBarItem = ({ title, content, icon: Icon, titleType = "bg", titleIcon 
                                         </span>
                                     </div>
                                 }
-                                <span className="text-[#5A6786] text-[10px] font-primary-med text-center">
+                                <span className={clsx("text-[#5A6786] text-[10px] font-primary-med text-center", isUpperContent == true && "uppercase")}>
                                     {content}
                                 </span>
                             </div>

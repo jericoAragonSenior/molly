@@ -48,7 +48,7 @@ const SupportBodyHeader = ({ tikcetNumber, subjectOfAppeal, lastUpdate, response
                         <IconChat className={clsx(responseType == "closed" ? "fill-[#545778] text-[#545778]" : ["fill-[#FDCD24] text-[#FDCD24]"])} />
                     </div>
                 </div>
-                <div className="flex-1 flex justify-between items-center flex-wrap md:gap-3 2sm:justify-start 2sm:gap-4">
+                <div className="flex-1 flex items-center flex-wrap md:gap-3 2sm:justify-start 2sm:gap-4 justify-between">
                     <div className="relative w-auto h-auto lg:flex hidden">
                         <div className={responseType == "closed" ? '' : cls.chat_shadow}>
                             <IconChat className={clsx(responseType == "closed" ? "fill-[#545778] text-[#545778]" : ["fill-[#FDCD24] text-[#FDCD24]"])} />
@@ -58,19 +58,19 @@ const SupportBodyHeader = ({ tikcetNumber, subjectOfAppeal, lastUpdate, response
                         <span className="text-[#545778] text-[13px] font-[500]">{t('support_chat_header.id_ticket')}</span>
                         <span className="text-[#D1D9EB] font-[500] text-[15px]">{tikcetNumber}</span>
                     </div>
-                    <div className={clsx("flex flex-col gap-2 3sm:items-start", !chatViewHidden && "hidden")}>
+                    <div className={clsx("flex flex-col gap-2 3sm:items-start w-2/7 2sm:w-full")}>
 
                         <span className="text-[#545778] text-[13px] font-[500]">{t('support_chat_header.subject_of_appeal')}</span>
-                        <span className="text-[#D1D9EB] font-[500] text-[15px] 3sm:text-start">{subjectOfAppeal}</span>
+                        <span className="text-[#D1D9EB] font-[500] text-[15px] 3sm:text-start">{t(subjectOfAppeal)}</span>
                     </div>
-                    <div className="flex flex-col gap-2 3sm:items-start">
+                    <div className="flex flex-col gap-2 3sm:items-start  w-1/5 justify-center items-center 2sm:w-full">
                         <span className="text-[#545778] text-[13px] font-[500]">{t('support_chat_header.last_update')}</span>
                         <span className="text-[#D1D9EB] font-[500] text-[15px]">{lastUpdate}</span>
                     </div>
-                    <div className="flex flex-col gap-2 3sm:items-start md:w-full md:justify-center">
+                    <div className="flex flex-col gap-2 3sm:items-start md:w-full md:justify-center w-1/4 2sm:w-full">
                         <span className="text-[#545778] text-[13px] font-[500]">{t('support_chat_header.status_of_the_req')}</span>
 
-                        <span className="flex gap-3 md:gap-2 md:justify-center">
+                        <span className="flex gap-3 md:gap-2 md:justify-center justify-center items-center">
 
 
                             <IconMessage
@@ -86,7 +86,7 @@ const SupportBodyHeader = ({ tikcetNumber, subjectOfAppeal, lastUpdate, response
                                 responseType === "consideration" && "text-[#545778]",
                                 responseType === "response" && "text-[#D1D9EB]"
                             )}>
-                                {response}
+                                {t(response)}
                             </span>
                         </span>
                     </div>

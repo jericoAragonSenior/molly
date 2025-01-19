@@ -4,9 +4,9 @@ export const supportItems: ISupportItem[] = [
     {
         id: 1,
         ticketNumber: "#19315",
-        subjectOfAppeal: "Problem with recieving money",
+        subjectOfAppeal: "support_chat_header.problem_with_receiving_money",
         lastUpdate: "01.05.2020 14:55",
-        response: "Response from support",
+        response: "support_chat_header.response_from_support",
         responseNumber: "3",
         responseType: "response",
         messagesList: [
@@ -29,9 +29,9 @@ export const supportItems: ISupportItem[] = [
     {
         id: 2,
         ticketNumber: "#19315",
-        subjectOfAppeal: "Problem with recieving money",
+        subjectOfAppeal: "support_chat_header.problem_with_receiving_money",
         lastUpdate: "01.05.2020 14:55",
-        response: "Under consideration",
+        response: "support_chat_header.consideration",
         responseType: "consideration",
         messagesList: [
             {
@@ -53,9 +53,9 @@ export const supportItems: ISupportItem[] = [
     {
         id: 3,
         ticketNumber: "#19315",
-        subjectOfAppeal: "Problem with recieving money",
+        subjectOfAppeal: "support_chat_header.problem_with_receiving_money",
         lastUpdate: "01.05.2020 14:55",
-        response: "Response from support",
+        response: "support_chat_header.response_from_support",
         responseNumber: "3",
         responseType: "response",
         messagesList: [
@@ -78,9 +78,9 @@ export const supportItems: ISupportItem[] = [
     {
         id: 6,
         ticketNumber: "#19315",
-        subjectOfAppeal: "Problem with recieving money",
+        subjectOfAppeal: "support_chat_header.problem_with_receiving_money",
         lastUpdate: "01.05.2020 14:55",
-        response: "Ticket closed",
+        response: "support_chat_header.ticket_closed",
         responseType: "closed",
         messagesList: [
             {
@@ -102,9 +102,9 @@ export const supportItems: ISupportItem[] = [
     {
         id: 5,
         ticketNumber: "#19315",
-        subjectOfAppeal: "Problem with recieving money",
+        subjectOfAppeal: "support_chat_header.problem_with_receiving_money",
         lastUpdate: "01.05.2020 14:55",
-        response: "Ticket closed",
+        response: "support_chat_header.ticket_closed",
         responseType: "closed",
         messagesList: [
             {

@@ -89,9 +89,15 @@
 		"sigin_btn_text": "Sign in",
 		"signup_btn_text": "Sign up",
 		"sigin_in_via_steam": "Sign in via Steam",
+		"sigin_in_via_twitch": "Log in via Twitch",
 		"create_new_account": "Create new account",
 		"password_recovery": "Password recovery",
-		"continue": "Continue"
+		"continue": "Continue",
+		"login_or_create": "Log in or create",
+		"login": "Log in",
+		"register": "Registration",
+		"sent_email_success": "The email has been sent successfully!",
+		"check_email": "Please check your email"
 	},
 	"topbar": {
 		"provably_fair": "Provably Fair",

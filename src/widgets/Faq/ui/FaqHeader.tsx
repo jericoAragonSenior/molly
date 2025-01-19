@@ -35,7 +35,7 @@ const FaqHeader = () => {
 						hexagon
 						hexagonAxis='x'
 						classNames={{
-							base: 'h-10',
+                            base: clsx('h-10', cls.fnav_item),
 							content: 'px-6 text-xs'
 						}}
                     startContent={

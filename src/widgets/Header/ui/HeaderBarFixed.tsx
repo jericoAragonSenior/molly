@@ -8,7 +8,7 @@ import clsx from 'clsx'
 
 export const HeaderBarFixed: FC = () => {
 	return (
-		<div className={clsx(cls.bar_fixed)}>
+		<div className={clsx(cls.bar_fixed, 'min-w-[270px]')}>
 			<HeaderBarContent />
 		</div>
 	)

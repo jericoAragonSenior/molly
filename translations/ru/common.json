@@ -86,9 +86,15 @@
 		"sigin_btn_text": "Войти",
 		"signup_btn_text": "Зарегистрироваться",
 		"sigin_in_via_steam": "Войти через Steam",
+		"sigin_in_via_twitch": "Войти через Twitch",
 		"create_new_account": "Создать новый аккаунт",
 		"password_recovery": "Восстановление пароля",
-		"continue": "Продолжать"
+		"continue": "Продолжать",
+		"login_or_create": "Войти или создать",
+		"login": "Авторизоваться",
+		"register": "Регистрация",
+		"sent_email_success": "Письмо успешно отправлено!",
+		"check_email": "Пожалуйста, проверьте свою почту."
 	},
 	"topbar": {
 		"provably_fair": "Доказуемо честный",

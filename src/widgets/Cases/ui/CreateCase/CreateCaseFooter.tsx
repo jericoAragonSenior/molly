@@ -16,7 +16,11 @@ const CreateCaseFooter = () => {
     return (
         <div className={clsx(cls.footer_body, "w-full")}>
             <div className={clsx(cls.footer_body_inner, "w-full h-full py-3 px-4")}>
-                <div className="flex justify-between items-center flex-row md:flex-col md:justify-center md:items-center md:gap-4">
+                <div className="flex justify-between items-center flex-row md:flex-col md:justify-center md:items-center md:gap-4 gap-6">
+                    <div className="flex-1 px-4 h-full justify-center items-center gap-[5px] flex flex-col md:order-1 md:w-full">
+                        <span className="text-[9px] uppercase text-[#60719A] font-[700]">{t('cases_header.percent_of_income')}</span>
+                        <ProgressBar items={progressData} />
+                    </div>
                     <div className={clsx(cls.footer_body_btn, 'md:order-2')}>
                         <div className={clsx(cls.footer_body_btn_inner, "py-[10px] px-3 gap-2 flex items-center")}>
                             <IconBagTick className="w-6 h-6" />
@@ -28,10 +32,6 @@ const CreateCaseFooter = () => {
                                 </span>
                             </div>
                         </div>
-                    </div>
-                    <div className="flex-1 px-4 h-full justify-center items-center gap-[5px] flex flex-col md:order-1 md:w-full">
-                        <span className="text-[9px] uppercase text-[#60719A] font-[700]">{t('cases_header.percent_of_income')}</span>
-                        <ProgressBar items={progressData} />
                     </div>
                     <div className={clsx(cls.shadow, 'py-[1px] !z-10 px-[1px] relative md:order-3')}>
                         <Button

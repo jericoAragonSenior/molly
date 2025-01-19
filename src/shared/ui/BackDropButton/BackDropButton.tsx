@@ -31,7 +31,7 @@ const BackDropButton = ({ theme, icon: Icon, content, classNames }: BackDropButt
                             </div>
                         </div>
                     </div>
-                    <span className="text-[12px] text-white font-[500] text-center">{content}</span>
+                    <span className="text-[12px] text-white font-[500] text-center md:text-[10px]">{content}</span>
                 </div>
             </div>
         </div>
