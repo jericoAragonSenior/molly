@@ -25,7 +25,7 @@ const MysteryBody = () => {
                         <div className={cls.mystery_bg_over3}>
                             <div className={clsx(cls.mystery_bg_over4, 'flex justify-center')}>
                                 <div className={clsx('w-full sm:w-[310px] flex justify-center gap-5 md:flex-col md:items-center md:w-[500px] 2sm:w-[400px] md:gap-3')}>
-                                    <div>
+                                    <div className='w-[259px] flex justify-end md:w-auto md:justify-center'>
                                         <div className='flex flex-col gap-3 md:flex-row 2sm:gap-0 2sm:flex-wrap'>
                                             <BackDropButton classNames={{ body: '!w-[177px] !h-[140px] sm:!w-1/2 md:!w-1/3', inner: '!gap-2' }} theme={BackDropTheme.GREEN} icon={IconLuck} content={t('case_mystery.luck_text')} />
                                             <BackDropButton classNames={{ body: '!w-[177px] !h-[140px] sm:!w-1/2 md:!w-1/3', inner: '!gap-2' }} theme={BackDropTheme.PURPLE} icon={IconPrizes} content={t('case_mystery.luck_text')} />
