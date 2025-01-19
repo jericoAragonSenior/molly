@@ -36,7 +36,7 @@ const CaseBar = ({ title }: CaseBarProps) => {
                     onClick={() => setIsFavorite(!isFavorite)}
                 >
                     <div className={clsx(cls.item_icon, 'w-[23px] h-[23px]')}>
-                        <IconCaseBattle />
+                        <IconStar />
                     </div>
                     <div className={clsx(cls.item_label, 'text-[12px] uppercase')}>{t('cases_header.to_favorites')}</div>
                 </div>
@@ -46,7 +46,7 @@ const CaseBar = ({ title }: CaseBarProps) => {
                     onClick={() => setIsBattle(!isBattle)}
                 >
                     <div className={clsx(cls.item_icon, 'w-[23px] h-[23px]')}>
-                        <IconStar />
+                        <IconCaseBattle />
                     </div>
                     <div className={clsx(cls.item_label, 'text-[12px] uppercase')}>{t('cases_header.add_to_battle')}</div>
                 </div>
