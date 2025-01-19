@@ -42,7 +42,7 @@ const SetDropChances = () => {
             <div className={clsx("h-[406px] overflow-hidden pt-2 md:h-[370px]")}>
                 <Swiper
                     direction="vertical"
-                    slidesPerView={'auto'}
+                    slidesPerView={3}
                     spaceBetween={8}
                     loop={false}
                     onSlideChange={(swiper) => setSwiperIndex(swiper.activeIndex)}
