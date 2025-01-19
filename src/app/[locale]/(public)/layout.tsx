@@ -9,6 +9,7 @@ import MobileLayout from '@/shared/layout/MobileLayout'
 
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
+	// To get the screen size for responsive
 	const { lg } = useAppResponsive()
 
 	return (
