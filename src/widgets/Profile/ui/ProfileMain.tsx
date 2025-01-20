@@ -67,7 +67,7 @@ const ProfileMain = () => {
                                     <Button
                                         startContent={<IconPlus className="w-5 h-5" />}
                                         classNames={{
-                                            base: "w-full h-full py-[11px] hover:!bg-[#1d9c76]"
+                                            base: "w-full h-full py-[11px]"
                                         }}
                                     >
                                         <span className={clsx("text-[#121722] text-[17px]", cls.deposit_btn_inner_font)}>{t('profile_main.deposit')}</span>
