@@ -315,5 +315,13 @@
 		"top_winnings": "Лучшие выигрыши",
 		"best_drop": "Лучший дроп",
 		"investory": "Инвесторы"
+	},
+	"game_history_profile": {
+		"history_games": "Исторические игры",
+		"case_battle": "Дело битвы",
+		"case_name": "Название дела",
+		"price": "Цена",
+		"date_of_opening": "Дата открытия",
+		"prizes": "Призы"
 	}
 }
