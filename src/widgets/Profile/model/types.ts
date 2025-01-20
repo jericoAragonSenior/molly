@@ -1,3 +1,5 @@
+import { ISelectItem } from "@/shared/ui/Select/Select"
+
 export interface IProfileItem {
     id: number
     icon: React.FC<React.SVGProps<SVGSVGElement>>
@@ -29,4 +31,11 @@ export interface IInvestoryItemType {
     name: string
     price: string
     type: ImageBgType
+}
+
+// Game history profile page
+
+export interface IGameType extends ISelectItem {
+    value: string
+    icon: React.FC<React.SVGProps<SVGSVGElement>>
 }

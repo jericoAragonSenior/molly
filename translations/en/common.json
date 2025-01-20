@@ -318,5 +318,13 @@
 		"top_winnings": "Top winnings",
 		"best_drop": "Best drop",
 		"investory": "Investory"
+	},
+	"game_history_profile": {
+		"history_games": "History games",
+		"case_battle": "Case Battle",
+		"case_name": "Case name",
+		"price": "Price",
+		"date_of_opening": "Date of opening",
+		"prizes": "Prizes"
 	}
 }

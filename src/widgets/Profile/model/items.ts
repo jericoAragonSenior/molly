@@ -1,4 +1,4 @@
-import { IProfileItem, IBestDropData, IInvestoryItemType, ImageBgType } from "./types";
+import { IProfileItem, IBestDropData, IInvestoryItemType, ImageBgType, IGameType } from "./types";
 
 import IconUser from '@/shared/assets/icons/icon-user-avatar.svg'
 import IconGames from '@/shared/assets/icons/icon-game-history.svg'
@@ -9,10 +9,11 @@ import IconSetting from '@/shared/assets/icons/icon-setting.svg'
 import IconPromoCode from '@/shared/assets/icons/icon-promocode.svg'
 
 import IconCase from '@/shared/assets/icons/icon-case-battle.svg'
-import IconUpgrade from '@/shared/assets/icons/icon-upgrade.svg'
+import IconUpgrade from '@/shared/assets/icons/icon-upgrade.svg' 
 import IconLotto from '@/shared/assets/icons/icon-lotto.svg'
 import IconBucket from '@/shared/assets/icons/icon-bucket.svg'
-
+import IconBattle from '@/shared/assets/icons/icon-case-battle.svg'
+import IconOpenCase from '@/shared/assets/icons/icon-case-open.svg'
 
 
 export const profileList: IProfileItem[] = [
@@ -377,5 +378,24 @@ export const userBestDropData: IBestDropData[] = [
         icon: IconArchievement,
         title: "$934.33",
         content: "user_profile.top_winnings"
+    }
+]
+
+// Game history profile
+export const gameHistoryTypes: IGameType[] = [
+    {
+        value: 'Case Battle1',
+        icon: IconBattle,
+        label: "Case Battle"
+    },
+    {
+        value: 'Case Battle2',
+        icon: IconOpenCase,
+        label: "Case Battle"
+    },
+    {
+        value: 'Upgrade',
+        icon: IconUpgrade,
+        label: "Upgrade"
     }
 ]

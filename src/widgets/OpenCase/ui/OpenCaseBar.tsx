@@ -133,7 +133,7 @@ const OpenCaseBar = () => {
                             </div>
                         </div>
                         :
-                        <div className='flex h-auto items-center flex-col gap-4 pb-4 justify-center'>
+                        <div className='flex h-auto items-center flex-col gap-4 pb-4 justify-center w-full'>
                             <div className={clsx(cls.btn_refill, 'w-[313px] h-[48px]')}>
                                 <div className={cls.btn_refill_inner}>
                                     <Button fullWidth={true} classNames={{
@@ -144,7 +144,7 @@ const OpenCaseBar = () => {
                                     </Button>
                                 </div>
                             </div>
-                            <div className='flex flex-col gap-2 justify-center'>
+                            <div className='flex flex-col gap-2 justify-center items-center'>
                                 <span className='text-[#5F6C87] text-[13px] font-[500]'>{t('open_case.refill_text')}</span>
                                 <div className={clsx('w-[233px] h-[48px]', cls.btn_hexagon_green)}>
                                     <div className={clsx('w-full h-full', cls.btn_hexagon_green_inner)}>

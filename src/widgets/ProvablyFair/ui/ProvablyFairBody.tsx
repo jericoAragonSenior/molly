@@ -46,7 +46,7 @@ const ProvablyFairBody = () => {
 
     // For responsive
     const breakpoints = useAppResponsive()
-
+    
     // Create an array of refs
     const refs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -91,7 +91,7 @@ const ProvablyFairBody = () => {
             }
         }
         setActiveNumber(newIndex)
-    }
+    } 
 
 
     // Move scroll top of screen
@@ -128,12 +128,12 @@ const ProvablyFairBody = () => {
 
         window.addEventListener('scroll', handleScroll);
         setOnScroll(scrollHandle)
-
+        
         setIsScrollTop(true)
         return () => {
             setIsScrollTop(false)
             window.removeEventListener('scroll', handleScroll);
-            setOnScroll(() => { })
+            setOnScroll(() => {})
         };
     }, []);
 
